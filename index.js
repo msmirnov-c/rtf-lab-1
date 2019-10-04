@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    return null;
+    return undefined;
 }
 
 module.exports = {
