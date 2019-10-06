@@ -1,3 +1,6 @@
+let arr = [1, 5, 3];
+let num = 1;
+
 function addNumber(array, number) {
     let sum = '';
     let resArray = new Array();
@@ -8,10 +11,11 @@ function addNumber(array, number) {
     }
     sum = (parseInt(sum) + number).toString();
     for (let i = 0; i < sum.length; i++) {
-        resArray[i] = sum[i];
+        resArray[i] = Number.parseInt(sum[i]);
     }
     return resArray;
 }
+console.log(addNumber(arr,num));
 
 module.exports = {
     addNumber
