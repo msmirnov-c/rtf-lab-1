@@ -1,5 +1,5 @@
 function addNumber(array, number) {
-    let sum = '';
+    /*let sum = '';
     let resArray = new Array();
     for (let i = 0; i < arr.length; i++) {
         if (Number.isInteger(arr[i]) && arr[i].toString().length === 1)
@@ -10,7 +10,8 @@ function addNumber(array, number) {
     for (let i = 0; i < sum.length; i++) {
         resArray[i] = Number.parseInt(sum[i]);
     }
-    return resArray;
+    return resArray;*/
+    return null;
 }
 
 module.exports = {
