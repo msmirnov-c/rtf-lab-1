@@ -8,7 +8,7 @@ function addNumber(array, number) {
     }
     sum = (parseInt(sum) + number).toString();
     for (let i = 0; i < sum.length; i++) {
-        resArray[i] = Number.parseInt(sum[i]);
+        resArray[i] = Number.parseInt(sum[i], 10);
     }
     return resArray;
 }
