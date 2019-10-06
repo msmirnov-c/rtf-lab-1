@@ -1,9 +1,9 @@
 function addNumber(array, number) {
     let sum = '';
     let resArray = new Array();
-    for (let i = 0; i < array.length; i++) {
-        if (Number.isInteger(array[i]) && array[i].toString().length === 1)
-            sum += array[i].toString();
+    for (let e of array) {
+        if (Number.isInteger(e) && e.toString().length === 1)
+            sum += e.toString();
         else return null;
     }
     sum = (parseInt(sum) + number).toString();
