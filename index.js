@@ -4,7 +4,7 @@ function addNumber(array, number) {
     for (let i = 0; i < arr.length; i++) {
         if (Number.isInteger(arr[i]) && arr[i].toString().length === 1)
             sum += arr[i].toString();
-        else return console.log('null');
+        else return null;
     }
     sum = (parseInt(sum) + number).toString();
     for (let i = 0; i < sum.length; i++) {
