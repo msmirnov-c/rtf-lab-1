@@ -25,5 +25,5 @@ steps:
   displayName: 'Copy task'
 
 - script: |
-    cd lab-tests/01 && npm run test
+    cd lab-tests/01 && npm run lint && npm run test
   displayName: 'Run tests'
