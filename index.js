@@ -12,7 +12,7 @@ function addNumber(array, number) {
     }
     let resultNumber = base + number;
     let result = [];
-    while(true) {
+    for(;;) {
         let digit = resultNumber % 10;
         resultNumber -= digit;
         resultNumber /= 10;
