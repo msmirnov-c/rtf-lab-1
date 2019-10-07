@@ -4,6 +4,7 @@
 */
 function addNumber(array, number) {
     let base = 0;
+    if(array.length <= 0) return null;
     for(let i = 0; i < array.length; ++i)
     {
         let digit = array[i];
@@ -12,7 +13,6 @@ function addNumber(array, number) {
         base += Math.pow(10, array.length - i - 1) * digit;
     }
     let resultNumber = base + number, result = [];
-
     for(let i = 1; resultNumber > 0; ++i)
     {
         let digit = resultNumber % 10;
