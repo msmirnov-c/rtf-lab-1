@@ -9,6 +9,7 @@ describe('add number', function () {
     for (const c of cases) {
         it(`${JSON.stringify(c.array)} + ${c.number} = ${JSON.stringify(c.expected)}`, () => {
             const res = addNumber(c.array, c.number);
+
             expect(res).toStrictEqual(c.expected);
         });
     }
