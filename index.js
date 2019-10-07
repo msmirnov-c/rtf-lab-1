@@ -17,10 +17,9 @@ function addNumber(array, number) {
         let digit = resultNumber % 10;
         resultNumber -= digit;
         resultNumber /= 10;
-        result.push(digit);
+        result.unshift(digit);
     }
     while(resultNumber > 0)
-    result.reverse();
     return result;
 }
 
