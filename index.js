@@ -7,7 +7,7 @@ function addNumber(array, number) {
     for(let i = 0; i < array.length; ++i)
     {
         let digit = array[i];
-        if(typeof digit != 'number' || digit > 9 || digit < 0)
+        if(typeof digit != 'number' || digit > 9 || digit < 0 || Math.round(digit) != digit)
             return null;
         base += Math.pow(10, array.length - i - 1) * digit;
     }
