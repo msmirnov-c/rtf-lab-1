@@ -7,18 +7,19 @@ function addNumber(array, number) {
     for(let i = 0; i < array.length; ++i)
     {
         let digit = array[i];
-        if(!Number.isInteger(digit)|| digit > 9 || digit < 0)
+        if(!Number.isInteger(digit) || digit > 9 || digit < 0)
             return null;
         base += Math.pow(10, array.length - i - 1) * digit;
     }
     let resultNumber = base + number, result = [];
-    while(resultNumber > 0)
+    do
     {
         let digit = resultNumber % 10;
         resultNumber -= digit;
         resultNumber /= 10;
         result.unshift(digit);
     }
+    while(resultNumber > 0)
     return result;
 }
 
