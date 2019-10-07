@@ -4,11 +4,10 @@
 */
 function addNumber(array, number) {
     let base = 0;
-    if(array.length <= 0) return null;
     for(let i = 0; i < array.length; ++i)
     {
         let digit = array[i];
-        if(typeof digit != 'number' || digit > 9 || digit < 0 || Math.round(digit) != digit)
+        if(!Number.isInteger(digit)|| digit > 9 || digit < 0)
             return null;
         base += Math.pow(10, array.length - i - 1) * digit;
     }
