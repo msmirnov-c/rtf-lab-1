@@ -12,15 +12,12 @@ function addNumber(array, number) {
     }
     let resultNumber = base + number;
     let result = [];
-    let digit = resultNumber % 10;
-    resultNumber -= digit;
-    resultNumber /= 10;
-    result.unshift(digit);
-    while(resultNumber > 0) {
-        digit = resultNumber % 10;
+    while(true) {
+        let digit = resultNumber % 10;
         resultNumber -= digit;
         resultNumber /= 10;
         result.unshift(digit);
+        if(resultNumber <= 0) break;
     }
     return result;
 }
