@@ -4,16 +4,14 @@
  */
 function addNumber(array, number) {
     let base = 0;
-    for(let i = 0; i < array.length; ++i)
-    {
+    for(let i = 0; i < array.length; ++i) {
         let digit = array[i];
         if(!Number.isInteger(digit) || digit > 9 || digit < 0)
             return null;
         base += Math.pow(10, array.length - i - 1) * digit;
     }
     let resultNumber = base + number, result = [];
-    do
-    {
+    do {
         let digit = resultNumber % 10;
         resultNumber -= digit;
         resultNumber /= 10;
