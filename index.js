@@ -17,16 +17,6 @@ function addNumber(array, number) {
     return arr;
     
 }
-/*let array = [1, 2, 4];
-const number = 1;
-array = addNumber(array, number);
-if(array != null){
-    for (let i of array){
-        console.log(i);
-    }
-}
-else console.log('sosat');
-*/
 module.exports = {
     addNumber
 };
