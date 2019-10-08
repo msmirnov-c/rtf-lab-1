@@ -1,16 +1,11 @@
 function addNumber( array, number) 
 {
     let numberOfArray = '';
-    let resArray = [];
-    let check = typeof(number) =='number'&& number == Math.trunc(number);
-    if(!check)
+    let tempNumberOfArray = 0;
+
+    for (let i = 0; i < array.length; i++)
     {
-        return null;
-    }
-    for(let i = 0; i < array.length; i++)
-    {
-        
-        if(typeof(array[i]) == 'number' && array[i]>=0 && array[i]<10 && array[i]== Math.trunc(array[i]))
+        if (typeof(array[i]) === 'number' && array[i] >= 0 && array[i] < 10 && array[i] === Math.trunc(array[i]))
         {
             numberOfArray += array[i];
         }
@@ -19,19 +14,14 @@ function addNumber( array, number)
             return null;
         }
     }
-    
-    numberOfArray = +numberOfArray + number;
 
+    tempNumberOfArray = parseInt(numberOfArray);
+    tempNumberOfArray += number;
+    numberOfArray = tempNumberOfArray.toString(10);
 
-    numberOfArray =numberOfArray.toString(10);
-    for(let i = 0; i < numberOfArray.length; i++)
-    {
-        resArray[i] = +numberOfArray[i];
-    }
-
-    return resArray;
+    return numberOfArray.split('').map(item => parseInt(item));
 }
-   
+
 module.exports = {
     addNumber
 };
