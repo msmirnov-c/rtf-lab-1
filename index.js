@@ -19,7 +19,7 @@ function addNumber( array, number)
 
     return numberString.split('').map(item => parseInt(item));
 }
-console.log(addNumber([1,2,3],6))
+
 module.exports = {
     addNumber
 };
