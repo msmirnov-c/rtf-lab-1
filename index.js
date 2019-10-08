@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     let str = '', arr = [];
     for (let i of array) {
-        if (isNaN(i) || i > 9 || i < 0 || i === null || i === Infinity)
+        if (isNaN(i) || i > 9 || i < 0 || i === null || Math.floor(i) != i)
             return null;
         str += i.toString();
     }
@@ -15,7 +15,6 @@ function addNumber(array, number) {
         arr.push(parseInt(i));
     }
     return arr;
-    
 }
 module.exports = {
     addNumber
