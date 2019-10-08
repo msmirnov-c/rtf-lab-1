@@ -1,13 +1,12 @@
 function addNumber( array, number) 
 {
-    let numberOfArray = '';
-    let tempNumberOfArray = 0;
+    let numberString = '';
 
     for (let i = 0; i < array.length; i++)
     {
         if (typeof(array[i]) === 'number' && array[i] >= 0 && array[i] < 10 && array[i] === Math.trunc(array[i]))
         {
-            numberOfArray += array[i];
+            numberString += array[i];
         }
         else 
         {
@@ -15,13 +14,12 @@ function addNumber( array, number)
         }
     }
 
-    tempNumberOfArray = parseInt(numberOfArray);
-    tempNumberOfArray += number;
-    numberOfArray = tempNumberOfArray.toString(10);
+    const resSumInInt = parseInt(numberString) + number;
+    numberString = resSumInInt.toString(10);
 
-    return numberOfArray.split('').map(item => parseInt(item));
+    return numberString.split('').map(item => parseInt(item));
 }
-
+console.log(addNumber([1,2,3],6))
 module.exports = {
     addNumber
 };
