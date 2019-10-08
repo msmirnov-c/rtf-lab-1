@@ -5,17 +5,17 @@
 function addNumber(array, number) {
     let str = '', arr = [];
     for (let i of array) {
-        if (isNaN(i) || i > 9 || i < 0 || i === null || Math.floor(i) != i)
+        if (isNaN(i) || i > 9 || i < 0 || i === null || Math.floor(i) !== i)
             return null;
         str += i.toString();
     }
-    str = parseInt(str);
-    str += number;
-    for (let i of str.toString()){
+    str = parseInt(str) + number;
+    for (let i of str.toString(10)){
         arr.push(parseInt(i));
     }
     return arr;
 }
+
 module.exports = {
     addNumber
 };
