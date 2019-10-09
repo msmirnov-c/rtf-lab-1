@@ -11,7 +11,7 @@ function addNumber(array, number)
     var integer = array.every(item => Number.isInteger(item));
     var arrayIsExist = isNaN(array);// Проверка на существование массива
 
-    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false || integer == true || number.isInteger == true || )
+    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false || integer == true || number.isInteger == true )
     {
         for(let i = 0; i < array.length; i++)
             if (array[i].toString.length == 1) throw null;
