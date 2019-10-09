@@ -11,18 +11,15 @@ function addNumber(array, number)
     var integer = array.every(item => Number.isInteger(item));
     var arrayIsExist = isNaN(array);// Проверка на существование массива
 
-    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false || integer == true || number.isInteger == true )
-    {
-        for(let i = 0; i < array.length; i++)
-            if (array[i].toString.length == 1) throw null;
-        num = array.join();
-        num = Number(num.replace(/,/g, ''));
-        num += number;
-        newArray = num.toString(10).split('').map(Number);
-
-    }
-    else
+    if (lengthOfElem == false || typeOfElem == false || arrayIsExist == true || integer == false || number.isInteger == false )
         return null;// не подходит по усовию
+    //for(let i = 0; i < array.length; i++)
+    //    if (array[i].toString.length == 1) throw null;
+
+    num = array.join();
+    num = Number(num.replace(/,/g, ''));
+    num += number;
+    newArray = num.toString(10).split('').map(Number);
     return newArray;// возвращаю массив
 }
 
