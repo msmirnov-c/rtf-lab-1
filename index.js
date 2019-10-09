@@ -4,7 +4,7 @@
 */
 function addNumber(array, number)
 {
-    var degree = array.length;
+    //var degree = array.length;
     var num = 0;
     const newArray = [];
     var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
@@ -13,17 +13,10 @@ function addNumber(array, number)
 
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
-      //for(let i = 0; i < array.length; i++) // из массива в число
-      //  {
-      //      if (Math.floor(i) !== i) throw null;
-      //      num += (array[i]*Math.pow(10,degree));
-      //      degree--;
-      //  }
-      //  num = number + num; // сложили новое число
         num = array.join();
         num = Number(num.replace(/,/g, ''));
         num += number;
-        
+
         for (let i of num.toString(10))
             newArray.push(parseInt(i));
     }
@@ -34,3 +27,12 @@ function addNumber(array, number)
 module.exports = {
     addNumber
 };
+
+// прошлый вариант парсинга, до изобретения join();
+//for(let i = 0; i < array.length; i++) // из массива в число
+//  {
+//      if (Math.floor(i) !== i) throw null;
+//      num += (array[i]*Math.pow(10,degree));
+//      degree--;
+//  }
+//  num = number + num; // сложили новое число
