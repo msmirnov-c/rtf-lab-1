@@ -3,17 +3,15 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let str = '', arr = [];
-    for (let i of array) {
-        if (isNaN(i) || i > 9 || i < 0 || i === null || Math.floor(i) !== i)
-            return null;
-        str += i.toString();
+    let varForChangeMassive = ''
+    const arrayForOut = [];    
+    if (array.some(elem => isNaN(elem) || elem > 9  || elem < 0 || elem === null || Math.floor(elem) != elem))
+        return null;
+    for(let i of array){
+        varForChangeMassive += i.toString();
     }
-    str = parseInt(str) + number;
-    for (let i of str.toString(10)){
-        arr.push(parseInt(i));
-    }
-    return arr;
+    varForChangeMassive = parseInt(varForChangeMassive) + number;
+    return Array.from(varForChangeMassive.toString(10)).map(item => parseInt(item));
 }
 
 module.exports = {
