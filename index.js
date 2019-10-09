@@ -24,7 +24,7 @@ function addNumber(array, number)
       var num2 = String.valueOf(num);
       array = new int[num2.length()]; //новый массив array
 
-      for (int i = 0; i < num2.length(); i++)
+      for (let i = 0; i < num2.length(); i++)
        array[i] = num2.charAt(i);
   }
   else return null;// не подходит по усовию
