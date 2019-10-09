@@ -21,14 +21,11 @@ function addNumber(array, number)
       array = []; // отчистка старого массива
       num = number + num; // сложили новое число
 
-      var num2 = String.valueOf(num);
-      const arr[num2.length()]; //новый массив array
-
-      for (let i = 0; i < num2.length(); i++)
-       arr[i] = num2.charAt(i);
+      for (let i of num.toString())
+       array.push(parseInt(i));
   }
   else return null;// не подходит по усовию
-  return arr;// возвращаю массив
+  return array;// возвращаю массив
 }
 
 module.exports = {
