@@ -14,6 +14,7 @@ function addNumber(array, number) {
 
     let resultNumber = base + number;
     const result = [];
+    if(resultNumber == 0) return [0];
 
     while(resultNumber > 0) {
         let digit = resultNumber % 10;
