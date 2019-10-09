@@ -9,7 +9,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    array.forEach((digit, i) =>{
+    array.forEach((digit, i) => {
         base += 10 **  (array.length - i - 1) * digit;
     });
 
