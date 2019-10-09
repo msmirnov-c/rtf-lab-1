@@ -6,7 +6,7 @@ function addNumber(array, number)
 {
     //var degree = array.length;
     var num = 0;
-    const newArray = [];
+    let newArray = [];
     var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных
     var arrayIsExist = isNaN(array);// Проверка на существование массива
