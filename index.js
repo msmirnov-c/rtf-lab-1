@@ -4,11 +4,11 @@
 */
 function addNumber(array, number) {
     let stringForAddNumber;
-    if (array.some(elem => isNaN(elem) || elem > 9  || elem < 0 || elem === null || Math.floor(elem) != elem))
+    if (array.some(elem => isNaN(elem) || elem > 9  || elem < 0 || elem === null || Math.floor(elem) !== elem))
         return null;
     array.join('');
     stringForAddNumber = parseInt(array.join('')) + number;
-    return stringForAddNumber.toString(10).split('').map(Number);
+    return stringForAddNumber.toString().split('').map(Number);
 }
 module.exports = {
     addNumber
