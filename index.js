@@ -7,13 +7,13 @@ function addNumber(array, number)
     //var degree = array.length;
     var num = 0;
     let newArray = [];
-    var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
+    var lengthOfElem = array.every(item => item.toString().length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных
     var arrayIsExist = isNaN(array);// Проверка на существование массива
 
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
-        if (Math.floor(i) !== i) throw null;
+        //if (Math.floor(i) !== i) throw null;
         num = array.join();
         num = Number(num.replace(/,/g, ''));
         num += number;
