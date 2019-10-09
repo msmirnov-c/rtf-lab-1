@@ -11,7 +11,7 @@ function addNumber(array, number) {
     if (counter == 0) {
         let mas = [];
         let value = array.join();
-        value = Number(value.replace(/\,/g, ''));
+        value = Number(value.replace(/,/g, ''));
         value += number;
         for (let i = 0; i < value.toString().length; i++)
             mas.push(+value.toString().charAt(i));
