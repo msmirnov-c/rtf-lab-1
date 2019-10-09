@@ -6,6 +6,7 @@ function addNumber(array, number)
 {
     var degree = array.length;
     var num = 0;
+    const newArray = [];
     var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
     var typeOfElem = array.every(item => typeof item === 'number'); //Проверка на тип данных
     if (lengthOfElem == true && typeOfElem == true)
@@ -15,13 +16,13 @@ function addNumber(array, number)
             num+=(array[i]*Math.pow(10,degree));
             degree--;
         }
-        array = []; // отчистка старого массива
+         // отчистка старого массива
         num = number + num; // сложили новое число
         for (let i of num.toString())
-            array.push(parseInt(i));
+             newArray.push(parseInt(i));
     }
     else return null;// не подходит по усовию
-    return array;// возвращаю массив
+    return newArray;// возвращаю массив
 }
 
 module.exports = {
