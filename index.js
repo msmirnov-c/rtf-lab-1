@@ -8,11 +8,11 @@ function addNumber(array, number) {
             return null;
         }
     }
-    if(typeof(number) == "number" && number === Math.trunc(number) && number>= 0) {
-        stringOfNumbers = (parseInt(stringOfNumbers) + number).toString(10);
+    if(typeof(number) == "number" && number === Math.trunc(number) && number >= 0) {
+        stringOfNumbers = parseInt(stringOfNumbers) + number;
         return stringOfNumbers
         .split('')
-        .map(item => parseInt(item))
+        .map(item => parseInt(item));
     }
     else {
         return null;
