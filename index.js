@@ -5,19 +5,22 @@
 function addNumber(array, number) {
     let base = 0;
 
-    for(let i = 0; i < array.length; i++) {
-        const digit = array[i];
-        if(!Number.isInteger(digit) || digit > 9 || digit < 0)
-            return null;
-        base += 10 **  (array.length - i - 1) * digit;
+    if(array.some(digit => !Number.isInteger(digit) || digit > 9 || digit < 0)){
+        return null;
     }
+
+    array.forEach((digit, i) =>{
+        base += 10 **  (array.length - i - 1) * digit;
+    });
 
     let resultNumber = base + number;
     const result = [];
 
-    if(resultNumber == 0) return [0];
+    if (resultNumber === 0) {
+        return [0];
+    }
 
-    while(resultNumber > 0) {
+    while (resultNumber > 0) {
         let digit = resultNumber % 10;
         resultNumber -= digit;
         resultNumber /= 10;
