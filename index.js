@@ -13,8 +13,8 @@ function addNumber(array, number)
 
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
-      for(let i = 0; i < array.length; i++)
-        if (Math.floor(array[i]) !== i) throw null;
+        for(let i = 0; i < array.length; i++)
+          if (Math.floor(array[i]) !== i) throw null;
 
         num = array.join();
         num = Number(num.replace(/,/g, ''));
