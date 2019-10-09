@@ -11,7 +11,7 @@ function addNumber(array, number)
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных
     var arrayIsExist = isNaN(array);// Проверка на существование массива
 
-    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false || )
+    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
         for(let i = 0; i < array.length; i++) // из массива в число
         {
