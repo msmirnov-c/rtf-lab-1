@@ -22,7 +22,7 @@ function addNumber(array, number)
       num = number + num; // сложили новое число
 
       var num2 = String.valueOf(num);
-      array[] = new int[num2.length()]; //новый массив array
+      array = new int[num2.length()]; //новый массив array
 
       for (int i = 0; i < num2.length(); i++)
        array[i] = num2.charAt(i);
