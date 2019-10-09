@@ -9,11 +9,11 @@ function addNumber(array, number)
     let newArray = [];
     var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных
+    var integer = array.every(item => item.isInteger);
     var arrayIsExist = isNaN(array);// Проверка на существование массива
-    
-    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
-    {
 
+    if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false || integer == true)
+    {
         num = array.join();
         num = Number(num.replace(/,/g, ''));
         num += number;
