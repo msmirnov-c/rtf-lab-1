@@ -11,11 +11,10 @@ function addNumber(array, number)
     var integer = array.every(item => Number.isInteger(item));
     var arrayIsExist = isNaN(array);// Проверка на существование массива
 
-    if (lengthOfElem == false || typeOfElem == false || arrayIsExist == true || integer == false || number.isInteger == false )
+    if (lengthOfElem === false || typeOfElem === false || arrayIsExist === true || integer === false || number.isInteger === false )
         return null;// не подходит по усовию
-    //for(let i = 0; i < array.length; i++)
-    //    if (array[i].toString.length == 1) throw null;
-
+    for(let i = 0; i < array.length; i++)
+        if (array[i].isInteger === false) throw null;
     num = array.join();
     num = Number(num.replace(/,/g, ''));
     num += number;
