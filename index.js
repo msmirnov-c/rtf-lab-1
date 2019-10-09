@@ -8,8 +8,9 @@ function addNumber(array, number)
     var num = 0;
     const newArray = [];
     var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
-    var typeOfElem = array.every(item => typeof item === 'number'); //Проверка на тип данных
-    if (lengthOfElem == true && typeOfElem == true)
+    var typeOfElem = array.every(item => typeof item === 'number');
+    var arrayIsExist = isNaN(array); //Проверка на тип данных
+    if (lengthOfElem == true && typeOfElem == true && arrayIsExist == false)
     {
         for(let i = 0; i < array.length; i++) // из массива в число
         {
