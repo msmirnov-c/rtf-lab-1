@@ -15,10 +15,10 @@ function addNumber(array, number) {
         value += number;
         for (let i = 0; i < value.toString().length; i++)
             mas.push(+value.toString().charAt(i));
-        console.log(mas);
+        return(mas);
     }
     else
-        console.log(null);
+        return(null);
 }
 
 module.exports = {
