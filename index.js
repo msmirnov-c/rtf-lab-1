@@ -7,7 +7,7 @@ function addNumber(array, number)
   var degree = array.length;
   var num = 0;
   var flag1 = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
-  var flag2 = array.every(item => item typeof == "Number" ); //Проверка на тип данных
+  var flag2 = array.every(item => item.number); //Проверка на тип данных
 
 
   if ((flag1 == true) && (flag2 == true))
@@ -18,14 +18,13 @@ function addNumber(array, number)
         degree--;
       }
 
-      //array = []; // отчистка старого массива
+      array = []; // отчистка старого массива
 
       num = number + num; // сложили новое число
       var num2 = String.valueOf(num);
       array[] = new int[num2.length()]; //новый массив array
+      for (int i = 0; i < num2.length(); i++) array[i] = num2.charAt(i);
 
-      for (int i = 0; i < num2.length(); i++)
-        array[i] = num2.charAt(i);
   }
   else return null;// не подходит по усовию
 }
