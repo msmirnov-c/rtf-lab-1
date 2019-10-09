@@ -21,7 +21,7 @@ function addNumber(array, number)
       array = []; // отчистка старого массива
 
       num = number + num; // сложили новое число
-      String num2 = String.valueOf(num);
+      var num2 = String.valueOf(num);
       array[] = new int[num2.length()]; //новый массив array
       for (int i = 0; i < num2.length(); i++) array[i] = num2.charAt(i);
 
