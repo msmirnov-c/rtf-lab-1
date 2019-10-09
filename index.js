@@ -13,6 +13,7 @@ function addNumber(array, number)
 
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
+        if (Math.floor(i) !== i) throw null;
         num = array.join();
         num = Number(num.replace(/,/g, ''));
         num += number;
