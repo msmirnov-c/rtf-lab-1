@@ -16,7 +16,8 @@ function addNumber(array, number)
         num = array.join();
         num = Number(num.replace(/,/g, ''));
         num += number;
-        newArray = num.split('').map(Number);
+
+        newArray = num.toString(10).split('').map(Number);
         //for (let i of num.toString(10))
         //  newArray.push(parseInt(i));
     }
