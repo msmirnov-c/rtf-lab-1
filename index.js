@@ -9,7 +9,7 @@ function addNumber(array, number) {
         }
     }
     if(typeof(number) == "number" && number === Math.trunc(number) && number>= 0) {
-        stringOfNumbers = parseInt(stringOfNumbers) + number;
+        stringOfNumbers = (parseInt(stringOfNumbers) + number).toString(10);
         return stringOfNumbers
         .split('')
         .map(item => parseInt(item))
