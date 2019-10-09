@@ -13,13 +13,17 @@ function addNumber(array, number)
 
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
-        for(let i = 0; i < array.length; i++) // из массива в число
-        {
-            if (Math.floor(i) !== i) throw null;
-            num += (array[i]*Math.pow(10,degree));
-            degree--;
-        }
-        num = number + num; // сложили новое число
+      //for(let i = 0; i < array.length; i++) // из массива в число
+      //  {
+      //      if (Math.floor(i) !== i) throw null;
+      //      num += (array[i]*Math.pow(10,degree));
+      //      degree--;
+      //  }
+      //  num = number + num; // сложили новое число
+        num = array.join();
+        num = Number(num.replace(/,/g, ''));
+        num += number;
+        
         for (let i of num.toString(10))
             newArray.push(parseInt(i));
     }
