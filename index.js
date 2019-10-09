@@ -21,7 +21,10 @@ function addNumber(array, number)
         newArray = num.toString(10).split('').map(Number);
 
     }
-    else return null;// не подходит по усовию
+    else
+    {
+        return null;// не подходит по усовию
+    }
     return newArray;// возвращаю массив
 }
 
