@@ -22,13 +22,13 @@ function addNumber(array, number)
       num = number + num; // сложили новое число
 
       var num2 = String.valueOf(num);
-      array = new const[num2.length()]; //новый массив array
+      const arr[num2.length()]; //новый массив array
 
       for (let i = 0; i < num2.length(); i++)
-       array[i] = num2.charAt(i);
+       arr[i] = num2.charAt(i);
   }
   else return null;// не подходит по усовию
-  return array;// возвращаю массив
+  return arr;// возвращаю массив
 }
 
 module.exports = {
