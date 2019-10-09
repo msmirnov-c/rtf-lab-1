@@ -16,7 +16,6 @@ function addNumber(array, number)
             num+=(array[i]*Math.pow(10,degree));
             degree--;
         }
-         // отчистка старого массива
         num = number + num; // сложили новое число
         for (let i of num.toString(10))
              newArray.push(parseInt(i));
