@@ -14,11 +14,10 @@ function addNumber(array, number)
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false )
     {
         num = array.join();
-        num = Number(num.replace(/,/g, ''));
-        num += number;
-
-        for (let i of num.toString(10))
-            newArray.push(parseInt(i));
+        num = Number(num.replace(/,/g, '')) + number;
+        newArray = num.split('').map(Number);
+        //for (let i of num.toString(10))
+        //  newArray.push(parseInt(i));
     }
     else return null;// не подходит по усовию
     return newArray;// возвращаю массив
