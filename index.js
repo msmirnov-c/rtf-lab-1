@@ -13,7 +13,7 @@ function addNumber(array, number)
     {
         for(let i = 0; i < array.length; i++) // из массива в число
         {
-            num+=(array[i]*Math.pow(10,degree));
+            num += (array[i]*Math.pow(10,degree));
             degree--;
         }
         num = number + num; // сложили новое число
