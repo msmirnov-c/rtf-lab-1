@@ -5,12 +5,12 @@
 function addNumber(array, number)
 {
   var degree = array.length;
-  Number num = 0;
-  var flag1 = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
-  var flag2 = array.every(item => item.number); //Проверка на тип данных
+  var num = 0;
+  var lengthOfElem = array.every(item => item.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every
+  var typeOfElem = array.every(item => typeof item === 'number');); //Проверка на тип данных
 
 
-  if ((flag1 == true) && (flag2 == true))
+  if ((lengthOfElem == true) && (typeOfElem == true))
   {
       for(let i = 0; i < array.length; i++) // из массива в число
       {
@@ -25,9 +25,9 @@ function addNumber(array, number)
       array[] = new int[num2.length()]; //новый массив array
       for (int i = 0; i < num2.length(); i++)
        array[i] = num2.charAt(i);
-
   }
   else return null;// не подходит по усовию
+  return array;// возвращаю массив
 }
 
 module.exports = {
