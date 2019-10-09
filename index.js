@@ -18,7 +18,7 @@ function addNumber(array, number) {
         console.log(mas);
     }
     else
-        console.log(NULL);
+        console.log(null);
 }
 
 module.exports = {
