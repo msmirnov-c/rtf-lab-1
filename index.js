@@ -13,8 +13,9 @@ function addNumber(array, number)
 
     if (lengthOfElem === false || typeOfElem === false || arrayIsExist === true || integer === false || number.isInteger === false )
         return null;// не подходит по усовию
-    for(let i = 0; i < array.length; i++)
-        if (array[i].isInteger === false) throw null;
+    //for(let i = 0; i < array.length; i++)
+    //    if (array[i].isInteger === false) throw null;
+
     num = array.join();
     num = Number(num.replace(/,/g, ''));
     num += number;
