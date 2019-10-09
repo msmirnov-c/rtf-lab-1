@@ -18,7 +18,7 @@ function addNumber(array, number)
         }
          // отчистка старого массива
         num = number + num; // сложили новое число
-        for (let i of num.toString())
+        for (let i of num.toString(10))
              newArray.push(parseInt(i));
     }
     else return null;// не подходит по усовию
