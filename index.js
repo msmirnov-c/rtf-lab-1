@@ -1,7 +1,7 @@
 function addNumber(array, number) {
     let stringOfNumbers = '';
     for(let i = 0; i < array.length; i++) {
-        if(typeof(array[i] === 'number' && array[i] === Math.trunc(array[i]) && array[i] >= 0 && array[i] <= 9)) {
+        if(typeof(array[i]) === 'number' && array[i] === Math.trunc(array[i]) && array[i] >= 0 && array[i] <= 9) {
             stringOfNumbers += array[i];
         }
         else {
