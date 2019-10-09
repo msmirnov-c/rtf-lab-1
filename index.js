@@ -14,6 +14,8 @@ function addNumber(array, number)
 
     if (lengthOfElem == true || typeOfElem == true || arrayIsExist == false || integer == true)
     {
+        for(let i = 0; i < array.length; i++)
+            if (array[i].isInteger == false) throw null;
         num = array.join();
         num = Number(num.replace(/,/g, ''));
         num += number;
