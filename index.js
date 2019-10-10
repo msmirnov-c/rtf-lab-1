@@ -14,8 +14,7 @@ function addNumber(array, number) {
             return null;
         }
     }
-    res = (parseInt(str) + number).toString(10);
-    arr = res.split('').map(item => parseInt(item));
+    res = (parseInt(str) + number).toString(10).map(item => parseInt(item));
     return arr;
     // Решение задачи
 }
