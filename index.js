@@ -25,11 +25,6 @@ function addNumber(array, number)
     return newArray;// возвращаю массив 
 }
 
-var number = -10; 
-var array = [3, 4, 5]; 
-var n = addNumber(array, number) 
-console.log(n);
-
 module.exports = {
     addNumber
 };
