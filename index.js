@@ -4,7 +4,6 @@
 */
 function addNumber(array, number)
 {
-    let resultSum = '';
     let strArray = '';
     for (let i = 0; i < array.length; i++)
     {
@@ -14,9 +13,7 @@ function addNumber(array, number)
         }
         else return null;
     }
-    resultSum = Number(strArray) + number;
-    resultSum.toString();
-    return resultSum.split('').map(value=> parseInt(value));;
+    return (Number(strArray)+number).toString().split('').map(value=> parseInt(value));;
 }
 
 module.exports = {
