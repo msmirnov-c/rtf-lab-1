@@ -12,9 +12,9 @@ function addNumber(array, number) {
             return null;
         }
     }
-    str = (parseInt(str) + number).toString(10);
-    var arr = str.split('').map(item => parseInt(item));
-    return arr;
+    str = parseInt(str) + number;
+    var result = str.toString(10);
+    return result.split('').map(item => parseInt(item));
 }
 
 module.exports = {
