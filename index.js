@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     var str = '';
     for (var i = 0; i < array.lenght; i++) {
-        if (array[i] === Math.trunc(array[i]) && typeof (number) === 'number' && typeof (array[i]) === 'number' && array[i] >= 0 && array <= 9) {
+        if (array[i] === Math.trunc(array[i]) && typeof (number) === 'number' && typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             str += array[i];
         }
         else {
