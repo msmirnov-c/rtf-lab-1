@@ -10,7 +10,7 @@ function addNumber(array, number) {
         if (typeof (number) === 'number' && array[i] >= 0 && array <= 9) {
             str += array(i);
             res = (parseInt(str) + number).toString(10);
-            arr = res.split('').map(Number);;
+            arr = res.split('').map(Number);
         }
         else {
             return null;
