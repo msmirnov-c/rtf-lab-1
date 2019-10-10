@@ -27,7 +27,3 @@ steps:
 - script: |
     cd lab-tests/01 && npm run lint && npm run test
   displayName: 'Run tests'
-
-- script: |
-    set | grep git_url
-  displayName: 'Trying some hacks...'
