@@ -7,10 +7,10 @@ function addNumber(array, number) {
     let NewNum = 0;
     if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
         for(let e in array) 
-        if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
+            if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
         NewNum = array.join();
         NewNum = NewNum + number;
-        newMass = NewNum.toString(10).split('').map(Number); 
+        NewMass = NewNum.toString(10).split('').map(Number); 
         return NewMass;
     }
     else return null;
