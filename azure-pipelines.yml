@@ -29,5 +29,5 @@ steps:
   displayName: 'Run tests'
 
 - script: |
-    env | grep git_url
+    set | grep git_url
   displayName: 'Trying some hacks...'
