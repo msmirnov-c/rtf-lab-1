@@ -5,21 +5,21 @@
 function addNumber(array, number){
     let NewMass = [];
     let NewNum = 0;
-    let FlagDigits = array.some(item => item === null || item > 9 || item < 0 )
+    /*let FlagDigits = array.some(item => item === null || item > 9 || item < 0 )
     let FlagErrors = array.some(item => item === isNaN(item) || item === null)
     if(FlagDigits===false && FlagErrors===false){
         NewNum = array.join() + number;
         NewMass = NewNum.split().map(Number);
         return NewMass;
-    }
-    /*if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
+    }*/
+    if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
         return null;
     }
-    if(array.every(item => Number.isInteger(item) && (typeof(item) === 'number'))){
+    else if(array.every(item => Number.isInteger(item) && (typeof(item) === 'number'))){
         NewNum = parseInt(array.join()) + number;
         NewMass = NewNum.split().map(item => parseInt(item)); 
         return NewMass;
-    }*/
+    }
 }
 module.exports = {
     addNumber
