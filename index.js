@@ -6,15 +6,16 @@ function addNumber(array, number)
 { 
     var num = 0; 
     let newArray = []; 
-    var lengthOfElem = array.every(item => item.toString.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every 
+    //var lengthOfElem = array.every(item => item.toString.length === 1);// Решил использовать флаги для того чтобы лучше разобраться с работой every 
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных 
     var integer = array.every(item => Number.isInteger(item)); 
     //var arrayIsExist = isNaN(array);// Проверка на существование массива 
 
-    if (lengthOfElem === true && typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true) 
+    if (typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true) 
     { 
         for(let i = 0; i < array.length; i++) 
-            if (array[i].isNaN === false ) throw null; 
+            if (array[i].isNaN === false || array[i] > 9 || array[i] < 0 ) return null; 
+
         num = array.join(); 
         num = Number(num.replace(/,/g, '')); 
         num += number; 
@@ -24,6 +25,7 @@ function addNumber(array, number)
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 } 
+
 
 module.exports = {
     addNumber
