@@ -11,7 +11,7 @@ function addNumber(array, number)
     var integer = array.every(item => Number.isInteger(item)); 
     //var arrayIsExist = isNaN(array);// Проверка на существование массива 
 
-    if (lengthOfElem === true && typeOfElem === true && integer === true && number > 0) 
+    if (lengthOfElem === true && typeOfElem === true && integer === true && number > 0 && number.isInteger === true) 
     { 
         for(let i = 0; i < array.length; i++) 
             if (array[i].isNaN === false ) throw null; 
@@ -24,6 +24,7 @@ function addNumber(array, number)
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 }
+
 
 module.exports = {
     addNumber
