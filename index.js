@@ -6,8 +6,13 @@ function addNumber(array, number) {
     if (array.some((e) => !Number.isInteger(e) || e < 0 || e > 9) || !Number.isInteger(number) || number < 0){
         return null;
     }
-    return parseInt(array.reduce((arr, e) => arr += e.toString())) + number;
+    return (parseInt(array.reduce((arr, e) => arr += e.toString())) + number)
+    .toString()
+    .split('')
+    .map(Number);
 }
+
+console.log(addNumber([1,2,3], 2522))
 
 module.exports = {
     addNumber
