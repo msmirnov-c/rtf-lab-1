@@ -1,11 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "node ./node_modules/mocha/bin/mocha",
     "lint": "eslint ."
   },
   "dependencies": {
     "eslint": "^6.5.1",
     "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.1"
   }
 }
