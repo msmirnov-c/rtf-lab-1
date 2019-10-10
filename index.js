@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    var arr;
+    var arr="";
     var res;
     for (var i = 0; i < array.lenght; i++) {
         if (typeof (number) === 'number' && array[i] >= 0 && array <= 9) {
