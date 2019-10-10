@@ -9,7 +9,7 @@ function addNumber(array, number)
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных 
     var integer = array.every(item => Number.isInteger(item)); 
     var isNaNka = array.every(item => isNaN(item));
-    if (typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true && isNanka === true) 
+    if (typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true && isNaNka === true) 
     { 
         for(let i = 0; i < array.length; i++) 
             if (array[i].isNaN === false || array[i] > 9 || array[i] < 0 ) return null; 
