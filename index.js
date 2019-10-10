@@ -12,7 +12,7 @@ function addNumber(array, number)
     if (typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true) 
     { 
         for(let i = 0; i < array.length; i++) 
-            if (array[i].isNaN === true || array[i] > 9 || array[i] < 0 ) return null; 
+            if (array[i] === null || array[i] > 9 || array[i] < 0 ) return null; 
 
         num = array.join(); 
         num = Number(num.replace(/,/g, '')); 
@@ -23,9 +23,6 @@ function addNumber(array, number)
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 } 
-
-
-
 
 module.exports = {
     addNumber
