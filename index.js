@@ -11,9 +11,7 @@ function addNumber( array, number)
     }
     const totalAmount  = number + parseInt(numStr);
     numStr  = totalAmount .toString(10);
-    return numStr
-    .split('')
-    .map(item => parseInt(item));
+    return numStr.split('').map(item => parseInt(item));
 }
 
 module.exports = {
