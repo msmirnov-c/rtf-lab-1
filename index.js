@@ -7,9 +7,9 @@ function addNumber(array, number) {
         return null;
     }
     return (parseInt(array.reduce((arr, e) => arr += e.toString())) + number)
-    .toString()
-    .split('')
-    .map(Number);
+        .toString()
+        .split('')
+        .map(Number);
 }
 
 module.exports = {
