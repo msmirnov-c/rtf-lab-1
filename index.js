@@ -1,5 +1,5 @@
 /** 
-* @param array – массив элементов. Например, [1, 8, 3] 
+* @param array  – массив элементов. Например, [1, 8, 3] 
 * @param number – число, которое нужно прибавить к числу, полученному из массива 
 */ 
 function addNumber(array, number) 
@@ -11,7 +11,7 @@ function addNumber(array, number)
     var integer = array.every(item => Number.isInteger(item)); 
     //var arrayIsExist = isNaN(array);// Проверка на существование массива 
 
-    if (lengthOfElem === true && typeOfElem === true && integer === true) 
+    if (lengthOfElem === true && typeOfElem === true && integer === true && number > 0) 
     { 
         for(let i = 0; i < array.length; i++) 
             if (array[i].isNaN === false ) throw null; 
@@ -24,6 +24,12 @@ function addNumber(array, number)
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 }
+
+var number = -10; 
+var array = [3, 4, 5]; 
+var n = addNumber(array, number) 
+console.log(n);
+
 module.exports = {
     addNumber
 };
