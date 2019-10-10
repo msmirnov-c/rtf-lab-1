@@ -15,7 +15,7 @@ function addNumber(array, number){
     if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
         return null;
     }
-    else if(array.every(item => Number.isInteger(item) && (typeof(item) === 'number'))){
+    else if(array.every(item => Number.trunc(item) === item && (typeof(item) === 'number'))){
         NewNum = parseInt(array.join()) + number;
         NewMass = NewNum.split().map(item => parseInt(item)); 
         return NewMass;
