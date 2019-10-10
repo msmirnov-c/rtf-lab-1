@@ -16,9 +16,9 @@ function addNumber(array, number)
     }
     if (number > 0 && Number.isInteger(number))
     {
-        resultSum = (Number(strArray) + number).ToString();
+        resultSum = (Number(strArray) + number).toString();
     }
-    return resultSum.split('').map(value=> +value);;
+    return resultSum.split('').map(value=> Number.parseInt(value));;
 }
 
 module.exports = {
