@@ -15,7 +15,7 @@ function addNumber(array, number) {
     }
     str = parseInt(str) + number;
     var result=str.toString(10).split('');
-    return result.map(item => parseInt(item));
+    return result.map(Number);
 }
 
 module.exports = {
