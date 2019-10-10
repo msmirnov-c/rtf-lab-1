@@ -5,7 +5,6 @@
 function addNumber(array, number) {
     var str = '';
     var arr = [];
-    var res;
     for (var i = 0; i < array.lenght; i++) {
         if (typeof (number) === 'number' && array[i] >= 0 && array <= 9) {
             str += array(i);
@@ -14,7 +13,7 @@ function addNumber(array, number) {
             return null;
         }
     }
-    res = (parseInt(str) + number).toString(10).map(item => parseInt(item));
+    arr = (parseInt(str) + number).toString(10).map(item => parseInt(item));
     return arr;
     // Решение задачи
 }
