@@ -4,16 +4,16 @@
 */
 function addNumber(array, number) {
     let NewMass = [];
-    let NewNum;
-    if(array.every(item => Number.isInteger(item)));//Проверка на целочисленность
+    let NewNum = 0;
+    if(array.every(item => Number.isInteger(item) || null));{//Проверка на целочисленность
     NewNum = array.join();
     NewNum = NewNum + number;
-
     while (NewNum>0){
         NewMass.push(NewNum % 10);
         NewNum = NewNum - (NewNum % 10);
     }
     return NewMass;
+    }
 }
 module.exports = {
     addNumber
