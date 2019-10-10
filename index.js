@@ -5,16 +5,16 @@
 function addNumber(array, number) {
     let NewMass = [];
     let NewNum = 0;
-    if (number < 0) return null;
     if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
+    return null;
+}
+    else{ 
         for(let e in array) 
             if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
-        NewNum = array.join();
-        NewNum = NewNum + number;
+        NewNum = array.join() + number;
         NewMass = NewNum.toString(10).split('').map(Number); 
         return NewMass;
     }
-    else return null;
 }
 module.exports = {
     addNumber
