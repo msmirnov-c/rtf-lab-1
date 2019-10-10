@@ -3,6 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
+    if (typeof array != 'object' && typeof number != 'number') return null;
     let in_num = '';
     let array_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     array.forEach(function (arr) {
