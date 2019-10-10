@@ -13,8 +13,6 @@ let NewNum;
 NewNum = MassNum + number;
     return NewNum;
 }
-
-
 module.exports = {
     addNumber
 };
