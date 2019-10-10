@@ -16,7 +16,7 @@ function addNumber(array, number) {
             return null;
         }
     } 
-    return res;
+    return arr;
     // Решение задачи
 }
 
