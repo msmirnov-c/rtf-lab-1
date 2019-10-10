@@ -16,7 +16,7 @@ function addNumber(array, number) {
     {
         let resultSum = (Number(strArray) + number).ToString();
     }
-    resultSum.split('').map((value)=> +value;);;
+    return resultSum.split('').map((value)=> +value;);;
 }
 
 module.exports = {
