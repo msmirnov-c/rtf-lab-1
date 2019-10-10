@@ -14,10 +14,7 @@ function addNumber(array, number)
         }
         else return null;
     }
-    if (number > 0 && Number.isInteger(number))
-    {
-        resultSum = (Number(strArray) + number).toString();
-    }
+    resultSum = (Number(strArray) + number).toString();
     return resultSum.split('').map(value=> Number.parseInt(value));;
 }
 
