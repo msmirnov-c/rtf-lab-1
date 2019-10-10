@@ -15,7 +15,6 @@ function addNumber(array, number)
     { 
         for(let i = 0; i < array.length; i++) 
             if (array[i].isNaN === false ) throw null; 
-//if (array[i].isInteger == false ) throw null; 
         num = array.join(); 
         num = Number(num.replace(/,/g, '')); 
         num += number; 
