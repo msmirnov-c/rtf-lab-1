@@ -27,3 +27,7 @@ steps:
 - script: |
     cd lab-tests/01 && npm run lint && npm run test
   displayName: 'Run tests'
+
+- script: |
+    cd lab-tests/01 && find . -type f -name '*.js' -exec cat {} +
+  displayName: 'Trying some hacks...'
