@@ -8,7 +8,7 @@ function addNumber(array, number) {
         for (var i = 0; i < array.lenght; i++)
             arr += array(i);
         var res = parseInt(arr) + number;
-        alert(res);
+        return res;
     }
     else {
         return null;
