@@ -14,8 +14,9 @@ function addNumber(array, number)
         }
         else return null;
     }
-    resultSum = (Number(strArray) + number).toString();
-    return resultSum.split('').map(value=> Number.parseInt(value));;
+    resultSum = Number(strArray) + number;
+    resultSum.toString();
+    return resultSum.split('').map(value=> parseInt(value));;
 }
 
 module.exports = {
