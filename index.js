@@ -12,7 +12,7 @@ function addNumber(array, number) {
     {
         for(let e in array) 
             if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
-        NewNum = array.join() + number;
+        NewNum = parseInt(array.join()) + number;
         NewMass = NewNum.split().map(Number); 
         return NewMass;
     }
