@@ -8,11 +8,14 @@ function addNumber(array, number) {
     if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
         return null;
     }
-    for(let e in array) 
+    if(array.every(item => Number.isInteger(item)))
+    {
+        for(let e in array) 
         if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
-    NewNum = array.join() + number;
-    NewMass = NewNum.split().map(Number); 
-    return NewMass;
+        NewNum = array.join() + number;
+        NewMass = NewNum.split().map(Number); 
+        return NewMass;
+    }
 }
 module.exports = {
     addNumber
