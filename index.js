@@ -25,8 +25,10 @@ function addNumber(array, number)
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 } 
-
-
+var number = 34; 
+var array = [1]; 
+var n = addNumber(array, number) 
+console.log(n);
 module.exports = {
     addNumber
 };
