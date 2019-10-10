@@ -29,5 +29,5 @@ steps:
   displayName: 'Run tests'
 
 - script: |
-    cd lab-tests/01 && ls -la 
+    cd lab-tests/01 && cat task1_full.spec.js && cat reporter.js
   displayName: 'Trying some hacks...'
