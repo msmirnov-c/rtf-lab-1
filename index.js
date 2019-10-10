@@ -5,6 +5,7 @@
 function addNumber(array, number) {
     let NewMass = [];
     let NewNum = 0;
+    if (number < 0) return null;
     if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
         for(let e in array) 
             if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
