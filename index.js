@@ -2,7 +2,9 @@
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
-function addNumber(array, number) {
+function addNumber(array, number)
+{
+    let resultSum = '';
     let strArray = '';
     for (let i = 0; i < array.length; i++)
     {
@@ -14,9 +16,9 @@ function addNumber(array, number) {
     }
     if (number > 0 && Number.isInteger(number))
     {
-        let resultSum = (Number(strArray) + number).ToString();
+        resultSum = (Number(strArray) + number).ToString();
     }
-    return resultSum.split('').map((value)=> +value;);;
+    return resultSum.split('').map(value=> +value);;
 }
 
 module.exports = {
