@@ -8,6 +8,7 @@ function addNumber(array, number) {
     if(array.every(item => Number.isInteger(item)));//Проверка на целочисленность
     NewNum = array.join();
     NewNum = NewNum + number;
+
     while (NewNum>0){
         NewMass.push(NewNum % 10);
         NewNum = NewNum - (NewNum % 10);
