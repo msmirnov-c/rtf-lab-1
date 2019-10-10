@@ -4,15 +4,16 @@
 */
 function addNumber(array, number){
     let NewMass = [];
-    let NewNum = 0;
-    if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
-        return null;
+    let NewNum = '';
+    for(var i = 0; i<array.lenght; i++){
+    if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0))    return null;
+    else if(array.every(item => Number.trunc(item) === item && (typeof(item) === 'number')) === true)
+      NewNum += array[i];
     }
-    else if(array.every(item => Number.trunc(item) === item && (typeof(item) === 'number')) === true){
-        NewNum = parseInt(array.join()) + number;
-        NewMass = NewNum.split().map(item => parseInt(item)); 
-        return NewMass;
-    }
+    NewNum = NewNum + number;
+    NewMass = NewNum.split().map(item); 
+    return NewMass;
+    
 }
 module.exports = {
     addNumber
