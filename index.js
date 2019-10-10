@@ -11,7 +11,7 @@ function addNumber(array, number)
     var integer = array.every(item => Number.isInteger(item)); 
     if (typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true) 
     { 
-        for(let i = 0; i < array.length; i++) 
+        for(let i in array) 
             if (array[i] === null || array[i] > 9 || array[i] < 0 ) return null; 
 
         num = array.join(); 
