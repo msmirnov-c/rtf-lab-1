@@ -5,14 +5,15 @@
 function addNumber(array, number) {
     var arr;
     var res
-    for (var i = 0; i < array.lenght; i++)
+    for (var i = 0; i < array.lenght; i++) {
         if (typeof (number) === 'number' && array[i] >= 0 && array <= 9) {
             arr += array(i);
             res = parseInt(arr) + number;
         }
-    
-    else 
-        return null;
+        else {
+            return null;
+        }
+    } 
     return res;
     // Решение задачи
 }
