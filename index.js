@@ -9,14 +9,13 @@ function addNumber(array, number) {
     for (var i = 0; i < array.lenght; i++) {
         if (typeof (number) === 'number' && array[i] >= 0 && array <= 9) {
             str += array(i);
-            res = (parseInt(str) + number).toString(10);
-            arr = res.split('');
-            arr = arr.map(item => parseInt(item));
         }
         else {
             return null;
         }
     }
+    res = (parseInt(str) + number).toString(10);
+    arr = res.split('').map(Number);
     return arr;
     // Решение задачи
 }
