@@ -10,10 +10,10 @@ function addNumber(array, number) {
             arr += array(i);
             res = parseInt(arr) + number;
         }
-    return res;
-    else {
+    
+    else 
         return null;
-    }
+    return res;
     // Решение задачи
 }
 
