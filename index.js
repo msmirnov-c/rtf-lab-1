@@ -4,21 +4,17 @@
  */
 function addNumber(array, number) {
     var str = '';
-    var arr;
-
     for (var i = 0; i < array.lenght; i++) {
-        if (typeof (number) === 'number' && array[i] >= 0 && array <= 9) {
-            str += array(i);
+        if (array[i] === Math.trunc(array[i]) && typeof (number) === 'number' && typeof (array[i]) === 'number' && array[i] >= 0 && array <= 9) {
+            str += array[i];
         }
         else {
             return null;
         }
     }
-
     str = (parseInt(str) + number).toString(10);
-    arr = str.split('').map(item => parseInt(item));
+    var arr = str.split('').map(item => parseInt(item));
     return arr;
-    // Решение задачи
 }
 
 module.exports = {
