@@ -12,6 +12,7 @@ function addNumber(array, number){
     }
     NewNum = parseInt(NewNum) + number;
     //NewMass = NewNum.split().map(Number); 
+    NewNum = NewNum.toString(10);
     return NewMass.split('').map(item => parseInt(item));
 }
 module.exports = {
