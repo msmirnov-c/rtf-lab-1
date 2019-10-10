@@ -1,6 +1,5 @@
-console.log(addNumber([5,6,7],20))
-
-function addNumber( array, number) {
+function addNumber( array, number) 
+{
     let numStr = '';
     for (let i = 0; i < array.length; i++) {
         if (array[i] === Math.trunc(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof(array[i]) === 'number')) {
