@@ -15,6 +15,9 @@ function addNumber(array, number) {
      for (let j = 0; j < array2.length; j++) 
             array3[j] = parseInt(array2[j]);
      return(array3);
+    options: {
+  fix: true
+}
 }
 
 module.exports = {
