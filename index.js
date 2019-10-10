@@ -4,8 +4,8 @@ function addNumber(array, number) {
     {
         array.every(item => stringOfNumbers += item);
     } else {
-    return null;
-}
+        return null;
+    }
     stringOfNumbers = (parseInt(stringOfNumbers) + number).toString(10);
     return stringOfNumbers.split('').map(item => parseInt(item));
 }
