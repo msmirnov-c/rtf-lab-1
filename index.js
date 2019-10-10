@@ -14,7 +14,7 @@ function addNumber(array, number){
     }
     const LastNum = parseInt(NewNum) + number;
     //NewMass = NewNum.split().map(Number); 
-    //NewNum = NewNum.toString(10);
+    NewNum = NewNum.toString(10);
     return NewMass.split().map(LastNum);
 }
 module.exports = {
