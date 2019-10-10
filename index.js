@@ -3,15 +3,16 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let MassNum;
-for(let i = 0; i <= array.lenght(); i++)
-    {
-        let MassNum;
-        MassNum =+ array[i];
+    let NewMass = [];
+    let NewNum;
+    if(array.every(item => Number.isInteger(item)));//Проверка на целочисленность
+    NewNum = array.join();
+    NewNum = MassNum + number;
+    while (num>0){
+        NewMass.push(NewNum % 10);
+        NewNum = NewNum - (NewNum % 10);
     }
-let NewNum;
-NewNum = MassNum + number;
-    return NewNum;
+    return NewMass;
 }
 module.exports = {
     addNumber
