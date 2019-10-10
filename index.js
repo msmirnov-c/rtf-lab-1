@@ -7,7 +7,7 @@ function addNumber(array, number) {
     let NewNum;
     if(array.every(item => Number.isInteger(item)));//Проверка на целочисленность
     NewNum = array.join();
-    NewNum = MassNum + number;
+    NewNum = NewNum + number;
     while (NewNum>0){
         NewMass.push(NewNum % 10);
         NewNum = NewNum - (NewNum % 10);
