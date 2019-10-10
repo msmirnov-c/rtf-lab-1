@@ -12,8 +12,6 @@ function addNumber(array, number) {
     .map(Number);
 }
 
-console.log(addNumber([1,2,3], 2522))
-
 module.exports = {
     addNumber
 };
