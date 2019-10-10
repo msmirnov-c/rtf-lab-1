@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++)
     { 
-     if (typeof array[i] != typeof i) 
+     if (typeof array[i] != typeof i || number == null) 
     return(null); 
     }
     let value = array.join('');
