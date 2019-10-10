@@ -11,7 +11,7 @@ function addNumber(array, number){
         NewNum += array[i];
     }
     NewNum = NewNum + number;
-    NewMass = NewNum.split().map(item); 
+    NewMass = NewNum.split().map(Number); 
     return NewMass;
     
 }
