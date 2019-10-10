@@ -10,10 +10,9 @@ function addNumber(array, number){
         else if(array.every(item => Number.trunc(item) === item && (typeof(item) === 'number')) === true)
             NewNum += array[i];
     }
-    NewNum = NewNum + number;
-    NewMass = NewNum.split().map(Number); 
-    return NewMass;
-    
+    NewNum = parseInt(NewNum) + number;
+    //NewMass = NewNum.split().map(Number); 
+    return NewMass.split('').map(item => parseInt(item));
 }
 module.exports = {
     addNumber
