@@ -13,6 +13,7 @@ function addNumber(array, number) {
             arr == array_numbers[3] || arr == array_numbers[4] || arr == array_numbers[5] ||
             arr == array_numbers[6] || arr == array_numbers[7] || arr == array_numbers[8] ||
             arr == array_numbers[9]);
+        //я так сделал не потому шо я тупой, а потому шо мне лень было думатб
         else { in_num = 'exit'; return null; }
         in_num += arr;
     });
