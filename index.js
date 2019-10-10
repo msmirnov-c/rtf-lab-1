@@ -4,10 +4,11 @@
 */
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++)
- { if (typeof array[i] != typeof number) 
+    { 
+     if (typeof array[i] != typeof i) 
     return(null); 
     }
- let value = array.join('');
+    let value = array.join('');
      let sum = String(parseInt(value) + number);
      let array2 =[];
      array2 = sum.split('');
