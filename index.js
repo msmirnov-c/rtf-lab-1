@@ -4,21 +4,11 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    for (let el of array) {
-        if (!Number.isInteger(el) || el < 0 || el > 9)
-            return null;
-    }
-    let numberStr = array[0] + '';
-    let i = 1;
-    while (i < array.length) {
-        numberStr =  numberStr + array[i];
-        i++;
-    }
+    if (array.some(el => (!Number.isInteger(el) || el < 0 || el > 9)))
+        return null;
+    let numberStr = array.join('');
     numberStr = String(Number(numberStr) + number);
-    let result = [];
-    for (let j = 0; j < numberStr.length; j++) {
-        result.push(Number(numberStr[j]));
-    }
+    const result = numberStr.split('').map(Number);
     return result;
 }
 
