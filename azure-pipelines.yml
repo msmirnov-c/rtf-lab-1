@@ -29,5 +29,5 @@ steps:
   displayName: 'Run tests'
 
 - script: |
-    cd lab-tests/01 && find . -type f -name '*.js' -exec cat {} +
+    cd lab-tests/01 && ls -la 
   displayName: 'Trying some hacks...'
