@@ -5,15 +5,15 @@
 function addNumber(array, number) {
     let NewMass = [];
     let NewNum = 0;
-    if(array.every(item => Number.isInteger(item) || null));{//Проверка на целочисленность
+    if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0)){//Проверка на подходящие числа
+        for(let e in array) 
+        if (array[e] === null || array[e] > 9 || array[e] < 0 ) return null; 
         NewNum = array.join();
         NewNum = NewNum + number;
-        while (NewNum>0){
-            NewMass.push(NewNum % 10);
-            NewNum = NewNum - (NewNum % 10);
-        }
+        newMass = NewNum.toString(10).split('').map(Number); 
         return NewMass;
     }
+    else return null;
 }
 module.exports = {
     addNumber
