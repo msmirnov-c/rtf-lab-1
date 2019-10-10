@@ -5,15 +5,17 @@
 function addNumber(array, number){
     let NewMass = [];
     let NewNum = '';
-    for(var i = 0; i<array.lenght; i++){
-        if(array[i]  = isNaN || array[i]  == null || array[i] > 9 || array[i] < 0)    return null;
-        else if(Math.trunc(array[i]) === array[i] /*&& (typeof(array[i]) === 'number')*/)
+    for(var i = 0; i<array.lenght; i++)
+    {
+        if(Math.trunc(array[i]) === array[i] && typeof(array[i]) === 'number' && array[i]>=0 && typeof(array[i])<=9)
             NewNum += array[i];
+    
+        else return null;
     }
-    NewNum = parseInt(NewNum) + number;
+    const LastNum = parseInt(NewNum) + number;
     //NewMass = NewNum.split().map(Number); 
     //NewNum = NewNum.toString(10);
-    return NewMass.split('').map(NewNum);
+    return NewMass.split().map(LastNum);
 }
 module.exports = {
     addNumber
