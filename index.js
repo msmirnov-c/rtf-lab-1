@@ -9,10 +9,10 @@ function addNumber(array, number)
     let newArray = []; 
     var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных 
     var integer = array.every(item => Number.isInteger(item)); 
-    if (typeOfElem === true && integer === true && number > 0 && Number.isInteger(number) === true) 
+    if (typeOfElem === true && integer === true /*&& number > 0 && Number.isInteger(number) === true*/) 
     { 
         for(let i in array) 
-            if (array[i] === null || array[i] > 9 || array[i] < 0 || isNaN(array[i]) ||  number.isInteger(number) === false) return null; 
+            if (array[i] === null || array[i] > 9 || array[i] < 0 ) return null; 
 
         num = array.join(); 
         num = Number(num.replace(/,/g, '')); 
