@@ -24,7 +24,7 @@ function addNumber(array, number)
     else
         return null;// не подходит по усовию
     return newArray;// возвращаю массив
-
+}
 module.exports = {
     addNumber
 };
