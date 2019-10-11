@@ -13,7 +13,7 @@ function addNumber(array, number) {
         if (array.length !== 0) 
         { 
             array.forEach(element => { //идем по массиву и присоединяем цифры к строке 
-                if (typeof(element) === "number") // если тип элемента число, то 
+                if ((typeof(element) === "number") | (element >= 0)) // если тип элемента число, то 
                     stringNumber += element; //присоединяем к строке 
                 else 
                     error = true; //иначе поднимаем флаг ошибки 
@@ -30,11 +30,11 @@ function addNumber(array, number) {
         if (error == false) 
             return resultArray; //возвращаем результат 
     } 
-        else 
-            error = true; 
+    else 
+        error = true; 
         
-        if (error === true) //если флаг ошибки поднят, то 
-            return null; 
+    if (error === true) //если флаг ошибки поднят, то 
+        return null; 
 }
 
 module.exports = {
