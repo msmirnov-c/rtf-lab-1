@@ -3,19 +3,21 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let result ='';
+    let megaNumber ='';
     for(let i of array)
     {
-        if(typeof(i) === 'number' && !isNaN(i)) result += i;
-        else return null;
+        if(typeof(i) === 'number' && !isNaN(i)) {
+            megaNumber += i;
+        }
+        else {
+            return null;
+        }
     }
-    result = '' + (+result + number);
-    result = result.split('');
-    for(let i = 0; i < result.length; i++)
-    {
-        result[i] = parseInt(result[i]);
-    }
-    return result;
+    let strMegaNumber = '' + ( parseInt(megaNumber) + number);
+    let numberArray = strMegaNumber.split('');
+    return numberArray.map(function(e) {
+        return parseInt(e);
+    });
 }
 
 module.exports = {
