@@ -5,15 +5,11 @@
 
 function addNumber(array, number) 
 { 
-    var num = 0; 
+    let num = 0; 
     let newArray = []; 
-    var typeOfElem = array.every(item => typeof item === 'number');//Проверка на тип данных 
     var integer = array.every(item => Number.isInteger(item)); 
-    if (typeOfElem === true && integer === true ) 
+    if (integer === true && array.every(item => item>0 && item<9 && item !== null) ) 
     { 
-        for(let i in array) 
-            if (array[i] === null || array[i] > 9 || array[i] < 0 ) return null; 
-
         num = array.join(); 
         num = Number(num.replace(/,/g, '')); 
         num += number; 
