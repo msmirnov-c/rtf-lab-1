@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     if (!Number.isInteger(number) || number < 0 ||
-        !Array.isArray(array) || array.length === 0 || (array.length > 0 && array[0] === 0) ||
+        !Array.isArray(array) || array.length === 0 || (array.length > 1 && array[0] === 0) ||
         !array.every((x) => Number.isInteger(x) && x <= 9 && x >= 0)) return null;
 
     const result = [];
