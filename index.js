@@ -3,7 +3,16 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    // Решение задачи
+    let sum = "";
+    for (let i = 0; i < array.length; i++) {
+        if ((array[i].toString().length === 1) && (typeof array[i] === 'number')) {
+            sum += array[i];
+        } else
+            return null;
+    }
+    sum = (Number(sum) + number).toString().split('');
+    let endresult = Array.from(sum, x => Number(x));
+    return endresult;
 }
 
 module.exports = {
