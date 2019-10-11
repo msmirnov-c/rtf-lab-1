@@ -1,12 +1,11 @@
 function addNumber(array, number) {
-    let stringOfNumbers = '';
-    if (array.some(item => ((typeof(item) != 'number') || (item != Math.trunc(item)) || (item < 0) || (item > 9)))) {
+    if (array.some(item => typeof(item) !== 'number' || item !== Math.trunc(item) || item < 0 || item > 9)) {
         return null;
     } else {
-        array.every(item => stringOfNumbers += item);
+        let StringOfNumbers = number;
+        StringOfNumbers += parseInt(array.reduce((total, current) => total + current.toString()));
+        return StringOfNumbers.toString(10).split('').map(item => parseInt(item));
     }
-    stringOfNumbers = (parseInt(stringOfNumbers) + number).toString(10);
-    return stringOfNumbers.split('').map(item => parseInt(item));
 }
 
 module.exports = {
