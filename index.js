@@ -14,12 +14,7 @@ if (array.length < 1)  return null;
 
 for (let i = 0; i < array.length; i++)
 {
-    if (typeof(array[i] !=='number'))  return null;    
-}
-
-for (let i = 0; i < array.length; i++)
-{
-    if (array[i]>9 || array[i]<0) return null;      
+    if (typeof(array[i] !=='number' && array[i] > 9 && array[i] < 0))  return null;    
 }
 
 for (let i = array.length; i >= 1; i--){
@@ -34,6 +29,7 @@ while (number1>0){
     arr.unshift(number1%10);
     number1= Math.floor(number1/10);
 }
+console.log(array.length)
 }
 
 module.exports = {
