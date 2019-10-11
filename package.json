@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha",
+    "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
