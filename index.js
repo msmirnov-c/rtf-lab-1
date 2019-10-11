@@ -4,18 +4,12 @@
 */
 function addNumber(array, number){
     let NewMass = [];
-    let NewNum = '';
-    for(var i = 0; i<array.lenght; i++)
-    {
-        if(Math.trunc(array[i]) === array[i] && typeof(array[i]) === 'number' && array[i]>=0 && typeof(array[i])<=9)
-            NewNum += array[i];
-    
-        else return null;
-    }
-    const LastNum = parseInt(NewNum) + number;
-    //NewMass = NewNum.split().map(Number); 
-    NewNum = NewNum.toString(10);
-    return NewMass.split().map(LastNum);
+    let NewNum = 0;
+    if(array.some(item => isNaN(item) || item === null || item > 9 || item < 0 || Math.trunc(item) != item || typeof(item) !== 'number')) return null;//Проверка на подходящие числа
+    NewNum = parseInt(array.join(''));
+    NewNum = NewNum + number;
+    NewMass = NewNum.toString(10).split().map(Number); 
+    return NewMass;
 }
 module.exports = {
     addNumber
