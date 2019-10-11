@@ -2,19 +2,20 @@
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
+
 function addNumber(array, number) {
-    var str = '';
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] === Math.trunc(array[i]) && typeof (number) === 'number' && typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
-            str += array[i];
-        }
-        else {
+    let str = '';
+    if (typeof number === 'number') {
+        if (array.some(i => i === Math.trunc(i) && typeof (i) === 'number' && i >= 0 && i <= 9)) {
+            array.ever(i => str += i);
+        } else {
             return null;
         }
+    } else {
+        return null;
     }
     str = parseInt(str) + number;
-    var result=str.toString(10).split('');
-    return result.map(Number);
+    return str.toString(10).split('').map(Number);
 }
 
 module.exports = {
