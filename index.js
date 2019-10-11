@@ -13,9 +13,9 @@ function addNumber(array, number) {
         if (array.length !== 0) 
         { 
             array.forEach(element => { //идем по массиву и присоединяем цифры к строке 
-                if ((typeof(element) === "number") | (element >= 0)) // если тип элемента число, то 
+                if (element >= 0) // если тип элемента число, то 
                     stringNumber += element; //присоединяем к строке 
-                else 
+                if (typeof(element) != "number") 
                     error = true; //иначе поднимаем флаг ошибки 
             }); 
         resultNumber = parseInt(stringNumber); //получаем число из строки 
