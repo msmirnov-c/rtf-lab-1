@@ -3,7 +3,30 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    // Решение задачи
+    let origStr = '';
+    let resultArr = [];
+    let resultNumber
+    let fail = false;
+    array.forEach(function(item, i, arr) {
+       if (typeof(item) === "number")
+       origStr += item;
+       else
+       fail = true;
+    });
+
+    if (fail === true){
+        return null;
+    }
+    else{
+        resultNumber = parseInt(origStr);
+        resultNumber += number;
+        resultStr = String(resultNumber);
+
+        for (let i = 0; i < resultStr.length; i++) {
+        resultArr.push(parseInt(resultStr[i]))
+    }
+    }
+    return resultArr;    
 }
 
 module.exports = {
