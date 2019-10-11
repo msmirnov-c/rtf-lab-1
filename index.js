@@ -7,7 +7,7 @@ function addNumber(array, number) {
     let str = '';
     if (typeof number === 'number') {
         if (array.some(i => i === Math.trunc(i) && typeof (i) === 'number' && i >= 0 && i <= 9)) {
-            array.ever(i => str += i);
+            array.every(i => str += i);
         } else {
             return null;
         }
