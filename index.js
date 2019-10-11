@@ -32,6 +32,6 @@ function addNumber(array, number) {
         return null;    
 }
 
-/*module.exports = {
+module.exports = {
     addNumber
-};*/
+};
