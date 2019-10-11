@@ -5,10 +5,8 @@
 function addNumber(array, number) {
     if (!array.every(item => typeof item === 'number'))
         return null;
-    let value = array.join();
-    value = Number(value.replace(/,/g, '')) + number;
-    let list = value.toString().split('').map(item => Number(item));
-    return list;
+    let value = Number(array.join('')) + number;
+    return value.toString().split('').map(item => Number(item));
 }
 
 module.exports = {
