@@ -10,8 +10,8 @@ function addNumber(array, number) {
     } else {
         array.every(i => str += i);
     }
-    str = parseInt(str) + number;
-    return str.toString(10).split('').map(Number);
+    str = (parseInt(str) + number).toString(10);
+    return str.split('').map(Number);
 }
 
 module.exports = {
