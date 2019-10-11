@@ -5,13 +5,18 @@
 function addNumber(array, number) {
     let error = false; //флаг ошибки
 
-    let stringNumber = ""; //строка в которую положим цифры
-    array.forEach(element => { //идем по массиву и присоединяем цифры к строке
-        if (typeof(element) === "number") // если тип элемента число, то
-            stringNumber += element; //присоединяем к строке
-        else 
-            error = true; //иначе поднимаем флаг ошибки
-    });
+    if (array != null)
+    {
+        let stringNumber = ""; //строка в которую положим цифры
+        array.forEach(element => { //идем по массиву и присоединяем цифры к строке
+            if (typeof(element) === "number") // если тип элемента число, то
+                stringNumber += element; //присоединяем к строке
+            else 
+                error = true; //иначе поднимаем флаг ошибки
+        });
+    }
+    else
+        error = true;
 
     if (error === false) //если флаг ошибки опущен, то
     {
