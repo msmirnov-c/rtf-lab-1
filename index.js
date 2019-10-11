@@ -14,12 +14,7 @@ function addNumber(array, number) {
             else 
                 error = true; //иначе поднимаем флаг ошибки
         });
-    }
-    else
-        error = true;
 
-    if (error === false) //если флаг ошибки опущен, то
-    {
         let resultNumber = parseInt(stringNumber); //получаем число из строки
         resultNumber += number; //прибавляем заданное число
         resultNumber = resultNumber.toString(); //возвращаемся к строке
@@ -27,12 +22,16 @@ function addNumber(array, number) {
         let resultArray = [] //массив результата
         for (let i = 0; i < resultNumber.length; i++) //идем по символам строки
             resultArray.push(parseInt(resultNumber[i])); //переводим символ строки в число и записываем в массив
-        return resultArray; //возвращаем результат
+        if (error == false)
+            return resultArray; //возвращаем результат
     }
     else
+        error = true;
+
+    if (error === true) //если флаг ошибки поднят, то
         return null;    
 }
 
-module.exports = {
+/*module.exports = {
     addNumber
-};
+};*/
