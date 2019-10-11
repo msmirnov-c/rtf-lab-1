@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     let error = false; //флаг ошибки
 
-    if (array != null)
+    if ((array != null) && (array.length !== 0))
     {
         let stringNumber = ""; //строка в которую положим цифры
         array.forEach(element => { //идем по массиву и присоединяем цифры к строке
@@ -34,4 +34,4 @@ function addNumber(array, number) {
 
 module.exports = {
     addNumber
-};
+}
