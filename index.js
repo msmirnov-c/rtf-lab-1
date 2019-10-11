@@ -9,18 +9,12 @@ function addNumber(array, number) {
     let resArr = [];
     if (array.length == 0 || ! Number.isInteger(number)|| number < 0) return null;
     for (let i = 0; i < array.length; i++) {
-        if (arr.indexOf(array[i]) == -1 ) return null;
+        if (arr.indexOf(array[i]) == -1) return null;
         res += (Math.pow(10, array.length - i - 1) * array[i]);
     }
     res += number;
-    while (res >= 0.1) {
-        resArr.unshift(res % 10);
-        res -= res % 10;
-        res /= 10;
-    }
-    return resArr;
+    return String(res).split('').map(item =>parseInt(item));
 }
-
 module.exports = {
     addNumber
 };
