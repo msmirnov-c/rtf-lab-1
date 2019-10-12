@@ -1,3 +1,4 @@
+
 function addNumber(array, number) {
     function check(value) {
         let result = true;
