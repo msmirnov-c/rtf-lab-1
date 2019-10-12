@@ -1,7 +1,7 @@
 function addNumber(array, number) {
-    function check(value, index, array) {
-        var result = true;
-        if (value < 0 || value > 9 || typeof value != "number") {
+    function check(value) {
+        let result = true;
+        if (value < 0 || value > 9 || typeof value !== 'number') {
             result = false;
         }
         return result;
@@ -9,7 +9,7 @@ function addNumber(array, number) {
     if (!array.every(check)) {
         return null;
     }
-    return (parseInt(array.join(''), 10) + number).toString().split('').map(Number)
+    return (parseInt(array.join(''), 10) + number).toString().split('').map(Number);
 }
 
 module.exports = {
