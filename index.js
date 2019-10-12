@@ -13,7 +13,6 @@ function addNumber(array, number) {
     });
     return out_nums == 'exit' ? null : Array.from((Number(out_nums) + number) + '').map(arr => Number(arr));
 }
-
 module.exports = {
     addNumber
 };
