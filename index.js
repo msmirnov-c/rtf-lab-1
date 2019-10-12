@@ -5,8 +5,14 @@
 function addNumber(array, number) {
     let origStr = '';
     let resultArr = [];
-    let resultNumber
+    let resultNumber;
     let fail = false;
+
+    if (array.length == 0){
+        resultArr.push(number);
+        return resultArr;
+    }
+    
     array.forEach(function(item, i, arr) {
        if (typeof(item) === "number")
        origStr += item;
@@ -26,7 +32,7 @@ function addNumber(array, number) {
         resultArr.push(parseInt(resultStr[i]))
     }
     }
-    return resultArr;    
+    return resultArr;   
 }
 
 module.exports = {
