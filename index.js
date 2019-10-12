@@ -1,4 +1,3 @@
-
 function addNumber(array, number) 
 {   
 
@@ -30,3 +29,6 @@ function addNumber(array, number)
     return array1;
 }
 
+module.exports = {
+    addNumber
+};
