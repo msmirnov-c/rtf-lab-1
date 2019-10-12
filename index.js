@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    // Решение задачи
+    let x=1;
 }
 
 module.exports = {
