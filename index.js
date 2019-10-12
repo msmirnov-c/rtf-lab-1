@@ -14,7 +14,7 @@ function addNumber(array, number) {
       stringFromArray += number; 
       returnedArray = split((toString(stringFromArray), ""));
       return returnedArray;  
-};
+}
 
 module.exports = {
     addNumber
