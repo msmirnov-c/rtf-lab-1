@@ -2,7 +2,6 @@
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
-
 function addNumber(array, number) {
     let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     let res = 0;
