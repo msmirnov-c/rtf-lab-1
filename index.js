@@ -9,13 +9,8 @@ function addNumber(array, number) {
     array.forEach(function (arr) {
         if (typeof arr == 'number');
         else { in_num = 'exit'; return null; }
-        if (arr == array_numbers[0] || arr == array_numbers[1] || arr == array_numbers[2] ||
-            arr == array_numbers[3] || arr == array_numbers[4] || arr == array_numbers[5] ||
-            arr == array_numbers[6] || arr == array_numbers[7] || arr == array_numbers[8] ||
-            arr == array_numbers[9]);
-        //я так сделал не потому шо я тупой, а потому шо мне лень было думатб
-        else { in_num = 'exit'; return null; }
-        in_num += arr;
+        if (arr < 0 || arr > 9) { in_num = 'exit'; return null; }
+        else in_num += arr;
     });
     return in_num == 'exit' ? null : Array.from((Number(in_num) + number) + '');
 }
