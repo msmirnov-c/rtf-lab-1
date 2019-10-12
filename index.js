@@ -7,6 +7,7 @@ function addNumber(array, number) {
     {
         return null;
     }
+
     let stringNumber = '';
     for (let i = 0; i < array.length; i++)
     {
@@ -23,11 +24,13 @@ function addNumber(array, number) {
     const intNumber = parseInt(stringNumber, 10) + number;
     const res = intNumber.toString();
     const arr = [];
+
     if (array.length === 0)
     {
         arr.push(number);
         return arr;
     }
+    
     for (let i = 0; i < res.length; i++)
     {
         arr.push(parseInt(res[i], 10));
