@@ -11,7 +11,7 @@ function addNumber(array, number) {
         if (arr < 0 || arr > 9) { out_nums = 'exit'; return null; }
         else out_nums += arr;
     });
-    return out_nums == 'exit' ? null : Array.from((Number(out_nums) + number) + '').map(arr => [Number(arr)]);
+    return out_nums == 'exit' ? null : Array.from((Number(out_nums) + number) + '').map(arr => Number(arr));
 }
 
 module.exports = {
