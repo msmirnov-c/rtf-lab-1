@@ -21,7 +21,7 @@ function addNumber(array, number) {
         }
     }
 
-    let intNumber = parseInt(stringNumber, 10) + number;
+    const intNumber = parseInt(stringNumber, 10) + number;
     const res = intNumber.toString();
     const arr = [];
     if (array.length === 0)
@@ -31,7 +31,9 @@ function addNumber(array, number) {
     }
 
     for (let i = 0; i < res.length; i++)
+    {
         arr.push(parseInt(res[i], 10));
+    }
 
     return arr;
 }
