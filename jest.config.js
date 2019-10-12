@@ -11,6 +11,15 @@ module.exports = {
     // The test environment that will be used for testing
     testEnvironment: 'node',
     reporters: ['default']
+    config.module.rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/,
+        options: {
+            fix: true
+        }
+    }
 
     // The glob patterns Jest uses to detect test files
     // testMatch: [
