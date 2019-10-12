@@ -4,14 +4,14 @@
 */
 function addNumber(array, number) {
     if (typeof array != 'object' && typeof number != 'number') return null;
-    let in_num = "";
+    let out_nums = "";
     array.forEach(function (arr) {
         if (typeof arr == 'number');
-        else { in_num = 'exit'; return null; }
-        if (arr < 0 || arr > 9) { in_num = 'exit'; return null; }
+        else { out_nums = 'exit'; return null; }
+        if (arr < 0 || arr > 9) { out_nums = 'exit'; return null; }
         else in_num += arr;
     });
-    return in_num == 'exit' ? null : Array.from((Number(in_num) + number) + '').map(arr => [Number(arr)]);
+    return out_nums == 'exit' ? null : Array.from((Number(out_nums) + number) + '').map(arr => [Number(arr)]);
 }
 
 module.exports = {
