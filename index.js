@@ -8,7 +8,7 @@ function addNumber(array, number) {
     
     var CisloMassiva = array.join('');
     var Sum = Number(CisloMassiva) + number;
-    var Sum = Sum.join('');
+    var Sum = String(Sum);
     return Sum.split('').map(item => Number(item));
 module.exports = {
     addNumber
