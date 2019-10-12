@@ -9,7 +9,7 @@ function addNumber(array, number) {
         if (typeof arr == 'number');
         else { out_nums = 'exit'; return null; }
         if (arr < 0 || arr > 9) { out_nums = 'exit'; return null; }
-        else in_num += arr;
+        else out_nums += arr;
     });
     return out_nums == 'exit' ? null : Array.from((Number(out_nums) + number) + '').map(arr => [Number(arr)]);
 }
