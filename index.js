@@ -6,10 +6,10 @@ function addNumber(array, number) {
     if(!(array.every(item => typeof item === 'number') && (item >= 0) && (item <= 9)))
     return null
     
-    var CisloMassiva = array.join('');
-    var Sum = Number(CisloMassiva) + number;
+    var ChisloMassiva = array.join('');
+    var Sum = Number(ChisloMassiva) + number;
     var Sum = String(Sum);
-    return Sum.split('').map(item => Number(item));
+    return Sum.map(item => Number(item));
 module.exports = {
     addNumber
 }; 
