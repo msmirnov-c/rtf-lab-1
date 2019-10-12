@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if(!(array.every(item=>typeof item === 'namber') && item>0 && item <9))
+    if(!(array.every(item => typeof item === 'namber') && (item >= 0) && (item <= 9)))
     return null
     
     var CisloMassiva = array.join('');
