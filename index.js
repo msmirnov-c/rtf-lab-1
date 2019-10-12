@@ -7,7 +7,6 @@ function addNumber(array, number) {
     {
         return null;
     }
-
     let stringNumber = '';
     for (let i = 0; i < array.length; i++)
     {
