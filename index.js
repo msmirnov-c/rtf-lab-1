@@ -29,7 +29,6 @@ function addNumber(array, number) {
         arr.push(number);
         return arr;
     }
-
     for (let i = 0; i < res.length; i++)
     {
         arr.push(parseInt(res[i], 10));
