@@ -14,7 +14,7 @@ function addNumber(array, number) {
     var integer2=prompt('enter the positive number');
     var integer4= parselnt(integer2,10);
     var integer3=integer1+integer4;
-    var Arr=integer3.tostring(10.split('').map(number);
+    var Arr=integer3.tostring(10).split('').map(number);
     console.log(Arr);
     
     
