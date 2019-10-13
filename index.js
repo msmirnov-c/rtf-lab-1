@@ -9,31 +9,32 @@ function addNumber(array, number) {
     let resultStr = '';
     let fail = false;
 
-    if (array.length === 0){
+    if (array.length === 0) {
         resultArr.push(number);
+
         return resultArr;
     }
-    
-    array.forEach(function(item, i, arr) {
-       if (typeof(item) === "number")
-       origStr += item;
-       else
-       fail = true;
+
+    array.forEach((item) => {
+        if (typeof (item) === 'number') origStr += item;
+        else fail = true;
     });
 
-    if (fail === true){
+    if (fail === true) {
         return null;
     }
-        resultNumber = parseInt(origStr);
-        resultNumber += number;
-        resultStr = String(resultNumber);
 
-        for (let i = 0; i < resultStr.length; i++) {
-        resultArr.push(parseInt(resultStr[i]))
+    resultNumber = parseInt(origStr, 10);
+    resultNumber += number;
+    resultStr = String(resultNumber);
+
+    for (let i = 0; i < resultStr.length; i++) {
+        resultArr.push(parseInt(resultStr[i], 10));
     }
-    return resultArr;   
+
+    return resultArr;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
