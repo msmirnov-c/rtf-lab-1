@@ -1,9 +1,8 @@
 function addNumber(array, number) {
     function check(value) {
-        let result = true;
-        if (value < 0 || value > 9 || typeof value !== 'number') { result = false; }
+        if (value < 0 || value > 9 || typeof value !== 'number') { return  false; }
         
-        return result;
+        return true;
     }
     if (!array.every(check)) { return null; }
     
