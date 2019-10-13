@@ -5,7 +5,7 @@
     function addNumber(array, number) {
         if (array.every(value => typeof value == 'number' || value > 0 || value < 9)|| number > 0){
             let string = parseInt(array.join('')) + number;
-            return string.split('').map(Number);
+            return string.toString().split('').map(Number);
         }
         else
         return null;
