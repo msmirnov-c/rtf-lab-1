@@ -1,5 +1,5 @@
 function addNumber(array, number) {
-  let n1=0;
+  let n1 = 0;
 
   if(number >= 0 && typeof(number)=="number"){
       let s = new String(number);
