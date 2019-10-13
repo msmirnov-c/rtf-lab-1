@@ -2,7 +2,7 @@ const {addNumber} = require('./index');
 
 const cases = [
     { array: [1, 2, 4], number: 1, expected: [1, 2, 5] },
-    { array: [null], number: 125, expected: null }
+    { array: [null], number: 125, expected: null },
 ];
 
 describe('add number', function () {
