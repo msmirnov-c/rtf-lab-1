@@ -4,7 +4,7 @@ function addNumber(array, number) {
     }
 
     let numbers = '';
-    numbers = number + parseInt(array.reduce((numbers, current) => numbers + current.toString()), 10);
+    numbers = number + parseInt(array.reduce((current) => numbers + current.toString()), 10);
 
     return numbers.toString(10).split('').map((item) => parseInt(item, 10));
 }
