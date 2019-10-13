@@ -5,11 +5,12 @@ function isNotANumber(item) {
 function isSomeArrayValueNaN(item) {
     return isNotANumber(item);
 }
-    
+
 function isNumberPositiveAndInteger(num) {
     if (!isNotANumber(num) && Number.isInteger(num) && (num >= 0)) {
         return true;
     }
+
     return false;
 }
 
@@ -17,24 +18,24 @@ function addNumber(array, number) {
     if (array.some(isSomeArrayValueNaN)) {
         return null;
     }
-    
+
     if (!isNumberPositiveAndInteger(number)) {
-        return;
+        return false;
     }
-    
+
     let firstTerm = '';
-    array.forEach( item => {
+    array.forEach((item) => {
         firstTerm += item.toString();
     });
-    
+
     const sum = parseInt(firstTerm, 10) + number; 
     const sumStr = sum.toString();
-    let outputArray = [];
-    
+    const outputArray = [];
+
     for (let i in sumStr) {
         outputArray.push(parseInt(sumStr[i], 10)); 
     }
-    
+
     return outputArray;
 }
 
