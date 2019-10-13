@@ -7,23 +7,22 @@
     if (!isCorrectArray(array)) {
         return null;
 
-        let resultStr = parseInt(array.toString().replace(/,/gm, ''));
+        let arr = parseInt(array.toString().replace(/,/gm, ''));
 
-        let resultArr = resiltStr + number;
+        let result = arr + number;
 
-        return Array.from(String(resultArr), Number);
+        return Array.from(String(result), Number);
     }
 
     function isCorrectArray(array) {
-        for (let i of array) {
-            if (Number(i) !== i || i > 9 || i < 0) {
+        for (let item of array) {
+            if (Number(item) !== item || item > 9 || item < 0) {
                 return false;
             }
         }
         return true;
     }
 }
-
 module.exports = {
     addNumber,
 };
