@@ -4,29 +4,17 @@
  */
 function addNumber(array, number) {
 // Решение задачи
+    const isCorrect = (element) => typeof element === 'number' && element >= 0 && element <= 9;
 
-    for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] === 'number') {
-            if (array[i] < 0 || array[i] > 9) {
-                return null;
-            }
-        } else {
-            return null;
-        }
-    }
-
-    if (number < 0 || !Number.isInteger(number)) {
+    if (!array.every(isCorrect) || number < 0 || !Number.isInteger(number)) {
         return null;
     }
 
     let arrayNumber = 0;
 
-    for (let i = 0; i < array.length - 1; i++) {
-        arrayNumber += array[i];
-        arrayNumber *= 10;
+    for (let i = 0; i < array.length; i++) {
+        arrayNumber += array[i] * Math.pow(10, array.length - i - 1);
     }
-
-    arrayNumber += array[array.length - 1];
 
     arrayNumber += number;
 
