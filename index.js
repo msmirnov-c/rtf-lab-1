@@ -3,16 +3,20 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (!Number.isInteger(number) || number < 0 ||
-        !Array.isArray(array) || array.length === 0 || (array.length > 1 && array[0] === 0) ||
-        !array.every((x) => Number.isInteger(x) && x <= 9 && x >= 0)) return null;
+    let isPositiveNumber = Number.isInteger(number) && number > 0;
+    let isNotEmptyArray = Array.isArray(array) && array.length > 0;
+    let isOnlyNumericalDigits = array.every((x) => Number.isInteger(x) && x <= 9 && x >= 0);
+
+    if (!isPositiveNumber || !isNotEmptyArray || !isOnlyNumericalDigits)
+        return null;
 
     const result = [];
 
-    for (let i = array.length - 1; i >= 0 || number > 0; i--){
-        number += i >= 0 ? array[i] : 0;
+    for (let i = 0; i < array.length || number > 0; i++){
+        if(i < array.length )
+            number += array[array.length - 1 - i];
         result.unshift(number % 10);
-        number = number / 10 | 0;
+        number = Math.trunc(number / 10);
     }
     return result;
 }
