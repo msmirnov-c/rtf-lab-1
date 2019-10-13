@@ -7,13 +7,15 @@ function addNumber(array, number) {
 
     let stringNumber = '';
     for (let i = 0; i < array.length; i++) {
-        if (array[i] > 0 && Number.isInteger(array[i])) 
+        if (array[i] > 0 && Number.isInteger(array[i])) {
             stringNumber += array[i];
-        else if (typeof (array[i]) === 'string') 
+        }
+        else if (typeof (array[i]) === 'string') {
             return null;
+        }
     }
 
-    const intNumber = parseInt(stringNumber) + number;
+    const intNumber = parseInt(stringNumber, 10) + number;
     const res = intNumber.toString();
     const arr = [];
     if (array.length == 0) {
@@ -23,8 +25,12 @@ function addNumber(array, number) {
     }
 
     for (let i = 0; i < res.length; i++) {
-        arr.push(parseInt(res[i]));
+        arr.push(parseInt(res[i]), 10);
     }
 
     return arr;
 }
+
+module.exports = {
+    addNumber
+};
