@@ -1,29 +1,22 @@
 ﻿function addNumber(array, number) {
-    // Решение задачи
-    if (number < 0 || !Number.isInteger(number)) {
-        return null;
-    }
-
-    function isCorrectArray(array) {
-        for (let item of array) {
-            if (Number(item) !== item || item > 9 || item < 0) {
-                return false;
-            }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < 0 || array[i] > 9 || parseInt(array[i], 10) == array[i]) {
+            return null;
         }
-        return true;
-    }
 
-    if (!isCorrectArray(array)) {
-        return null;
-    }
+        if (number < 0 || !Number.isInteger(number)) {
+            return null;
+        }
 
-        let arr = parseInt(array.toString().replace(/,/gm, 10));
+
+        let arr = parseInt(array.toString().replace(/,/gm, ''), 10);
 
         let result = arr + number;
 
         return Array.from(String(result), Number);
-        
+
+    }
 }
-module.exports = {
-    addNumber,
-};
+    module.exports = {
+        addNumber,
+    };
