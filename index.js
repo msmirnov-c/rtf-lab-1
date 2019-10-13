@@ -7,15 +7,15 @@ function addNumber(array, number) {
     let stringFromArray = "";
     let returnedArray = [];
     array.ForEach(function(item) {
-        if (item === 0 || item === 1 || item === 2 || item === 3 || 
-            item === 4 || item === 5 || item === 6 || item === 7 || 
-            item === 8 || item === 9 )
+        if (item === 0 || item === 1 || item === 2 || item === 3 
+            || item === 4 || item === 5 || item === 6 || item === 7 
+            || item === 8 || item === 9 )
         {
             stringFromArray += toString(item);
         }
         else return null;
     });
-    let finalNumber = parseInt(stringFromArray)+number;
+    const finalNumber = parseInt(stringFromArray)+number;
     for (var i = 0; i < toString(finalNumber).length; i++) {
         returnedArray.push(+finalNumber.charAt(i)); 
     } 
