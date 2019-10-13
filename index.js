@@ -9,13 +9,9 @@ function addNumber(array, number) {
             numLine += array[i];
             return numLine;
         }
-        else {
-            return null;
-        }
     });
     return (number + parseInt(numLine, 10)).toString(10).split('').map((item => parseInt(item, 10)));
 }
-console.log(addNumber([1,2,3],5)) 
 module.exports = {
     addNumber,
 };
