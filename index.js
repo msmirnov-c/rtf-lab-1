@@ -30,7 +30,7 @@ function addNumber(array, number) {
         arr.push(res[i]);
     }
 
-    const result = arr.map(item => parseInt(item, 10));
+    const result = arr.map((item) => parseInt(item, 10));
 
     return result;
 }
