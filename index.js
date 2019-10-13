@@ -9,6 +9,7 @@ function addNumber(array, number) {
         if (typeof array[i] === 'number') {
             megaNumber += i;
         }
+
         else {
             return null;
         }
@@ -17,9 +18,7 @@ function addNumber(array, number) {
     const strMegaNumber = (parseInt(megaNumber, 10) + number).toString();
     const numberArray = strMegaNumber.split('');
 
-    return numberArray.map(function foo(e) {
-        return parseInt(e, 10);
-    });
+    return numberArray.map(e => parseInt(e, 10));
 }
 
 module.exports = {
