@@ -8,7 +8,7 @@ function addNumber(array, number) {
     && element < 9
     && Number.isInteger(element)) && number >= 0 && Number.isInteger(number)) return null;
 
-    resultNumber = parseInt(array.join('')), 10);
+    resultNumber = parseInt(array.join(''), 10);
 
     resultNumber += number;
 
