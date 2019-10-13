@@ -1,25 +1,22 @@
 function addNumber(array, number) {
-    const array1 = [];
-    let transnum = '';
-
+    const finalArr = [];
+    let translatedNum = '';
+    
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9 && array[i] === Math.trunc(array[i])) {
-            transnum += array[i];
-        } else {
+        if (!(typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9 && array[i] === Math.trunc(array[i]))) {
             return null;
         }
     }
 
-    transnum = (+transnum + number).toString(10);
+    let translatedArr = array.reduce((result, item) => result + item.toString());
+    translatedNum = (parseInt(translatedArr) + number).toString();
 
-    for (let i = 0; i < transnum.length; i++) {
-        array1[i] = +transnum[i];
+    for (let i = 0; i < translatedNum.length; i++) {
+        finalArr[i] = parseInt(translatedNum[i]);
     }
 
-    return array1;
+    return finalArr;
 }
-
-addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
 
 module.exports = {
     addNumber,
