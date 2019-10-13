@@ -5,24 +5,23 @@
 */
 function addNumber(array, number) {
     let counter = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) != typeof (+array[i]))
+    for (let i = 0; i < array.length; i++)
+        if (typeof (array[i]) !== typeof (+array[i]))
             counter++;
-    }
-    if (counter == 0) {
-        let mas = [];
+    if (counter === 0) {
+        const finalArray = [];
         let value = array.join();
         value = Number(value.replace(/,/g, ''));
         value += number;
         for (let i = 0; i < value.toString().length; i++)
-            mas.push(+value.toString().charAt(i));
-        return(mas);
+            finalArray.push(+value.toString().charAt(i));
+        return (finalArray);
     }
     else
-        return(null);
+        return (null);
 }
 
 module.exports = {
     addNumber
 };
-//списано//
+/**списано**/
