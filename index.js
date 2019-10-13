@@ -1,8 +1,7 @@
 function addNumber(array, number) {
     if (!(array.every(item => typeof item ===  'number' )));
         return null
-        let cislomassiva =  array.join('') 
-        let sum = String((Number(cislomassiva) + number)).split('').map(item => Number(item));
+        let sum = String((Number(array.join('')) + number)).split('').map(item => Number(item));
     return sum 
     }
 
