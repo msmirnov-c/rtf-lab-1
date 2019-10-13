@@ -3,7 +3,7 @@ function addNumber(array, number) {
     let transnum = '';
 
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9 && array[i] === Math.trunc(array[i])) {
+        if (typeof (array[i]) == 'number' && array[i] >= 0 && array[i] <= 9 && array[i] == Math.trunc(array[i])) {
             transnum += array[i];
         } else {
             return null;
@@ -18,3 +18,9 @@ function addNumber(array, number) {
 
     return array1;
 }
+
+addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
+
+module.exports = {
+    addNumber
+};
