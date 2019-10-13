@@ -10,7 +10,7 @@ function addNumber(array, number) {
             && array[i] >= 0
             && number >= 0
             && Number.isInteger(number)
-            && array.length>0) {
+            && array.length > 0) {
             resultNumber += array[i] * (10 ** array.length - i - 1);
         } else return null;
     }
