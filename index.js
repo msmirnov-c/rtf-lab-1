@@ -6,13 +6,13 @@
 
     if (!isCorrectArray(array)) {
         return null;
-
-        let arr = parseInt(array.toString().replace(/,/gm, ''));
-
-        let result = arr + number;
-
-        return Array.from(String(result), Number);
     }
+    let arr = parseInt(array.toString().replace(/,/gm, ''));
+
+    let result = arr + number;
+
+    return Array.from(String(result), Number);
+
 
     function isCorrectArray(array) {
         for (let item of array) {
