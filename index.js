@@ -8,11 +8,13 @@ function addNumber(array, number) {
         if (value < 0 || value > 9 || typeof value !== 'number') {
             result = false;
         }
+        
         return result;
     }
     if (!array.every(check)) {
         return null;
     }
+    
     return (parseInt(array.join(''), 10) + number).toString().split('').map(Number);
 }
 
