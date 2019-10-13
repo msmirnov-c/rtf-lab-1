@@ -6,9 +6,9 @@ function addNumber(array, number) {
     // Решение задачи
     if (array.every((elem) => Number.isInteger(elem) && elem >= 0 && elem <= 9)) {
         let result = '';
-        for (let elem of array) {
-            result += elem;
-        }
+        array.reduce(function (sum, current) {
+            return result = sum + current;
+        }, []);
         result = +result;
         result += number;
 
