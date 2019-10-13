@@ -13,7 +13,7 @@ function addNumber(array, number) {
 
         const result = (stringArray + number).toString();
 
-        return result.split('').map();
+        return result.split('').map(Number);
     }
 }
 
