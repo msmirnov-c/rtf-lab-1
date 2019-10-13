@@ -9,7 +9,7 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] > 0 && Number.isInteger(array[i])) {
             stringNumber += array[i];
-        } else if (typeof (array[i]) === 'string' && Number.isInteger(array[i]) || array[i] === null) {
+        } else if (typeof (array[i]) === 'string' || Number.isInteger(array[i]) || array[i] === null) {
             return null;
         }
     }
