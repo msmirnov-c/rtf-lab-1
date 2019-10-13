@@ -4,16 +4,11 @@
 */
 function addNumber(array, number) {
     let resultNumber = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (!Number.isInteger(array[i])
-            || !Array.isArray(array)
-            || array[i] > 9
-            || array[i] < 0
-            || number < 0
-            || !Number.isInteger(number)) return null;
-    }
+    if (array.prototype.every(element => element >= 0
+    && element < 9
+    && Number.isInteger(element)) && number >= 0 && Number.isInteger(number)) return null;
 
-    resultNumber = parseInt(array.toString().replace(/,/gi, ''), 10);
+    resultNumber = parseInt(array.join('')), 10);
 
     resultNumber += number;
 
