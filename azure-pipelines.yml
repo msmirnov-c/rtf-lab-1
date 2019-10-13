@@ -17,8 +17,12 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm install
+  displayName: 'Install dependencys#1'
+
+- script: |
     cd lab-tests/01 && npm install
-  displayName: 'Install dependencys'
+  displayName: 'Install dependencys#2'
 
 - script: |
     cd lab-tests/01 && cp -f ../../index.js ./
