@@ -10,9 +10,7 @@ function addNumber(array, number) {
             return numLine.push;
         }
     });
-    return (number + parseInt(numLine, 10)).toString(10).split('').map((item) => {
-        return parseInt(item, 10);
-    });
+    return (number + parseInt(numLine, 10)).toString(10).split('').map((item) => parseInt(item, 10));
 }
 module.exports = {
     addNumber,
