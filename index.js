@@ -7,7 +7,6 @@ function check(value) {
         if (value < 0 || value > 9 || typeof value !== 'number') {
             result = false;
         }
-        
         return result;
     }
 
