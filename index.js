@@ -7,7 +7,7 @@ function addNumber(array, number) {
     array.forEach(function callback(_item, i) {
         if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number')) {
             numLine += array[i];
-            return numLine;
+            return numLine.push;
         }
     });
     return (number + parseInt(numLine, 10)).toString(10).split('').map((item => parseInt(item, 10)));
