@@ -5,18 +5,19 @@
 function addNumber(array, number) {
     if (typeof array !== 'object' && typeof number !== 'number') return null;
 
-    let outNums = "";
-    array.forEach(function (arr) {
-        if ((arr < 0 || arr > 9) || typeof arr !== 'number') {
+    let outNums = '';
+    for (let i = 0; i < array.length; i++) {
+        if ((array[i] < 0 || array[i] > 9) || typeof array[i] !== 'number') {
             outNums = 'exit';
+
             return null;
         }
 
-        else outNums += arr;
+        else outNums += array[i];
 
-    });
+    }
 
-    return outNums == 'exit' ? null : Array.from((Number(outNums) + number) + '').map(arr => Number(arr));
+    return outNums === 'exit' ? null : Array.from((Number(outNums) + number) + '').map((arr) => Number(arr));
 }
 
 module.exports = {
