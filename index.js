@@ -1,10 +1,11 @@
 /**
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
-*/
+ */
 function addNumber(array, number) {
     // Решение задачи
-    const newArray = [];
+    let newArray;
+    newArray = [];
     let helper = 0;
     let helperNum = 0;
     for (let i = 0; i < array.length; i++) {
@@ -16,7 +17,10 @@ function addNumber(array, number) {
                     return null;
                 }
             } else {
-                return null; } } }
+                return null;
+            }
+        }
+    }
     if (helper === array.length) {
         for (let i = 0; i < array.length; i++) {
             helperNum = helperNum + array[i] * Math.pow(10, i);
@@ -24,7 +28,7 @@ function addNumber(array, number) {
     }
     helperNum += number;
     let x = helperNum;
-    let helperCount;
+    let helperCount = 0;
     while (x > 0) {
         x /= 10;
         helperCount++;
@@ -36,6 +40,7 @@ function addNumber(array, number) {
     return newArray;
     // Решение задачи
 }
+
 module.exports = {
     addNumber
 };
