@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     const isPositiveNumber = Number.isInteger(number) && number > 0;
     const isNotEmptyArray = Array.isArray(array) && array.length > 0;
-    const isOnlyNumericalDigits = array.every(x => Number.isInteger(x) && x <= 9 && x >= 0);
+    const isOnlyNumericalDigits = array.every((x) => Number.isInteger(x) && x <= 9 && x >= 0);
 
     if (!isPositiveNumber || !isNotEmptyArray || !isOnlyNumericalDigits) {
         return null;
