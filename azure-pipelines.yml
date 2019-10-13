@@ -5,25 +5,29 @@
 
 trigger: none
 pr:
-  - master  
+  - master
 
 steps:
-- script: |
-     git clone $(git_url)
-  displayName: 'Cloning Tests'
-- task: NodeTool@0
-  inputs:
-   versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  - script: |
+      git clone $(git_url)
+    displayName: 'Cloning Tests'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    cd lab-tests/01 && npm install
-  displayName: 'Install dependencys'
+  - script: |
+      npm install
+    displayName: 'Install dependencys#1'
 
-- script: |
-    cd lab-tests/01 && cp -f ../../index.js ./
-  displayName: 'Copy task'
+  - script: |
+      cd lab-tests/01 && npm install
+    displayName: 'Install dependencys#2'
 
-- script: |
-    cd lab-tests/01 && npm run lint && npm run test
-  displayName: 'Run tests'
+  - script: |
+      cd lab-tests/01 && cp -f ../../index.js ./
+    displayName: 'Copy task'
+
+  - script: |
+      cd lab-tests/01 && npm run lint && npm run test
+    displayName: 'Run tests'
