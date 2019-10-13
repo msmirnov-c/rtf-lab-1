@@ -5,9 +5,7 @@
 function addNumber(array, number) {
     // Решение задачи
     if (array.every((elem) => Number.isInteger(elem) && elem >= 0 && elem <= 9)) {
-        let result = array.reduce(function bruteforce(sum, current) {
-            return sum + current;
-        }, '');
+        let result = array.reduce((stringNum, current) => stringNum + current, '');
         result = +result;
         result += number;
 
