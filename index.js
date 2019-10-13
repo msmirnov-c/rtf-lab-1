@@ -8,7 +8,7 @@ function addNumber(array, number) {
         if (Number.isInteger(array[i])
             && array[i] <= 9
             && array[i] >= 0
-            && number>0
+            && number > 0
             && Number.isInteger(number)) {
             resultNumber += array[i] * (10 ** array.length - i - 1);
         } else return null;
