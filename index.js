@@ -15,8 +15,8 @@ function addNumber(array, number) {
         let arr = parseInt(array.toString().replace(/,/gm, ''), 10);
 
         let result = arr + number;
-
-        return Array.from(String(result), Number);
+        let resultArr = Array.from(String(result), Number);
+        return resultArr;
     }
 }
 
