@@ -5,7 +5,7 @@
 function addNumber(array, number) 
 {
     let numLine = '';
-    array.forEach(function(_item, i, array) {
+    array.forEach(function addNumber(_item, i) {
         if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof(array[i]) === 'number')) {
             numLine += array[i];
         }
@@ -16,6 +16,6 @@ function addNumber(array, number)
     return (number + parseInt(numLine)).toString(10).split('').map(item => parseInt(item));
 }
 
-module.exports = {
-    addNumber
+module.exports = { 
+    addNumber 
 };
