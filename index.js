@@ -6,7 +6,9 @@ function addNumber(array, number) {
     // Решение задачи
     if (array.every((elem) => Number.isInteger(elem) && elem >= 0 && elem <= 9)) {
         let result = '';
-        array.forEach((elem) => result += elem);
+        for (let elem of array) {
+            result += elem;
+        }
         result = +result;
         result += number;
 
@@ -18,5 +20,5 @@ function addNumber(array, number) {
 
 
 module.exports = {
-    addNumber
+    addNumber,
 };
