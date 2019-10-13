@@ -9,15 +9,13 @@ function addNumber(array, number) {
             return null;
         }
     }
-    
-    let finalArray = [];
+    const finalArray = [];
     let value = array.join();
     value = Number(value.replace(/,/g, ''));
     value += number;
     for (let i = 0; i < value.toString().length; i++) {
         finalArray.push(+value.toString().charAt(i));
     }
-    
     return finalArray;
 }
 
