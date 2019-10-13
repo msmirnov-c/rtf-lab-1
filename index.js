@@ -7,7 +7,7 @@
             return null;
         }
         let string = parseInt(array.join('')) + number;
-        return string.split('');
+        return string.split('').map(Number);
     }
 module.exports = {
     addNumber
