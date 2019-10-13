@@ -1,8 +1,4 @@
-﻿﻿/**
- * @param array – массив элементов. Например, [1, 8, 3]
- * @param number – число, которое нужно прибавить к числу, полученному из массива
- */
-function addNumber(array, number) {
+﻿function addNumber(array, number) {
     // Решение задачи
     if (number < 0 || !Number.isInteger(number)) {
         return null;
@@ -11,16 +7,16 @@ function addNumber(array, number) {
     if (!isCorrectArray(array)) {
         return null;
 
-        let a = parseInt(array.toString().replace(/,/gm, ''));
+        let resultStr = parseInt(array.toString().replace(/,/gm, ''));
 
-        let result = arrr + number;
+        let resultArr = resiltStr + number;
 
-        return Array.from(String(result), Number);
+        return Array.from(String(resultArr), Number);
     }
 
     function isCorrectArray(array) {
-        for (let item of array) {
-            if (Number(item) !== item || item > 9 || item < 0) {
+        for (let i of array) {
+            if (Number(i) !== i || i > 9 || i < 0) {
                 return false;
             }
         }
@@ -29,5 +25,5 @@ function addNumber(array, number) {
 }
 
 module.exports = {
-        addNumber,
+    addNumber,
 };
