@@ -9,16 +9,14 @@ function addNumber(array, number) {
 
             return null;
         }
-        else {
-            numLine += array[i];
+        numLine += array[i];
 
-            return numLine.push;
+        return numLine.push;
         }
-    });
+    );
 
     return (number + parseInt(numLine, 10)).toString(10).split('').map((item) => parseInt(item, 10));
 }
-console.log(addNumber([1,2,3],5)) 
 module.exports = {
     addNumber,
 };
