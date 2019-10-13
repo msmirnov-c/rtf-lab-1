@@ -5,7 +5,7 @@
 
 function addNumber(array, number) {
     return (number !== 'string')
-            && array.every(item => (typeof (item) === 'number'
+            && array.every((item) => (typeof (item) === 'number'
             && (item >= 0)
             && (item <= 9))) ? String(Number(array.join('')) + number).split('') : null;
 }
