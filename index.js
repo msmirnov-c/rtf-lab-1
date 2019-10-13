@@ -23,4 +23,4 @@ addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
 
 module.exports = {
     addNumber,
-} ;
+};
