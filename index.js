@@ -11,6 +11,7 @@ function addNumber(array, number) {
     });
 
     if (!(array.every((item) => item === Math.ceil(item) && item >= 0 && item <= 9 && (typeof (item) === 'number') && (typeof (number) === 'number')))) {
+
         return null;
     };
 
