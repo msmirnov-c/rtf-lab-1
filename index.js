@@ -7,7 +7,7 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if (Number.isInteger(array[i]) && array[i] <= 9 && array[i] >= 0) {
             resultNumber += array[i] * (10 ** array.length - i - 1);
-        }else return null;
+        } else return null;
     }
 
     resultNumber += number;
