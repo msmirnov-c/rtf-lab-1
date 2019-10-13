@@ -12,7 +12,7 @@ function addNumber(array, number) {
         else out_nums += arr;
     });
     return out_nums == 'exit' ? null : Array.from((Number(out_nums) + number) + '').map(arr => Number(arr));
-    /а щас пройдет?
+    //а щас пройдет?
 }
 module.exports = {
     addNumber
