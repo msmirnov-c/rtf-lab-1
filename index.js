@@ -13,13 +13,15 @@ function addNumber(array, number) {
             return null;
         }
     }
-    const strMegaNumber = '' + (parseInt(megaNumber, 10) + number);
+
+    const strMegaNumber = (parseInt(megaNumber, 10) + number).toString();
     const numberArray = strMegaNumber.split('');
+
     return numberArray.map(function foo(e) {
         return parseInt(e, 10);
     });
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
