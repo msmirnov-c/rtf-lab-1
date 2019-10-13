@@ -8,10 +8,7 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if (Number.isInteger(array[i]) && array[i].toString().length === 1) {
             strArray += array[i].toString();
-        }
-        else {
-            return null;
-        }
+        } else return null;
     }
 
     return (Number(strArray) + number).toString().split('').map((value) => parseInt(value, 10));
