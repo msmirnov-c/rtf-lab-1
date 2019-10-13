@@ -9,10 +9,10 @@ function addNumber(array, number) {
         result = +result;
         result += number;
 
-        return result.toString().split('');
+        return result.toString().split('').map((elem) => +elem);
     }
 
-    return 'null';
+    return null;
 }
 
 module.exports = {
