@@ -7,7 +7,7 @@ function addNumber(array, number){
         return null;
     }
 
-    for(let item of array){
+    for(const item of array){
         if (Number(item) !== item || item > 9 || item < 0)
             return null;
     }
