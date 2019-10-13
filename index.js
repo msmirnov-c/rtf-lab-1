@@ -11,9 +11,7 @@ function addNumber(array, number) {
         stringFromArray += item;
         else return null;
     });
-    parseInt(stringFromArray);
-    stringFromArray += number;
-    sNumber = stringFromArray.toString();
+    var sNumber = parseInt(stringFromArray)+number;
     for (var i = 0; i < stringFromArray.length; i++) {
         returnedArray.push(+sNumber.charAt(i)); 
     } 
