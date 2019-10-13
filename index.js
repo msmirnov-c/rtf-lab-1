@@ -12,16 +12,14 @@ function addNumber(array, number) {
     }
 
     const result = [];
-
-    for (let i = 0; i < array.length || number > 0; i++) {
+    let n = number;
+    for (let i = 0; i < array.length || n > 0; i++) {
         if (i < array.length) {
-            // eslint-disable-next-line no-param-reassign
-            number += array[array.length - 1 - i];
+            n += array[array.length - 1 - i];
         }
 
-        result.unshift(number % 10);
-        // eslint-disable-next-line no-param-reassign
-        number = Math.trunc(number / 10);
+        result.unshift(n % 10);
+        n = Math.trunc(n / 10);
     }
 
     return result;
