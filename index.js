@@ -5,7 +5,7 @@ function addNumber(array, number) {
 
     NewNum = parseInt(array.join(''), 10);
     NewNum += number;
-    NewMass = NewNum.toString(10).split().map(Number);
+    NewMass = NewNum.toString(10).split("").map(Number);
 
     return NewMass;
 }
