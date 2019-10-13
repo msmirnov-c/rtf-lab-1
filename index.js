@@ -6,7 +6,7 @@ function addNumber(array, number) {
     // Решение задачи
     let stringArray;
     for (let i = 0; i < array.lenght; i++) {
-        if (typeof (array[i] === 'number' && array[i] >= 0 && array[i] <= 9)) {
+        if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             stringArray += array[i].toString();
         } else {
             return null;
