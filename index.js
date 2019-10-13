@@ -10,7 +10,7 @@ function addNumber(array, number) {
     let arrayNumber = 0;
     arrayNumber = Number(array.join('')) + number;
 
-    return arrayNumber.toString().split('');
+    return arrayNumber.toString().split('').map(Number);
 }
 
 module.exports = {
