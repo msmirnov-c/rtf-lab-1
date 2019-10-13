@@ -8,7 +8,7 @@ module.exports = {
             { blankLine: 'always', prev: ['if', 'for', 'while', 'switch'], next: '*' },
         ],
         camelcase: ['error'],
-        'linebreak-style': 'off',
+        'linebreak-style': ['error', 'windows'],
         'no-plusplus': ['off'],
         'no-console': ['error'],
         'arrow-parens': ['error', 'as-needed']
