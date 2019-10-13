@@ -6,9 +6,7 @@ function addNumber(array, number) {
 // Решение задачи
 
     for (let i = 0; i < array.length; i++) {
-
         if (typeof array[i] === 'number') {
-
             if (array[i] < 0 || array[i] > 9) {
                 return null;
             }
