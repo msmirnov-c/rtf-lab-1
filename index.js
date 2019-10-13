@@ -5,6 +5,7 @@ function addNumber(array, number) {
         let StringOfNumbers = number;
         StringOfNumbers += parseInt(array.reduce((total, current) => total + current.toString()));
         return StringOfNumbers.toString(10).split('').map(item => parseInt(item));
+        
     }
 }
 
