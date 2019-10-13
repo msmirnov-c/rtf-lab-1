@@ -8,8 +8,9 @@ function addNumber(array, number){
     }
     for(const item of array)
     {
-        if (Number(item) !== item  item > 9 || item < 0)
-        return null;
+        if (Number(item) !== item || item > 9 || item < 0) {
+            return null;
+        }
     }
     const arr = parseInt(array.toString().replace(/,/gm, '')), result = arr + number;
     return Array.from(String(result), Number);
