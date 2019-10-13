@@ -10,10 +10,12 @@ function addNumber(array, number) {
         }
         else return null;
     }
+
     resultNumber += number;
+
     return resultNumber.toString().split('').map((i) => Number(i));
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
