@@ -4,13 +4,13 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    let New_Array = [];
+    const newArray = [];
     let helper = 0;
-    let Helper_Num = 0;
-    for (let i = 0; i < array.length; i++){
-        for (let j = 1; j < 10; j++){
-            if (array[i] === j){
-                if (number > 0 && Number.isInteger(number) === true){
+    let helperNum = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 1; j < 10; j++) {
+            if (array[i] === j) {
+                if (number > 0 && Number.isInteger(number) === true) {
                     helper++;
                 }
                 else
@@ -20,24 +20,23 @@ function addNumber(array, number) {
                 return null;
         }
     }
-    if (helper === array.length){
-        for (let i = 0; i < array.length; i++){
-            Helper_Num = Helper_Num + array[i] * Math.pow(10,i);
+    if (helper === array.length) {
+        for (let i = 0; i < array.length; i++) {
+            helperNum = helperNum + array[i] * Math.pow(10, i);
         }
     }
-    Helper_Num += number;
-    let x = Helper_Num;
-    let Helper_Count;
+    helperNum += number;
+    let x = helperNum;
+    let helperCount;
     while (x > 0) {
         x /= 10;
-        Helper_Count++;
+        helperCount++;
     }
-    for (let i = Helper_Count - 1; i >= 0; i--)
-    {
-        Helper_Num = Helper_Num % 10;
-        New_Array[i] = Helper_Num;
+    for (let i = helperCount - 1; i >= 0; i--) {
+        helperNum = helperNum % 10;
+        newArray[i] = helperNum;
     }
-    return New_Array;
+    return newArray;
     // Решение задачи
 }
 
