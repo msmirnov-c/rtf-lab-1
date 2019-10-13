@@ -1,6 +1,6 @@
-/** 
-*@param array – массив элементов. Например, [1, 8, 3] 
-*@param number – число, которое нужно прибавить к числу, полученному из массива 
+/**
+*@param array – массив элементов. Например, [1, 8, 3]
+*@param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
     let numLine = '';
@@ -11,10 +11,9 @@ function addNumber(array, number) {
         else {
             return null;
         }
-    });
-    
-    return (number + parseInt(numLine, 10)).toString(10).split('').map(item => parseInt(item));
-}
+    });   
+    return (number + parseInt(numLine, 10)).toString(10).split('').map(item => parseInt(item, 10));
+} 
 module.exports = { 
     addNumber 
 };
