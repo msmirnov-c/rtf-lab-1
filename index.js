@@ -15,7 +15,7 @@ function addNumber(array, number) {
         num += array[i];
     }
 
-    let number1 = parseInt(num);
+    let number1 = parseInt(num, number);
     number1 = number + number1;
     const arr = [];
     while (number1 > 0) {
@@ -27,5 +27,5 @@ function addNumber(array, number) {
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
