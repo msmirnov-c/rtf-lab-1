@@ -6,9 +6,9 @@ function addNumber(array, number) {
     // Решение задачи
     if (array.every((item) => Number.isInteger(item))) {
         const str = array.join('');
-        const sum = +str + number + '';
-        let arrOfStr = sum.split('');
-        let arrOfNumb = arrOfStr.map((item) => parseInt(item));
+        const sum = +str + number;
+        const arrOfStr = sum.toString().split('');
+        const arrOfNumb = arrOfStr.map((item) => parseInt(item));
         return arrOfNumb;
     }
     return null;
