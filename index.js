@@ -5,10 +5,10 @@
 function addNumber(array, number) {
     let flag = false;
     let str = '';
-    array.forEach(element => {
+    array.forEach((element) => {
         if (!Number.isInteger(element)) flag = true;
     });
-    array.forEach(element => {
+    array.forEach((element) => {
         if (element >= 0 && element <= 9 && Number.isInteger(element)) {
             str += element;
         }
