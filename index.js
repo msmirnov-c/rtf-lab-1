@@ -9,7 +9,7 @@ function addNumber(array, number) {
             result = false;
         }
         return result;
-    };
+    }
     if (!array.every(check)) {
         return null;
     }
