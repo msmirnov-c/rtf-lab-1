@@ -35,7 +35,6 @@ function addNumber(array, number) {
     return newArray;
     // Решение задачи
 }
-
 module.exports = {
     addNumber
 };
