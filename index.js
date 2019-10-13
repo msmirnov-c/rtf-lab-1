@@ -12,7 +12,7 @@ function addNumber(array, number){
             return null;
         }
     }
-    let arr = parseInt(array.toString().replace(/,/gm, ''),10), result = arr + number;
+    const arr = parseInt(array.toString().replace(/,/gm, '')), result = arr + number;
     return Array.from(String(result), Number);
 }
 
