@@ -25,6 +25,7 @@ function addNumber(array, number) {
         arrayNumber += array[i];
         arrayNumber *= 10;
     }
+
     arrayNumber += array[array.length - 1];
 
     arrayNumber += number;
