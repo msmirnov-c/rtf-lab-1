@@ -8,11 +8,11 @@ function addNumber(array, number) {
         }
     }
 
-    let translatedArr = array.reduce((result, item) => result + item.toString());
-    translatedNum = (parseInt(translatedArr) + number).toString();
+    const translatedArr = array.reduce((result, item) => result + item.toString());
+    translatedNum = (parseInt(translatedArr, 10) + number).toString();
 
     for (let i = 0; i < translatedNum.length; i++) {
-        finalArr[i] = parseInt(translatedNum[i]);
+        finalArr[i] = parseInt(translatedNum[i], 10);
     }
 
     return finalArr;
