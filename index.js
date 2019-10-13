@@ -3,11 +3,11 @@ function addNumber(array, number) {
         return null
         let CisloMassiva =  array.join(''); 
         let Sum =  Number(CisloMassiva) + number;
-        let Sum =  String(Sum); 
-        let Sum =  Sum.split(''); 
-        let Sum =  Sum.map(item => Number(item));
+        let Sum =  String(Sum)
+        let Sum =  Sum.split('').map(item => Number(item));
     return Sum 
     
-    module.exports = {};
+    module.exports = {
     addNumber
+    }
 };
