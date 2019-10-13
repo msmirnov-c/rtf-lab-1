@@ -6,6 +6,7 @@ function addNumber(array, number) {
     let resultNumber = 0;
     for (let i = 0; i < array.length; i++) {
         if (Number.isInteger(array[i])
+            && Array.isArray(array)
             && array[i] <= 9
             && array[i] >= 0
             && number >= 0
