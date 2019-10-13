@@ -5,9 +5,9 @@ function addNumber(array, number) {
     let CisloMassiva = array.join('');
     let Sum = Number(CisloMassiva) + number;
     let Sum1 = String(Sum);
-    let Sum1 = Sum.split('');
-    let Sum1 = Sum1.map(item => Number(item));
-    return Sum1
+    let Sum2 = Sum1.split('');
+    let Sum3 = Sum2.map(item => Number(item));
+    return Sum3
 
 module.exports = {
     addNumber
