@@ -28,9 +28,9 @@ function addNumber(array, number) {
 
     arrayNumber += array[array.length - 1];
 
-    arrayNumber += number;
-
-    return arrayNumber.toString().split('');
+    arrayNumber = (parseInt(arrayNumber) + number).toString(10);
+    
+    return arrayNumber.split('').map(item => parseInt(item));
 }
 
 module.exports = {
