@@ -4,8 +4,7 @@
  */
 function addNumber(array, number) {
     // Решение задачи
-    if (number < 0 || !Number.isInteger(number))
-    {
+    if (number < 0 || !Number.isInteger(number)) {
         return null;
     }
     if (!isCorrectArray(array))
@@ -15,9 +14,8 @@ function addNumber(array, number) {
     return Array.from(String(result), Number);
 }
 
-function isCorrectArray(array){
-    for(let item of array)
-    {
+function isCorrectArray(array) {
+    for (let item of array) {
         if (Number(item) !== item || item > 9 || item < 0)
             return false;
     }
