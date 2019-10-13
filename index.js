@@ -6,6 +6,7 @@
 function addNumber(array, number) {
     let num = '';
     if (array.length < 1) return null;
+    
     for (let i = 0; i < array.length; i++) {
         if (typeof (array[i]) !== 'number' && array[i] > 9 && array[i] < 0) return null;
     }
@@ -21,7 +22,6 @@ function addNumber(array, number) {
         arr.unshift(number1 % 10);
         number1 = Math.floor(number1 / 10);
     }
-    
     return arr;
 }
 
