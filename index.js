@@ -11,7 +11,7 @@ function addNumber(array, number) {
             return null;
         }
 
-        const result = (Number(stringArray) + number).toString();
+        let result = (stringArray + number).toString();
 
         return result.split('').map(Number);
     }
