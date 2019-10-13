@@ -2,10 +2,34 @@
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
+function isCorrectArray(array) {
+    for (let i = 0; i < array.length; i++){
+        if (typeof array[i] !== 'number' || array[i] > 9 || array[i] < 0)
+            return false;
+    }
+    return true;
+}
+
+function isCorrectNumber(number) {
+    return !(number < 0 || !Number.isInteger(number));
+}
+
 function addNumber(array, number) {
-    // Решение задачи
+    if (!isCorrectArray(array) || !isCorrectNumber(number)){
+        return null;
+    }
+
+    const numberFromArray = parseInt(array
+        .toString()
+        .replace(/[^0-9]/gm, ''), 10);
+    let sum = numberFromArray + number;
+
+    return sum
+        .toString()
+        .split("")
+        .map(Number);
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
