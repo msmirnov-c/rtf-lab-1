@@ -15,6 +15,7 @@ function addNumber(array, number) {
 
     const arr = parseInt(array.toString().replace(/,/gm, ''), 10);
     const result = arr + number;
+    
     return Array.from(String(result), Number);
 }
 
