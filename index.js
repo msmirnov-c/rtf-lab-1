@@ -8,13 +8,15 @@ function addNumber(array, number) {
         if (typeof (array[i]) !== typeof (+array[i])) {
             return null;
         }
-    }const finalArray = [];
+    }
+    const finalArray = [];
     let value = array.join();
     value = Number(value.replace(/,/g, ''));
     value += number;
     for (let i = 0; i < value.toString().length; i++) {
         finalArray.push(+value.toString().charAt(i));
-    }return finalArray;
+    }
+    return finalArray;
 }
 
 module.exports = {
