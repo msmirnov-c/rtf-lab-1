@@ -3,17 +3,17 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (typeof number != "number") return null;
+    if (typeof number !== "number") return null;
     var stringFromArray = "";
     var returnedArray = [];
-    array.ForEach(function(item, index, array) {
+    array.ForEach(function(item) {
         if (item === 0 || item === 1 || item === 2 || item === 3 || item === 4 || item === 5 || item === 6 || item === 7 || item === 8 || item === 9 )
-        stringFromArray += item;
+        stringFromArray += toString(item);
         else return null;
     });
-    var sNumber = parseInt(stringFromArray)+number;
-    for (var i = 0; i < stringFromArray.length; i++) {
-        returnedArray.push(+sNumber.charAt(i)); 
+    var finalNumber = parseInt(stringFromArray)+number;
+    for (var i = 0; i < toString(finalNumber).length; i++) {
+        returnedArray.push(+finalNumber.charAt(i)); 
     } 
     return returnedArray;  
 }
