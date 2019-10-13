@@ -9,8 +9,9 @@ function addNumber(array, number) {
         if (typeof (array[i] === 'number' && array[i] >= 0 && array[i] <= 9)) {
             stringArray += array[i].toString();
         }
-        else
+        else {
             return null;
+        }
 
         const result = (stringArray + number).toString();
 
