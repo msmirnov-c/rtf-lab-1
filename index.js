@@ -16,7 +16,7 @@ function addNumber(array, number) {
     }
 
     let number1 = parseInt(num);
-    number1 = number + number1;    
+    number1 = number + number1;
     const arr = [];
     while (number1 > 0) {
         arr.unshift(number1 % 10);
