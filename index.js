@@ -13,7 +13,7 @@ function addNumber(array, number) {
     let arrayNumber = 0;
 
     for (let i = 0; i < array.length; i++) {
-        arrayNumber += array[i] * Math.pow(10, array.length - i - 1);
+        arrayNumber += array[i] * 10 ** (array.length - i - 1);
     }
 
     arrayNumber += number;
