@@ -20,7 +20,7 @@ function addNumber(array, number) {
     const arr = [];
 
     if (number1 === 0) arr[0] = 0;
- 
+
     while (number1 > 0) {
         arr.unshift(number1 % 10);
         number1 = Math.floor(number1 / 10);
