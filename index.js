@@ -3,9 +3,13 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    // Решение задачи
+    for (const value of array) {
+        if (value > 9) return null;
+    }
+
+    return Number(array.reduce((sum, current) => sum + current.toString())) + number;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
