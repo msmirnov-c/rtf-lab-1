@@ -5,8 +5,8 @@
 
     function addNumber(array, number) {
         if (array.every((value) => typeof value === 'number' )){
-            let string = parseInt(array.join(''),10) + number;
-            return string.toString().split('').map(Number);
+            let arrString = parseInt(array.join(''),10) + number;
+            return arrString.toString().split('').map(Number);
 
         }
         return null;
