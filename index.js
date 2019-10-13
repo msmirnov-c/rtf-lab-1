@@ -1,5 +1,6 @@
-function addNumber(array, number) {
-    if (!(array.every(item => typeof item ===  'number' )));
+function addNumber(array, number) 
+{
+    if (!array.every(item => typeof item ===  'number' ));
         return null
         const s = String((Number(array.join('')) + number)).split('').map(item => Number(item));
     return s
