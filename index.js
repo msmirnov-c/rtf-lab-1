@@ -3,10 +3,11 @@ function addNumber(array, number) {
         return null;
     }
 
-    let numbers = '';
-    numbers = number + parseInt(array.reduce((current) => numbers + current.toString()), 10);
+    let sumString = '';
+    sumString = parseInt(array.reduce((sumString, current) => sumString + current.toString()), 10);
+    sumString += number;
 
-    return numbers.toString(10).split('').map((item) => parseInt(item, 10));
+    return sumString.toString(10).split('').map((item) => parseInt(item, 10));
 }
 
 module.exports = {
