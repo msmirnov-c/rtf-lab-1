@@ -3,11 +3,12 @@
      * @param number – число, которое нужно прибавить к числу, полученному из массива
      */
     function addNumber(array, number) {
-        if (array.every(value => typeof value == 'number' || value < 0 || value < 9)|| number < 0){
-            return null;
+        if (array.every(value => typeof value == 'number' || value > 0 || value < 9)|| number > 0){
+            let string = parseInt(array.join('')) + number;
+            return string.split('').map(Number);
         }
-        let string = parseInt(array.join('')) + number;
-        return string.split('').map(Number);
+        else
+        return null;
     }
 module.exports = {
     addNumber
