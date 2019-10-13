@@ -6,7 +6,7 @@ function addNumber(array, number) {
             result = false;
         }
         return result;
-    };
+    }
     if (!array.every(check)) {
         return null;
     }
@@ -15,4 +15,5 @@ function addNumber(array, number) {
 
 module.exports = {
     addNumber
+    
 };
