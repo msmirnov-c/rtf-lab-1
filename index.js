@@ -15,7 +15,7 @@
     return Array.from(String(result), Number);
 
 
-    function isCorrectArray {
+    function isCorrectArray(array) {
         for (let item of array) {
             if (Number(item) !== item || item > 9 || item < 0) {
                 return false;
