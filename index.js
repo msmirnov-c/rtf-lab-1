@@ -5,15 +5,14 @@
 function addNumber(array, number) {
     let numLine = '';
     let i = 0;
-    while (i < array.length) {
-        if (array[i] === Math.trunc(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof(array[i]) === 'number')) {
+    array.forEach(function(_item, i, array) {
+        if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof(array[i]) === 'number')) {
             numLine += array[i];
-            i++;
         }
         else {
             return null;
         }
-    }
+    }); 
     return (number + parseInt(numLine)).toString(10).split('').map(item => parseInt(item));
 }
 
