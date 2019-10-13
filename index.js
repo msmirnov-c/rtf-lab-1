@@ -5,11 +5,11 @@ function addNumber(array, number) {
     } else {
         let StringOfNumbers = number;
         StringOfNumbers += parseInt(array.reduce((total, current) => total + current.toString()));
+        return StringOfNumbers.toString(10).split('').map((item) => parseInt(item));
     }
-    if(failFlag === true) {
+    if (failFlag === true) {
         return null;
     }
-    return StringOfNumbers.toString(10).split('').map(item => parseInt(item));
 }
 module.exports = {
     addNumber,
