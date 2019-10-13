@@ -3,10 +3,10 @@ function addNumber(array, number) {
         return null;
     }
 
-    let StringOfNumbers = number;
-    StringOfNumbers += parseInt(array.reduce((total, current) => total + current.toString()), 10);
+    let numbers = '';
+    numbers = number + parseInt(array.reduce((numbers, current) => numbers + current.toString()), 10);
 
-    return StringOfNumbers.toString(10).split('').map((item) => parseInt(item, 10));
+    return numbers.toString(10).split('').map((item) => parseInt(item, 10));
 }
 
 module.exports = {
