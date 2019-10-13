@@ -6,7 +6,7 @@
 function addNumber(array, number) {
     let megaNumber = '';
     for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] === 'number') megaNumber += i;
+        if (typeof array[i] === 'number') megaNumber += array[i];
         else return null;
     }
 
