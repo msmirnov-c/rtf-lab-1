@@ -6,9 +6,10 @@ function addNumber(array, number) {
     let origStr = '';
     const resultArr = [];
     let resultNumber;
+    let resultStr = '';
     let fail = false;
 
-    if (array.length == 0){
+    if (array.length === 0){
         resultArr.push(number);
         return resultArr;
     }
@@ -23,14 +24,12 @@ function addNumber(array, number) {
     if (fail === true){
         return null;
     }
-    else{
         resultNumber = parseInt(origStr);
         resultNumber += number;
         resultStr = String(resultNumber);
 
         for (let i = 0; i < resultStr.length; i++) {
         resultArr.push(parseInt(resultStr[i]))
-    }
     }
     return resultArr;   
 }
