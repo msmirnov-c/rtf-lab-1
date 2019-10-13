@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (array.every((item) => typeof item !== 'number' )) {
+    if (array.every((item) => typeof item !== 'number')) {
         return null;
     }
 
@@ -14,5 +14,5 @@ function addNumber(array, number) {
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
