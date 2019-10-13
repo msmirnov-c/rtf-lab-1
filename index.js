@@ -7,8 +7,8 @@ function addNumber(array, number){
         return null;
     }
 
-    for (let i = 0; i < array.length; i++){
-        if (typeof array[i] !== 'number'  array[i] > 9 || array[i] < 0)
+    for (let i = 0; i < array.length; i++) {
+        if (typeof array[i] !== 'number'|| array[i] > 9 || array[i] < 0)
         return null;
     }
     const arr = parseInt(
