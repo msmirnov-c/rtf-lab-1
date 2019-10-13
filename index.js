@@ -3,7 +3,7 @@ function addNumber(array, number) {
         return null
         let CisloMassiva =  array.join(''); 
         let Sum =  Number(CisloMassiva) + number;
-        let Sum =  String(Sum)
+        let Sum =  String(Sum);
         let Sum =  Sum.split('').map(item => Number(item));
     return Sum 
     
