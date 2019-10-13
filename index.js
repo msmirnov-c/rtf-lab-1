@@ -11,7 +11,7 @@ function addNumber(array, number) {
 
     const summ = Number(array.reduce((sum, current) => sum + current.toString())) + number;
 
-    return Array.from(summ.toString(), value => parseInt(value, 10));
+    return Array.from(summ.toString(), (value => parseInt(value, 10)));
 }
 
 module.exports = {
