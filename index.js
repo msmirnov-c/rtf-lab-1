@@ -8,7 +8,7 @@ function addNumber(array, number) {
         const str = array.join('');
         const sum = +str + number;
         const arrOfString = sum.toString().split('');
-        const arrOfNumbers = arrOfString.map((item) => (parseInt(item)), 10);
+        const arrOfNumbers = arrOfString.map((item) => (parseInt((item), 10)));
 
         return arrOfNumbers;
     }
