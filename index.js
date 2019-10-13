@@ -9,13 +9,13 @@ function addNumber(array, number) {
             return null;
         }
 
-        numLine += array[i]
+        numLine += array[i];
 
         return numLine;
     });
 
     return (number + parseInt(numLine, 10)).toString(10).split('').map((item) => parseInt(item, 10));
-} 
+}
 module.exports = {
     addNumber,
 };
