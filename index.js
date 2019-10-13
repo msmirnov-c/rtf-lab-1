@@ -12,7 +12,7 @@ function isCorrectNumber(number) {
     return !(number < 0 || !Number.isInteger(number));
 }
 function addNumber(array, number) {
-    if (!isCorrectArray(array) || !isCorrectNumber(number)){
+    if (!isCorrectArray(array) || !isCorrectNumber(number)) {
         return null;
     }
 
