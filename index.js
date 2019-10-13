@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     let origStr = '';
-    let resultArr = [];
+    const resultArr = [];
     let resultNumber;
     let fail = false;
 
