@@ -4,11 +4,12 @@
 */
 function addNumber(array, number) {
     let numLine = '';
-    array.forEach((_item, i) => { 
-            numLine += array[i];
+    array.forEach((_item, i) => {
+        numLine += array[i];
 
-            return numLine;
+        return numLine;
     });
+
     if (!(array.every((item) => item === Math.ceil(item) && item >= 0 && item <= 9 && (typeof (item) === 'number') && (typeof (number) === 'number')))) {
         return null;
     };
