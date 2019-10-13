@@ -1,5 +1,5 @@
 function isNotANumber(item) {
-    return typeof item !== 'number';
+  return typeof item !== 'number';
 }
 
 function isSomeArrayValueNaN(item) {
@@ -7,36 +7,31 @@ function isSomeArrayValueNaN(item) {
 }
 
 function isNumberPositiveAndInteger(num) {
-    if (!isNotANumber(num) && Number.isInteger(num) && (num >= 0)) {
-        return true;
-    }
+  if (!isNotANumber(num) && Number.isInteger(num) && (num >= 0)) {
+    return true;
+  }
 
-    return false;
+  return false;
 }
 
 function addNumber(array, number) {
-    if (array.some(isSomeArrayValueNaN)) {
-        return null;
-    }
+  if (array.some(isSomeArrayValueNaN)) {
+    return null;
+  }
 
-    if (!isNumberPositiveAndInteger(number)) {
-        return false;
-    }
+  if (!isNumberPositiveAndInteger(number)) {
+    return false;
+  }
 
-    let firstTerm = '';
-    array.forEach((item) => {
-        firstTerm += item.toString();
-    });
+  let firstTerm = '';
+  array.forEach((item) => {
+    firstTerm += item.toString();
+  });
 
-    const sum = parseInt(firstTerm, 10) + number; 
-    const sumStr = sum.toString();
-    const outputArray = [];
+  const sum = parseInt(firstTerm,10) + number; 
+  const sumStr = sum.toString();
 
-    for (let i in sumStr) {
-        outputArray.push(parseInt(sumStr[i], 10)); 
-    }
-
-    return outputArray;
+  return sumStr.split('').map((item) => parseInt(item,10));
 }
 
 module.exports = {
