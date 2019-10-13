@@ -6,17 +6,15 @@
 function addNumber(array, number) {
     let megaNumber = '';
     for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] === 'number') {
-            megaNumber += i; }
-        else {
+        if (typeof array[i] === 'number') megaNumber += i;
+        else
             return null;
-        }
     }
 
     const strMegaNumber = (parseInt(megaNumber, 10) + number).toString();
     const numberArray = strMegaNumber.split('');
 
-    return numberArray.map(e => parseInt(e, 10));
+    return numberArray.map((e) => parseInt(e, 10));
 }
 
 module.exports = {
