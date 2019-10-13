@@ -4,7 +4,6 @@
 */
 
 function addNumber(array, number) {
-    let len = array.length - 1;
     let num = '';
     if (array.length < 1) return null;
 
@@ -14,20 +13,19 @@ function addNumber(array, number) {
 
     for (let i = 0; i < array.length; i++) {
         num += array[i];
-
     }
 
     let number1 = parseInt(num);
-    number1 = number + number1;
-    
+    number1 = number + number1;    
     const arr = [];
     while (number1 > 0) {
         arr.unshift(number1 % 10);
         number1 = Math.floor(number1 / 10);
     }
+
     return arr;
 }
 
 module.exports = {
     addNumber
-    };
+};
