@@ -8,12 +8,11 @@ function addNumber(array, number) {
         || !array.every((num) => Number.isInteger(num))
         || !array.every((num) => num<=9 && num>=0) ||number < 0) return null;
     for (let i = 0; i < array.length; i++) {
-        
         res += (Math.pow(10, array.length - i - 1) * array[i]);
     }
     res += number;
     return String(res).split('').map(item =>parseInt(item));
 }
 module.exports = {
-    addNumber
+    addNumber,
 };
