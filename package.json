@@ -5,9 +5,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "eslint": "^6.5.1",
     "jest": "^24.9.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.5.1"
   }
 }
