@@ -5,10 +5,8 @@
 
 function addNumber(array, number) {
     let strArray = '';
-    for (let i = 0; i < array.length; i++)
-    {
-        if (Number.isInteger(array[i]) && array[i].toString().length === 1)
-        {
+    for (let i = 0; i < array.length; i++) {
+        if (Number.isInteger(array[i]) && array[i].toString().length === 1) {
             strArray += array[i].toString();
         }
         else return null;
