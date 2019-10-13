@@ -30,7 +30,7 @@ function addNumber(array, number) {
 
     arrayNumber += number;
 
-    return arrayNumber.toString().split('').map(Number)
+    return arrayNumber.toString().split('').map(Number);
 }
 
 module.exports = {
