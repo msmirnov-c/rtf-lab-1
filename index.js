@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     let numLine = '';
     array.forEach((_item, i) => {
-        if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number' && array[i] === null)) {
+        if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number' && array[i] === null) && (typeof (number) === 'number')) {
             return null;
         }
 
