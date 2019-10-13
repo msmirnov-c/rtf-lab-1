@@ -17,7 +17,7 @@ function addNumber(array, number) {
     for (let i = 0; i < value.toString().length; i++) {
         finalArray.push(+value.toString().charAt(i));
     }
- 
+
     return finalArray;
 }
 
