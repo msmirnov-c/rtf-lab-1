@@ -5,13 +5,13 @@
 function addNumber(array, number) {
     let numLine = '';
     array.forEach((_item, i) => {
-        if (!(array[i] === Math.trunc(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number' && array[i] === null) && (typeof (number) === 'number'))) {
-            numLine += array[i];
-
-            return numLine.push;
+        if (array[i] === Math.trunc(array[i]) && array[i] < 0 && array[i] > 9 && (typeof (array[i]) === 'number' && array[i] === null) && (typeof (number) === 'number')) {
+            return null;   
         }
+        numLine += array[i];
 
-        return null;
+        return numLine.push;
+        
     });
 
     return (number + parseInt(numLine, 10)).toString(10).split('').map((item) => parseInt(item, 10));
