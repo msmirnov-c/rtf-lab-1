@@ -4,21 +4,23 @@
 */
 function addNumber(array, number) {
     const checkArr = array.every(item => typeof item === 'number');
-    if(checkArr){
+    if (checkArr) {
         let resultArr = [];
         if (array.length === 0) {
             resultArr.push(number);
+
             return resultArr;
         }
-        
+
         let origNum = parseInt(array.join(''), 10);
         origNum += number;
-        const numStr = origNum.toString()  
+        const numStr = origNum.toString();
         resultArr = numStr.split('');
-        resultArr = resultArr.map(numStr => parseInt(numStr));
-        console.log(numStr, typeof numStr); 
+        resultArr = resultArr.map(item => parseInt(item, 10));
+
         return resultArr;
     }
+
     return null;
 }
 
