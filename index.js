@@ -5,10 +5,9 @@
 function addNumber(array, number) {
     // Решение задачи
     if (array.every((elem) => Number.isInteger(elem) && elem >= 0 && elem <= 9)) {
-        let result = '';
-        array.reduce(function (sum, current) {
-            return result = sum + current;
-        }, []);
+        let result = array.reduce(function bruteforce(sum, current) {
+            return sum + current;
+        }, '');
         result = +result;
         result += number;
 
@@ -17,7 +16,6 @@ function addNumber(array, number) {
 
     return 'null';
 }
-
 
 module.exports = {
     addNumber,
