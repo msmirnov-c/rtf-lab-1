@@ -26,6 +26,7 @@ function addNumber(array, number) {
         }
         return true;
     }
+}
 
 module.exports = {
         addNumber,
