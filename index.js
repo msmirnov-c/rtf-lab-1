@@ -11,15 +11,11 @@ function addNumber(array, number) {
         for (let j = 1; j < 10; j++) {
             if (array[i] === j) {
                 if (number > 0 && Number.isInteger(number) === true) {
-                    helper++;
-                }
-                else
-                    return null;
-            }
-            else
-                return null;
-        }
-    }
+                    helper++; }
+                else {
+                    return null; } }
+            else {
+                return null; } } }
     if (helper === array.length) {
         for (let i = 0; i < array.length; i++) {
             helperNum = helperNum + array[i] * Math.pow(10, i);
