@@ -13,7 +13,7 @@ function addNumber(array, number) {
             || !Number.isInteger(number)) return null;
     }
 
-    resultNumber = parseInt(array.toString().replace(/,/gi, ''))
+    resultNumber = parseInt(array.toString().replace(/,/gi, ''),10);
 
     resultNumber += number;
 
