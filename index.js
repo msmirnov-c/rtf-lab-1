@@ -3,7 +3,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    sumString = parseInt(array.reduce((total, current) => total + current.toString(), ''), 10);
+    let sumString = parseInt(array.reduce((total, current) => total + current.toString(), ''), 10);
     sumString += number;
 
     return sumString.toString(10).split('').map((item) => parseInt(item, 10));
