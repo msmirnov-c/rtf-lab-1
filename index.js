@@ -5,9 +5,9 @@
 function addNumber(array, number) {
     let resultNumber = 0;
     for (let i = 0; i < array.length; i++) {
-        if (Number.isInteger(array[i]) && array[i] <= 9 && array[i] >= 0)
+        if (Number.isInteger(array[i]) && array[i] <= 9 && array[i] >= 0) {
             resultNumber += array[i] * (10 ** array.length - i - 1);
-        else return null;
+        }else return null;
     }
 
     resultNumber += number;
