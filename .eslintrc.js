@@ -1,34 +1,16 @@
 module.exports = {
-    'env': {
-        'commonjs': true,
-        'es6': true,
-        'node': true,
-        'jest': true,
-    },
-    'extends': 'eslint:recommended',
-    'globals': {
-        'Atomics': 'readonly',
-        'SharedArrayBuffer': 'readonly'
-    },
-    'parserOptions': {
-        'ecmaVersion': 2018
-    },
-    'rules': {
-        'indent': [
+    extends: 'eslint-config-airbnb-base',
+    rules: {
+        indent: ['error', 4],
+        'padding-line-between-statements': [
             'error',
-            4
+            { blankLine: 'always', prev: '*', next: 'return' },
+            { blankLine: 'always', prev: ['if', 'for', 'while', 'switch'], next: '*' },
         ],
-        'linebreak-style': [
-            'error',
-            'windows'
-        ],
-        'quotes': [
-            'error',
-            'single'
-        ],
-        'semi': [
-            'error',
-            'always'
-        ]
+        camelcase: ['error'],
+        'linebreak-style': 'off',
+        'no-plusplus': ['off'],
+        'no-console': ['error'],
+        'arrow-parens': ['error', 'as-needed']
     }
 };
