@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     let resultNumber = 0;
-    if (array.prototype.every(element => element >= 0
+    if (array.prototype.every((element) => element >= 0
     && element < 9
     && Number.isInteger(element)) && number >= 0 && Number.isInteger(number)) return null;
 
