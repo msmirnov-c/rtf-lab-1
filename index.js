@@ -1,9 +1,28 @@
+function isSomeArrayValueNaN(item) {
+    return isNotANumber(item);
+}
+    
+function isNumberPositiveAndInteger(num) {
+    if (!isNotANumber(num) && isInteger(num) && (num >= 0)) {
+        return true;
+    }
+    return false;
+}
+    
+function isNotANumber(item) {
+    return typeof item !== 'number';
+}
+    
+function isInteger(num) {
+    return (num ^ 0) === num;
+}
+
 function addNumber(array, number) {
-    if ( array.some(isSomeArrayValueNaN) ) {
+    if (array.some(isSomeArrayValueNaN)) {
         return null;
     }
     
-    if ( !isNumberPositiveAndInteger(number) ) {
+    if (!isNumberPositiveAndInteger(number)) {
         return;
     }
     
@@ -21,25 +40,6 @@ function addNumber(array, number) {
     }
     
     return outputArray;
-}
-    
-function isSomeArrayValueNaN(item) {
-    return isNotANumber(item);
-}
-    
-function isNumberPositiveAndInteger(num) {
-    if ( !isNotANumber(num) && isInteger(num) && (num >= 0) ) {
-        return true;
-    }
-    return false;
-}
-    
-function isNotANumber(item) {
-    return typeof item !== 'number';
-}
-    
-function isInteger(num) {
-    return (num ^ 0) === num;
 }
 
 module.exports = {
