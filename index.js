@@ -8,7 +8,7 @@ function addNumber(array, number) {
     {
         return null;
     }
-    if (!isCorrectArray(array) && !isCorrectNumber(number))
+    if (!isCorrectArray(array))
         return null;
     let arr = parseInt(array.toString().replace(/,/gm, ''));
     let result = arr + number;
