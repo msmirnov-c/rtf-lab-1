@@ -4,18 +4,17 @@
 */
 function addNumber(array, number) {
     let str = '';
-    let flag = array.every(element => (element >= 0 && element <= 9 && Number.isInteger(element)));
-    array.forEach((element) => {
-        {
-            str += element;
-        }
+    const flag = array.every(element => (element >= 0
+        && element <= 9 && Number.isInteger(element)));
+    array.forEach(element => {
+        str += element;
     });
     let num = parseInt(str, 10);
     num += number;
-    let lastnum = num.toString();
+    const lastnum = num.toString();
     let arr = lastnum.split('');
-    arr = arr.map(lastnum => parseInt(lastnum));
-    
+    arr = arr.map(lastn => parseInt(lastn, 10));
+
     if (flag === true) return arr;
 
     return null;
