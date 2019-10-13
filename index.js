@@ -1,19 +1,15 @@
-/**
-* @param array – массив элементов. Например, [1, 8, 3]
-* @param number – число, которое нужно прибавить к числу, полученному из массива
-*/
 function addNumber(array, number) {
     if ( array.some(isSomeArrayValueNaN) ) {
-    return null;
+        return null;
     }
     
     if ( !isNumberPositiveAndInteger(number) ) {
-    return;
+        return;
     }
     
     let firstTerm = '';
     array.forEach( item => {
-    firstTerm += item.toString();
+        firstTerm += item.toString();
     });
     
     const sum = parseInt(firstTerm, 10) + number; 
@@ -21,27 +17,31 @@ function addNumber(array, number) {
     let outputArray = [];
     
     for (let i in sumStr) {
-    outputArray.push(parseInt(sumStr[i], 10)); 
+        outputArray.push(parseInt(sumStr[i], 10)); 
     }
     
     return outputArray;
-    }
+}
     
-    function isSomeArrayValueNaN(item) {
+function isSomeArrayValueNaN(item) {
     return isNotANumber(item);
-    }
+}
     
-    function isNumberPositiveAndInteger(num) {
+function isNumberPositiveAndInteger(num) {
     if ( !isNotANumber(num) && isInteger(num) && (num >= 0) ) {
-    return true;
+        return true;
     }
     return false;
-    }
+}
     
-    function isNotANumber(item) {
+function isNotANumber(item) {
     return typeof item !== 'number';
-    }
+}
     
-    function isInteger(num) {
+function isInteger(num) {
     return (num ^ 0) === num;
-    }
+}
+
+module.exports = {
+    addNumber,
+};
