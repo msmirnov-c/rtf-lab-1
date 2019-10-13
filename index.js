@@ -7,13 +7,15 @@ function addNumber(array, number) {
     if (array.every((item) => Number.isInteger(item))) {
         const str = array.join('');
         const sum = +str + number;
-        const arrOfStr = sum.toString().split('');
-        const arrOfNumb = arrOfStr.map((item) => parseInt(item));
-        return arrOfNumb;
+        const arrOfString = sum.toString().split('');
+        const arrOfNumbers = arrOfString.map((item) => (parseInt(item)),10);
+
+        return arrOfNumbers;
     }
+
     return null;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
