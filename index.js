@@ -2,17 +2,17 @@
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
-function addNumber(array, number){
-    if (number < 0 || !Number.isInteger(number)){
+function addNumber(array, number) {
+    if (number < 0 || !Number.isInteger(number)) {
         return null;
     }
 
-    for(const item of array){
-        if (Number(item) !== item || item > 9 || item < 0)
+    for (const item of array) {
+        if (Number(item) !== item || item > 9 || item < 0) {
             return null;
     }
 
-    const arr = parseInt(array.toString().replace(/,/gm, ''),10);
+    const arr = parseInt(array.toString().replace(/,/gm, ''), 10);
     const result = arr + number;
     return Array.from(String(result), Number);
 }
