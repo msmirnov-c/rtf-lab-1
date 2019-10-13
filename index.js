@@ -4,14 +4,14 @@
      */
 
     function addNumber(array, number) {
-        if (array.every(value => typeof value == 'number' || value >= 0 || value <= 9)){
+        if (array.every(value => typeof value == 'number' )){
             let string = parseInt(array.join(''),10) + number;
-            return string.toString().split('').map(Number);
+            return array.toString().split('').map(Number);
 
         }
         return null;
     }
-    
+
 module.exports = {
     addNumber
 };
