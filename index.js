@@ -22,6 +22,7 @@ function addNumber(array, number) {
         arr.unshift(number1 % 10);
         number1 = Math.floor(number1 / 10);
     }
+
     return arr;
 }
 
