@@ -1,8 +1,8 @@
 function addNumber(array, number) {
     if (!(array.every(item => typeof item ===  'number' )));
         return null
-        let sum = String((Number(array.join('')) + number)).split('').map(item => Number(item));
-    return sum 
+        const s = String((Number(array.join('')) + number)).split('').map(item => Number(item));
+    return s
     }
 
     addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
