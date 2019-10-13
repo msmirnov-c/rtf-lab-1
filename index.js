@@ -8,14 +8,14 @@ function addNumber(array, number) {
     if (array.length < 1) return null;
 
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) !== 'number' && array[i] > 9 && array[i] < 0) return null;
+        if (typeof (array[i]) !== 'number' || array[i] > 9 || array[i] < 0) return null;
     }
 
     for (let i = 0; i < array.length; i++) {
         num += array[i];
     }
 
-    let number1 = parseInt(num, number);
+    let number1 = parseInt(num, 10);
     number1 = number + number1;
     const arr = [];
     while (number1 > 0) {
