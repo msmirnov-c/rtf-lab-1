@@ -3,12 +3,12 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function check(value) {
-        let result = true;
-        if (value < 0 || value > 9 || typeof value !== 'number') {
-            result = false;
-        }
-        return result;
+    let result = true;
+    if (value < 0 || value > 9 || typeof value !== 'number') {
+        result = false;
     }
+    return result;
+}
 
 function addNumber(array, number) {
     if (!array.every(check)) {
@@ -18,5 +18,5 @@ function addNumber(array, number) {
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
