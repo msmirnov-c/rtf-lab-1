@@ -7,10 +7,8 @@ function addNumber(array, number) {
     const NumberIsNumber = typeof (number) === 'number';
     if (arrayElementsIsNumber && NumberIsNumber) {
         const amount = Number(array.join('')) + number;
-       
         return String(amount).split('').map((item) => Number(item));
     }
-    
     return null;
 }
 
