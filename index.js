@@ -9,9 +9,11 @@ function addNumber(array, number) {
     }
 
     for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] !== 'number' || array[i] > 9 || array[i] < 0)
+        if (typeof array[i] !== 'number' || array[i] > 9 || array[i] < 0) {
             return null;
+        }
     }
+    
     const arr = parseInt(array.toString().replace(/,/gm, ''), 10);
     const result = arr + number;
 
