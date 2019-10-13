@@ -10,7 +10,9 @@ function addNumber(array, number) {
             stringArray += array[i].toString();
         }
         else return null;
+
         const result = (stringArray + number).toString();
+
         return result.split('');
 
     }
