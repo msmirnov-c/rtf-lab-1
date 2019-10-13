@@ -4,12 +4,13 @@
 */
 function addNumber(array, number) {
     let numLine = '';
-    array.forEach(function (_item, i) {
+    array.forEach(function callback(_item, i) {
         if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number')) {
             numLine += array[i];
 
             return numLine.push;
         }
+
         return null;
     });
 
