@@ -12,10 +12,10 @@ function addNumber(array, number) {
         if (typeof array[i] !== 'number' || array[i] > 9 || array[i] < 0)
             return null;
     }
-    const arr = parseInt(array.toString().replace(/,/gm, ''), 10));
-const result = arr + number;
+    const arr = parseInt(array.toString().replace(/,/gm, ''), 10);
+    const result = arr + number;
 
-return Array.from(String(result), Number);
+    return Array.from(String(result), Number);
 }
 
 module.exports = {
