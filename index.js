@@ -4,10 +4,12 @@
 */
 function addNumber(array, number) {
     let numLine = '';
-    array.forEach(function callback(_item, i) {
+    array.forEach(function(_item, i) {
         if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number')) {
             numLine += array[i];
-            return numLine;
+        }
+        else {
+            return null;
         }
     });
     return (number + parseInt(numLine, 10)).toString(10).split('').map(item => parseInt(item, 10));
