@@ -5,8 +5,7 @@ function addNumber(array, number) {
     if (flag === true && array.every((item) => item >= 0 && item < 10 && item !== null)) {
         num = array.join();
         num = Number(num.replace(/,/g, ''));
-        num += number;
-        newArray = num.toString(10).split('').map(Number);
+        newArray = (num + number).toString(10).split('').map(Number);
     } else return null;
 
     return newArray;
