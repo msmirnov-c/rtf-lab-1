@@ -12,7 +12,8 @@ function addNumber(array, number) {
         return myResult;
 }
 
+        return null;
+
 module.exports = {
     addNumber,
 };
-//
