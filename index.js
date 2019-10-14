@@ -12,13 +12,13 @@ function addNumber(array, number) {
 
             return null;
         }
-        
+
         outNums += array[i];
     }
-    
+
     return outNums === 'exit' ? null : Array.from(toString(Number(outNums) + number)).map((arr) => Number(arr));
 }
-// Это пиздец какой-то
+
 module.exports = {
     addNumber,
 };
