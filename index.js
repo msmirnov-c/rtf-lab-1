@@ -4,7 +4,11 @@
  */
 function addNumber(array, number) {
     // Решение задачи
-    if (number < 0 || !Number.isInteger(number) || array.every((elem) => typeof elem !== 'number' && elem >= 9 && elem <= 0)) {
+    if (number < 0 || !Number.isInteger(number)) {
+        return null;
+    }
+
+    if (array.every((elem) => number.isInteger(elem) && elem >= 9 && elem <= 0)) {
         return null;
     }
 
