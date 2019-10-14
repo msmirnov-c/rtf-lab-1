@@ -7,10 +7,11 @@ function addNumber(array, number) {
         if (item >= 0 && item <= 9 && typeof (item) === 'number') {
             n1 = n1 * 10 + item; 
             return true;
-        } else return false;       
+        } return false;
     })) return null;
 
     n1 += number;
+    
     return String(n1).split('').map(Number);
 }
 
