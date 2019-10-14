@@ -9,11 +9,11 @@ function addNumber(array, number) {
         }
     }
 
-    let sum = 0;
+   
     const str = array.join('');
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
-    array.concat(sum.toString.split(''));
+    array.concat(sum.split(''));
 
     return array;
 }
