@@ -6,15 +6,16 @@ function addNumber(array, number) {
     // Решение задачи
     if (!Number.isInteger(number) || number < 0) {
         return null;
-    } 
-        
+    }
+
     if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
         let numberString = array.join('');
     } else {
         return null;
     }
+    numberString = (parseInt(numberString, 10) + number).toString(); 
 
-    return  (parseInt(numberString, 10) + number).toString().split('').map(Number);
+    return numberString.split('').map(Number); 
 }
 
 module.exports = {
