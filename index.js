@@ -1,28 +1,35 @@
-function checkTheNumberType(item) {
+function isNotANumber(item) {
     return typeof item !== 'number';
-}
-
-function isNumberPositiveAndInteger(num) {
-    if (num >= 0) {
-        return Number.isInteger(num);
+  }
+  
+  function isSomeArrayValueNaN(item) {
+    return isNotANumber(item);
+  }
+  
+  function isNumberPositiveAndInteger(num) {
+    if (!isNotANumber(num) && Number.isInteger(num) && (num >= 0)) {
+        return true;
     }
-
+  
     return false;
-}
-
-function addNumber(array, number) {
-    if (array.some(checkTheNumberType) || !isNumberPositiveAndInteger(number)) {
+  }
+  
+  function addNumber(array, number) {
+    if (array.some(isSomeArrayValueNaN)) {
         return null;
     }
-
-    let firstTerm = array.reduce((outputStr, curItem) => outputStr += curItem.toString());
-
-    const sum = parseInt(firstTerm, 10) + number;
+  
+    if (!isNumberPositiveAndInteger(number)) {
+        return false;
+    }
+  
+    let firstTerm = '';
+    array.forEach((item) => {
+        firstTerm += item.toString();
+    });
+  
+    const sum = parseInt(firstTerm,10) + number; 
     const sumStr = sum.toString();
-
-    return sumStr.split('').map((item) => parseInt(item, 10));
-}
-
-module.exports = {
-    addNumber,
-};
+  
+    return sumStr.split('').map((item) => parseInt(item,10));
+  }
