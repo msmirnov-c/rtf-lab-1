@@ -4,8 +4,7 @@
  */
 function addNumber(array, number) {
     // Решение задачи
-    let newArray;
-    newArray = [];
+    const newArray = [];
     let helper = 0;
     let helperNum = 0;
     for (let i = 0; i < array.length; i++) {
