@@ -20,26 +20,30 @@ function addNumber(array, number) {
             }
         }
     }
-    if (helper === array.length) {
+    
+	if (helper === array.length) {
         for (let i = 0; i < array.length; i++) {
-            helperNum = helperNum + array[i] * Math.pow(10, i);
+            helperNum += array[i] * (10 ** i);
         }
     }
-    helperNum += number;
+    
+	helperNum += number;
     let x = helperNum;
     let helperCount = 0;
     while (x > 0) {
         x /= 10;
         helperCount++;
     }
-    for (let i = helperCount - 1; i >= 0; i--) {
+    
+	for (let i = helperCount - 1; i >= 0; i--) {
         helperNum = helperNum % 10;
         newArray[i] = helperNum;
     }
+	
     return newArray;
     // Решение задачи
 }
 
 module.exports = {
     addNumber
-};
+};,
