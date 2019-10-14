@@ -6,14 +6,14 @@ function addNumber(array, number) {
       
      const right = (item) => (!Number.isInteger(number)))||(typeof (item) = 'number');
         if (!array.every(right)) {
-        console.log (null);
+         return null;
       };
       {
        const str1 = array.reduce((array , number) => array + number , "");
        const amount = +str1 + number;
        const array1 = amount.toString().split('');
 
-        console.log (array1.map((correct) => parseInt(correct)));
+        return array1.map((correct) => parseInt(correct));
     }
 }
 
