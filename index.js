@@ -8,7 +8,7 @@ function addNumber(array, number) {
         num += number;
         newArray = num.toString(10).split('').map(Number);
     } else return null;
-    
+
     return newArray;
 }
 module.exports = {
