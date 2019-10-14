@@ -16,17 +16,17 @@ function addNumber(array, number)
 		else
 		{
 			n=(array.reduce((total, current) => total + current)) + number;
-			while (n > 0) {
-				d.push(n % 10);
-				n = parseInt(n / 10);
+			while(n > 0)
+			{
+				d += n % 10;
+				n = Math.floor(n / 10);
 			}
-			d.reverse();
 			return d;
 	}
 }
 
 module.exports = {
     addNumber
-}
+};
 
 
