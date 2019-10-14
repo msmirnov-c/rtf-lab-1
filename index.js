@@ -7,7 +7,7 @@ function addNumber(array, number) {
     const translatedArr = array.reduce((result, item) => result + item.toString(), 0);
     const summedNum = (parseInt(translatedArr, 10) + number).toString();
     const finalArr = summedNum.split('').map((item) => parseInt(item, 10));
-   
+
     return finalArr;
 }
 
