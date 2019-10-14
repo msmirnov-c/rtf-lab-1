@@ -7,9 +7,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    let str = array.reduce((sum, current) => {
-        return sum + current;
-    }, '');
+    let str = array.reduce((sum, current) => sum + current, '');
     str = (Number(str) + number).toString();
     const newArray = str.split('').map(Number);
 
