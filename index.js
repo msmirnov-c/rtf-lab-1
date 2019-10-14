@@ -13,7 +13,6 @@ function addNumber(array, number) {
         }
 
     }
-
     return null;
 }
 
