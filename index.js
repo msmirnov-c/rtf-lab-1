@@ -19,10 +19,11 @@ function addNumber(array, number) {
         for (let i = 0; i < array.length + 1; i++) {
             newArray[i] = array[i];
             if (i === array.length) {
-                newArray[i] = parseInt(number);
+                newArray[i] = parseInt(number, 10);
             }
         }
-        return newArray;
+        
+		return newArray;
     }
 
     if (helper === array.length) {
