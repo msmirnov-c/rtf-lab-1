@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (array.every(element => element >= 0
+    if (array.every((element) => element >= 0
         && element <= 9
         && Number.isInteger(element))) {
         const string = array.reduce((str, element) => str + element, '');
