@@ -4,9 +4,9 @@
 */
 function addNumber(array, number) {
     for (let i = 0; i < array.lenght; i++ ) {
-        if(typeof array[i] !=='number') {
+        if(typeof array[i] !== 'number') {
             return null;
-        } 
+     } 
     } 
 
    const str = array.join('');
@@ -18,5 +18,5 @@ function addNumber(array, number) {
 }
 
  module.exports = {
-      addNumber
+    addNumber
 };
