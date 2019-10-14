@@ -11,7 +11,8 @@ function addNumber(array, number) {
     let myString = array.join('');
     myString = String(Number(myString) + number);
 
-    return myString.split('').map(Number);
+    return myString.split('')
+        .map(Number);
 }
 
 module.exports = {
