@@ -11,6 +11,7 @@ function addNumber(array, number) {
 
             return null;
         }
+
         for (let j = 0; j < 10; j++) {
             if (array[i] === j) {
                 helper++;
