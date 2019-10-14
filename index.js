@@ -7,12 +7,12 @@ for(let i = 0; i < array.lenght; i++ ) {
 if(typeof array[i] !=='number')
      {
          
-      return null;
-    } } 
+      return null;} } 
    const str = array.join('');
    const strValue = parseInt(str,10);
    const str = strstrValue + number;
    array = array.concat(strValue.splite(''));
+   
    return array;}
  module.exports = {
       addNumber
