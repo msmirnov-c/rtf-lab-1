@@ -5,14 +5,15 @@
 function addNumber(array, number) {
     if (!array.every((item) => (typeof item) === 'number')) { return null; }
 
-    array = Number.parseInt(array.join('')) + number;
-    array = Array.from(array.toString());
+    let endNumber = Number.parseInt(array.join('')) + number;
+    let arrayOfString = Array.from(endNumber.toString());
+    let endArray;
 
     for (let i = 0; i < array.length; i++) {
-        array[i] = Number.parseInt(array[i]);
+        endArray[i] = Number.parseInt(arrayOfString[i]);
     }
 
-    return (array);
+    return (endArray);
 }
 
 module.exports = {
