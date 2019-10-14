@@ -9,6 +9,7 @@ function addNumber(array, number) {
 
         if (item < 0 || item > 9) {
             return null;
+            return 0;
         }
     });
     let finalNumber = 0;
