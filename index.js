@@ -8,7 +8,6 @@ function addNumber(array, number) {
     let helperNum = 0;
     for (let i = 0; i < array.length; i++) {
         if (typeof (array[i]) !== 'number') {
-
             return null;
         }
 
@@ -20,7 +19,6 @@ function addNumber(array, number) {
     }
 
     if (helper < array.length) {
-
         return null;
     }
 
