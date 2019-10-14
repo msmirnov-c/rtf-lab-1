@@ -8,14 +8,14 @@ function addNumber(array, number)
 	let sum	=0;
 	for (let i of array)
 	{
-		if (typeof(i)!=='number'&& i>=9)
+		if (typeof(i) !== 'number' && i >= 9)
 		{
 			return null;
 			break;
 		}
 		else
 		{
-			n=(array.reduce((total, current) => total + current))+number;
+			n=(array.reduce((total, current) => total + current)) + number;
 			while(n > 0)
 			{
   				sum += n % 10;
