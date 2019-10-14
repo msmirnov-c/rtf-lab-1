@@ -9,13 +9,15 @@ function addNumber(array, number) {
         if (!Number.isInteger(array[i]) || array[i].toString().length !== 1) {
             return null;
         }
+
         finalString += array[i].toString();
         i++;
     }
+
 
     return (parseInt(finalString, 10) + number).toString().split('').map(element => parseInt(element, 10));
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
