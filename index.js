@@ -6,19 +6,20 @@
 
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] != typeof number)
+        if (typeof array[i] !== typeof number) {
             return (null);
+        }
     }
-            
-            
+                       
     const sum = String(parseInt(array.join(''), 10) + number);
     const array2 = [];
     array2 = sum.split('');
     const array3 = [];
-    for (let j = 0; j < array2.length; j++)
-    array3[j] = parseInt(array2[j], 10);
-                         
-    return (array3);
+    for (let j = 0; j < array2.length; j++) {
+        array3[j] = parseInt(array2[j], 10);
+    }
+    
+        return (array3);
 }
 
 module.exports = {
