@@ -1,12 +1,12 @@
-function addNumber( array, number ){
-length = array.length;
-let res = 0;
-let k = Math.pow(10, length-1);
-for(var i = 0; i < array.length; i++) {
-        if(typeof(array[i]) == 'number') {
-                let s = array[i] * k;
-                        k = k / 10;
-                         res = res + s
+function addNumber(array, number) {
+        length = array.length;
+        let res = 0;
+        let k = Math.pow(10, length - 1);
+        for (var i = 0; i < array.length; i++) {
+        if (typeof(array[i]) === 'number') {
+            let s = array[i] * k;
+            k = k / 10;
+            res = res + s
                                         
 
                 } else {
