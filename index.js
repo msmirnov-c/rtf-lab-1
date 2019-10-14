@@ -1,11 +1,8 @@
-const array = [1, 2, 3];
-const number = 44;
-
 function addNumber(array, number) {
     let sum = 0;
     let i;
     for (i = 0; i < array.length; i++) {
-        if (typeof array[i] && "number" && array[i] <= 9 && array[i] >= 0) {
+        if (typeof array[i] === "number" && array[i] <= 9 && array[i] >= 0) {
             sum = sum * 10 + array[i];
         } else return null;
     }
@@ -19,9 +16,9 @@ function addNumber(array, number) {
     }
 
     return (sum1);
-    sum = addNumber(array, number);
 }
 
+const sum = addNumber(array, number);
 module.exports = {
     addNumber,
 };
