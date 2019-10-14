@@ -3,9 +3,8 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (!array.every(item => typeof item === 'number'))
-        return null;    
-    
+    if (!array.every(item => typeof item === 'number')){return null;}
+
     array = array.join('');
     array = Number.parseInt(array);   
     array=array+number;
