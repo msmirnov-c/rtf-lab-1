@@ -5,7 +5,7 @@ function addNumber(array, number) {
 
     newNum = parseInt(array.join(''), 10);
 
-    return newMass = (newNum + number).toString(10).split('').map(Number);
+    return (newNum + number).toString(10).split('').map(Number);
 }
 module.exports = {
     addNumber,
