@@ -5,12 +5,13 @@
 function addNumber(array, number) {
     function right(element) {
         return element < 9 && element > 0 && Number.isInteger(element);
-    };
+    }
     if (!array.every(right)) {
         return null;
     }
-    let sumDigit = Number(array.join('')) + number;
-    let sumArray = sumDigit.toString().split('').map(Number);
+    const sumDigit = Number(array.join('')) + number;
+    
+    const sumArray = sumDigit.toString().split('').map(Number);
 
     return sumArray;
 }
