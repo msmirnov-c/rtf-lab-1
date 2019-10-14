@@ -18,5 +18,4 @@ function addNumber(array, number) {
     return array;
 }
 
-module.exports ={
-    addNumber };
+module.exports = { addNumber };
