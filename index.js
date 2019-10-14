@@ -10,12 +10,12 @@ function addNumber(array, number) {
 
     if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
         let numberString = array.join('');
+        numberString = (parseInt(numberString, 10) + number).toString();
     } else {
-        return null;
-    }
-    numberString = (parseInt(numberString, 10) + number).toString(); 
+            return null;
+        }
 
-    return numberString.split('').map(Number); 
+    return numberString.split('').map(Number);
 }
 
 module.exports = {
