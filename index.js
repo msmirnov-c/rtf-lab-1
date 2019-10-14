@@ -6,7 +6,7 @@ function addNumber(array, number) {
     if (!array.every((item) => (typeof item) === 'number')) { return null; }
 
     array = array.join('');
-    let array = Number.parseInt(array);
+    array = Number.parseInt(array);
     let array = array + number;
     let array = Array.from(array.toString());
 
