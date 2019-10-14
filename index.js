@@ -6,7 +6,7 @@ function addNumber(array, number) {
     // Решение задачи
     let numberString = '';
 
-    if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
+    if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10 && Number.isInteger(number)))) {
         numberString = array.join('');
     } else {
         return null;
