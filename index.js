@@ -4,12 +4,10 @@
  */
 function addNumber(array, number) {
     if (array.every(number >= 0 && number <= 9 && typeof number === 'number')) {
-        if (number >= 0 && Number.isInteger((number))) {
-            let newNumber = Number(array.join(''));
-            newNumber += number;
-
-            return newNumber.toString.split('').map(Number);
-        }
+        let newNumber = Number(array.join(''));
+        newNumber += number;
+        
+        return newNumber.toString.split('').map(Number);
     }
 
     return null;
