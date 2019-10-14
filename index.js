@@ -8,10 +8,10 @@ function addNumber(array, number) {
         if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             stringArray += array[i].toString();
         } else return null;
-
-        var result = (parseInt(stringArray, 10) + number).toString();
     }
-    
+
+    const result = (parseInt(stringArray, 10) + number).toString();
+
     return result.split('').map((item) => parseInt(item, 10));
 }
 
