@@ -1,3 +1,4 @@
+console.log(addNumber([1,1,1,1], 2))
 function addNumber(array, number) {
     let newMass = [];
     let newNum = 0;
@@ -5,9 +6,8 @@ function addNumber(array, number) {
     || !Number.isInteger(item))) return null;
 
     newNum = parseInt(array.join(''), 10);
-    newMass = (newNum + number).toString(10).split('').map(Number);
 
-    return newMass;
+    return newMass = (newNum + number).toString(10).split('').map(Number);
 }
 module.exports = {
     addNumber,
