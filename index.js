@@ -25,4 +25,5 @@ function addNumber(array, number) {
 
 module.exports = {
     addNumber
+  
 };
