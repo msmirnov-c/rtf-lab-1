@@ -7,17 +7,21 @@ function addNumber(array, number) {
     let result = 0;
     if (!(typeof (number) === 'number' && number > 0))
         return null;
-    for (let i = array.length -1; i >= 0; i--) {
+
+    for (let i = array.length -1; i >= 0; i--) 
+    {
         if (!(typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9))
             return null;
-        result += array[i] * Math.pow(10, i);
+
+        result += array[i] * (10 ** i);
     }
     result += number;
-    let resultString = result.toString();
+    const resultString = result.toString();
     let resultArray = [];
     for (let i = 0; i < resultString.length; i++)
         resultArray.push(+resultString[i]);
     return resultArray;
+
 }
 
 module.exports = {
