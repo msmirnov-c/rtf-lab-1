@@ -15,7 +15,7 @@ function addNumber(array, number) {
     });
     let finalNumber;
     for (let i = 0; i < array.length; i++) {
-        finalNumber += array[i] * 10;
+        finalNumber = finalNumber * 10 + array[i];
     }
 
     finalNumber += number;
