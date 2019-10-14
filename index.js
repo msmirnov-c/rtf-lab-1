@@ -7,12 +7,13 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if (typeof (array[i]) !== 'number') return null;
 
-        if (array[i] < 0 || item > 9) {
+        if (array[i] < 0 || array[i] > 9) {
             return null;
         }
 
         return 0;
     }
+    
     let finalNumber = 0;
     for (let i = 0; i < array.length; i++) {
         finalNumber = finalNumber * 10 + array[i];
