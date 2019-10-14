@@ -12,7 +12,7 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++){
         finalNumber += array[i] * 10;
     }
-    finalNumber+=number;
+    finalNumber += number;
     let finalArr = [];
     for (let i = (finalNumber.toString()).length; i > 0; i--){
         finalArr[i]=finalNumber % 10;
