@@ -22,7 +22,6 @@ for(i=0; i < n; i++) {
         numb = Math.floor(numb/10)
 }
 return arr
-
 }
 addNumber([2, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
 addNumber([2, 5, 1], 5); // 251 + 5 = 256; => [2, 5, 6]
