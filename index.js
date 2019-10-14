@@ -15,7 +15,7 @@ function addNumber(array, number) {
         }
     }
 
-    if (number < 0 || Number.isInteger(number) === false) {
+    if (number < 0 || typeof (number) !== 'number') {
         return null;
     }
 
