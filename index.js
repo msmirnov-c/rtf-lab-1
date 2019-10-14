@@ -5,14 +5,15 @@
 function addNumber(array, number) {
     // Решение задачи
     let result = 0;
-    if (!(typeof (number) === 'number' && number > 0))
+    if (!(typeof (number) === 'number' && number > 0)) {
         return null;
 
-    for (let i = array.length -1; i >= 0; i--) 
-    {
-        if (!(typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9))
+    }
+    for (let i = array.length -1; i >= 0;  i --) {
+        if (!(typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9)) {
             return null;
 
+        }
         result += array[i] * (10 ** i);
     }
     result += number;
