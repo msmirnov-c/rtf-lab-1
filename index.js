@@ -8,11 +8,12 @@ function addNumber(array, number) {
             return null;
         }
     }
+
     const str = array.join('');
     const strValue = parseInt(str, 10);
-    strstrValue += number;
-    array1 = array.concat(strValue.splite(''));
-    return array1;
+    strValue += number;
+    array = array.concat(strValue.splite(''));
+    return array;
 }
 
 module.exports = {
