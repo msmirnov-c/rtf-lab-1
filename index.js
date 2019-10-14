@@ -13,7 +13,7 @@ function addNumber(array, number) {
     }
 
     let answer = array.reverse();
-    answer.forEach(item => {
+    answer.forEach((item) => {
         sum += item * 10 ** pow;
         pow++;
     });
