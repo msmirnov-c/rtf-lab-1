@@ -7,7 +7,7 @@ function addNumber(array, number) {
         if (number >= 0 && Number.isInteger((number))) {
             let string = array.join('');
             string += number;
-            return string.split('');
+            return string.split('').map(Number);
         }
     }
     return null;
