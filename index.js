@@ -7,10 +7,10 @@ function addNumber(array, number) {
 
     array = array.join('');
     array = Number.parseInt(array);   
-    array=array+number;
+    array = array + number;
     array = Array.from(array.toString());
 
-    for (let i=0; i<array.length;i++) {
+    for (let i = 0; i < array.length; i++) {
         array[i] = Number.parseInt(array[i]);
     }
 
