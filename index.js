@@ -15,4 +15,4 @@ if (!array.every(right)) {
 
 module.exports = {
     addNumber
-};
+}
