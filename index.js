@@ -17,6 +17,7 @@ function addNumber(array, number) {
     }
 
     temp = parseInt(temp, 10) + number;
+
     return temp.toString().split('').map(Number);
 }
 
