@@ -15,10 +15,12 @@ function digitFind(array, number) {
 
 function addNumber(array, number) {
     const digit = digitFind(array, number);
+    
     if (digit == null) {
 
         return null;
     }
+    
     return digit.toString().split('').map(Number);
 }
 
