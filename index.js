@@ -12,9 +12,9 @@ function addNumber(array, number) {
 
     sum = (Number(sum) + number).toString().split('');
 
-    return Array.from(sum, x => Number(x));
+    return Array.from(sum, (x) => Number(x));
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
