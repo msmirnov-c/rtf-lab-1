@@ -10,9 +10,10 @@ function addNumber(array, number) {
         if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             finalNumber = finalNumber * 10 + array[i];
         }
+
         finalNumber += number;
     }
-    
+
     for (let i = (finalNumber.toString()).length; i > 0; i--) {
         finalArr.unshift(finalNumber % 10);
         finalNumber = Math.trunc(finalNumber / 10);
