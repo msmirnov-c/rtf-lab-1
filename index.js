@@ -6,8 +6,9 @@ function addNumber(array, number) {
     let newNumber = 0;
     if (array.every(number >= 0 && number <= 9 && typeof number === 'number')) {
         if (number >= 0 && Number.isInteger((number))) {
-            const string = array.join('');
-            newNumber = Number(string);
+            //const string = array.join('');
+            //newNumber = Number(string);
+            newNumber = Number(array.join(''));
             newNumber += number;
 
             return newNumber.toString.split('').map(Number);
