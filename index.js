@@ -1,12 +1,34 @@
-function addNumber(array, number) 
-{
-    if (!array.every(item => typeof item ===  'number' ));
-        return null
-        let s = ((Number(array.join('')) + number)).tostring().split('').map(item => Number(item));
-    return s
-    }
+function addNumber(array, number){
+        length = array.length;
+        let res = 0;
+        let k = Math.pow(10, length-1);
+        for(var i = 0; i < array.length; i++) {
+                        if(typeof(array[i]) == 'number') {
+                                        let s = array[i] * k;
+                                        k = k / 10;
+                                        res = res + s
+                                        
 
-    addNumber([2, 1, 7], 2);
-    addNumber([4, 3, 9], 1); 
-    addNumber([4], 3123);
-    addNumber([2, '3'], 7);
+                        } else {
+                                        return null		
+                        }
+                        
+        }
+        let numb = res + number
+        let n = numb.toString().length;
+        let arr = [];
+        for(i=0; i < n; i++) {
+                        arr[n - 1 - i] = numb % 10
+                        numb = Math.floor(numb/10)
+        }
+        return arr
+}
+let s1 = addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
+let s2 = addNumber([2, 5, 1], 5); // 251 + 5 = 256; => [2, 5, 6]
+let s3 = addNumber([1], 4020); // 1 + 4020 = 4021; => [4, 0, 2, 1]
+let s4 = addNumber([1, '4'], 1); // некорректный элемент => null 
+
+console.log(s1)
+console.log(s2)
+console.log(s3)
+console.log(s4)
