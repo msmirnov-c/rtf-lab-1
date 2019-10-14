@@ -9,8 +9,7 @@ function addNumber(array, number) {
         if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number')) {
             final += array[i];
             i++;
-       }
-        else {
+        } else {
             return null;
         }
     }
