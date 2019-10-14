@@ -18,5 +18,5 @@ function addNumber(array, number) {
     return array;
 }
 
-module.exports = {
+module.exports ={
     addNumber };
