@@ -1,16 +1,16 @@
 const array = [1, 2, 3];
-let number = 44;
+const number = 44;
 
 function addNumber(array, number) {
     let sum = 0;
     let i;
     for (i = 0; i < array.length; i++) {
-        if (typeof array[i] !== "string" && array[i] <= 9 && array[i] >= 0) {
+        if (typeof array[i] && "number" && array[i] <= 9 && array[i] >= 0) {
             sum = sum * 10 + array[i];
         } else return null;
     }
 
-    sum = sum + number;
+    sum += number;
     const sum1 = [];
     const len = sum.toString().length;
     for (i = len; i > 0; i--) {
@@ -19,13 +19,10 @@ function addNumber(array, number) {
     }
 
     return (sum1);
+    sum = addNumber(array, number);
 }
-
-const sum = addNumber(array, number);
-console.log(sum);
 
 module.exports = {
     addNumber,
 };
 Enter;
-
