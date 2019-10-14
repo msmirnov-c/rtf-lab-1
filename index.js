@@ -12,14 +12,16 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++){
         finalNumber += array[i] * 10;
     }
+
     finalNumber += number;
-    let finalArr = [];
+    const finalArr = [];
     for (let i = (finalNumber.toString()).length; i > 0; i--){
         finalArr[i]=finalNumber % 10;
     }
+
     return finalArr;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
