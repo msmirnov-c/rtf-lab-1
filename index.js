@@ -22,8 +22,8 @@ function addNumber(array, number) {
                 newArray[i] = parseInt(number, 10);
             }
         }
-        
-		return newArray;
+
+        return newArray;
     }
 
     if (helper === array.length) {
