@@ -10,8 +10,6 @@ function addNumber(array, number) {
         if (item < 0 || item > 9) {
             return null;
         }
-
-        return null;
     });
     let finalNumber = 0;
     for (let i = 0; i < array.length; i++) {
