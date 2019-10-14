@@ -9,14 +9,13 @@ function addNumber(array, number) {
         }
     }
 
-     const str = array.join('');
-     const strValue = parseInt(str, 10);
-     const sum = strValue + number;
-     const strSum = sum.toSting();
-     const door = strSum.split('');
+    const str = array.join('');
+    const strValue = parseInt(str, 10);
+    const sum = strValue + number;
+    const strSum = sum.toSting();
+    const door = strSum.split('');
      
      return array.concat(door);
-
 }
 
 module.exports = { addNumber };
