@@ -5,9 +5,7 @@ function checkArray(array) {
 function addNumber(array, number) {
     let str = '';
     if (!checkArray(array)) {
-        array.forEach(function sum(element) {
-            str += element;
-        });
+        array.forEach((item) => str += item;);
         str = (Number(str) + number).toString();
         const newArray = str.split('').map(Number);
 
