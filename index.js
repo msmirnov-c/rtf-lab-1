@@ -16,7 +16,13 @@ function addNumber(array, number) {
             }
         }
     } else {
-        return null;
+        for (let i = 0; i < array.length + 1; i++) {
+            newArray[i] = array[i];
+            if (i === array.length) {
+                newArray[i] = parseInt(number);
+            }
+        }
+        return newArray;
     }
 
     if (helper === array.length) {
