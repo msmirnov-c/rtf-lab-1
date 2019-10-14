@@ -3,12 +3,10 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    console.log(array);
     if (!array.every((item) => (typeof item) === 'number')) { return null; }
 
     const endNumber = Number(array.join('')) + number;
     const arrayOfString = Array.from(endNumber.toString());
-    let endArray;
 
     for (let i = 0; i < arrayOfString.length; i++) {
         arrayOfString[i] = Number(arrayOfString[i]);
@@ -16,7 +14,7 @@ function addNumber(array, number) {
 
     return (arrayOfString);
 }
-addNumber([1,2,3],1);
+
 module.exports = {
     addNumber,
 };
