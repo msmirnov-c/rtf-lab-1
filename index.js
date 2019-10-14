@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     for (let i = 0; i < array.Length; i++) {
-        if (isNaN(array[i]) || array[i] < 0 || array[i] > 9) {
+        if (!array[i].isInteger() || array[i] < 0 || array[i] > 9) {
             return null;
         }
     }
@@ -19,5 +19,5 @@ function addNumber(array, number) {
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
