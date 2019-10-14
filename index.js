@@ -11,7 +11,7 @@ function addNumber(array, number) {
             return null;
         }
 
-        const result = (parseInt(stringArray) + number).toString();
+        const result = (parseInt(stringArray,10) + number).toString();
 
         return result.split('').map(Number);
     }
