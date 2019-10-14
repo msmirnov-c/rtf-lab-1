@@ -1,4 +1,3 @@
-console.log(addNumber([1,1,1,1], 2))
 function addNumber(array, number) {
     let newMass = [];
     let newNum = 0;
