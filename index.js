@@ -6,8 +6,8 @@
 
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
-        if (number < 0 || array == null || number == null 
-            ||array.some((item) => item < 0 || item == null || !Number.isInteger(item)) return (null));
+        if (typeof array[i] != typeof number)
+            return (null);
     }
             
             
