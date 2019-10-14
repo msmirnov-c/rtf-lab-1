@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++)
 { if (typeof array[i] != typeof number)
-console.log(null);
+return(null);
 } 
 let value = array.join('');
 let sum = String(parseInt(value) + number);
@@ -14,7 +14,7 @@ array2 = sum.split('');
 let array3 =[];
 for (let j = 0; j < array2.length; j++)
 array3[j] = parseInt(array2[j]);
-console.log(array3);
+return(array3);
 }
 
 module.exports = {
