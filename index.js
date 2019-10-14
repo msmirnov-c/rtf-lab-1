@@ -8,7 +8,7 @@ function addNumber(array, number)
 	let sum	=0;
 	for (let i of array)
 	{
-		if (typeof(i)!=='number')
+		if (typeof(i)!=='number'&& i>=9)
 		{
 			return null;
 			break;
@@ -19,7 +19,7 @@ function addNumber(array, number)
 			while(n > 0)
 			{
   				sum += n % 10;
-  				num = Math.floor(n / 10);
+  				n = Math.floor(n / 10);
 			}
 			return sum;
 		}
