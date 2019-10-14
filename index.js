@@ -6,7 +6,7 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++)
 { if (typeof array[i] != typeof number)
 console.log(null);
-}
+} 
 let value = array.join('');
 let sum = String(parseInt(value) + number);
 let array2 =[];
