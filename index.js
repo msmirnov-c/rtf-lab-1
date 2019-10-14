@@ -7,20 +7,12 @@ function addNumber(array, number) {
     let finalNumber = 0;
     const finalArr = [];
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) === 'number') {
-            if (array[i] < 0 || array[i] > 9) {
-                return null;
-            }
-
-            return 0;
+        if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
+            finalNumber = finalNumber * 10 + array[i];
         }
+        finalNumber += number;
     }
-
-    for (let i = 0; i < array.length; i++) {
-        finalNumber = finalNumber * 10 + array[i];
-    }
-
-    finalNumber += number;
+    
     for (let i = (finalNumber.toString()).length; i > 0; i--) {
         finalArr.unshift(finalNumber % 10);
         finalNumber = Math.trunc(finalNumber / 10);
