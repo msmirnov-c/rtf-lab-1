@@ -9,15 +9,17 @@ function addNumber(array, number) {
     }
 
     const num = String(Number(str) + number);
-    const retArr = num.split('', array.length + number);
+    let retArr = num.split('', array.length + number);
     for (let i = 0; i < retArr.length; i++) {
         retArr[i] = Number(retArr[i]);
     }
 
     if ((number < 0) || (f)) {
-        retArr = null;}
+        retArr = null; 
+    }
+
     return retArr;
-}
+};
 
 module.exports = {
     addNumber
