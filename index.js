@@ -4,17 +4,18 @@
 */
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++)
-{ if (typeof array[i] != typeof number)
-return(null);
-} 
+{ if (number < 0 || array == null || number == null
+        || array.some((item) => item < 0 || item == null || !Number.isInteger(item)))
+console.log(null);
+}
 let value = array.join('');
 let sum = String(parseInt(value) + number);
 let array2 =[];
 array2 = sum.split('');
 let array3 =[];
 for (let j = 0; j < array2.length; j++)
-array3[j] = parseInt(array2[j], 10);
-return(array3);
+array3[j] = parseInt(array2[j]);
+console.log(array3);
 }
 
 module.exports = {
