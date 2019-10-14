@@ -12,7 +12,6 @@ function addNumber(array, number) {
 
         return resultArr;
     }
-    
     return null;
 }
 
