@@ -15,7 +15,7 @@ function addNumber(array, number) {
      const strSum = sum.toSting();
      const array = strSum.split('');
      
-     return arr.concat(array);
+     return arrEnd.concat(array);
 
 }
 
