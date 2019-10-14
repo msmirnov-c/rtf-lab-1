@@ -5,9 +5,8 @@
 function addNumber(array, number) {
     if (!array.every((item) => (typeof item) === 'number')) { return null; }
 
-    array = Number.parseInt(array.join(''));
-    array += number;
-    let array = Array.from(array.toString());
+    array = Number.parseInt(array.join('')) + number;
+    array = Array.from(array.toString());
 
     for (let i = 0; i < array.length; i++) {
         array[i] = Number.parseInt(array[i]);
