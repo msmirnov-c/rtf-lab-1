@@ -22,20 +22,8 @@ function addNumber(array, number) {
         return null;
     }
 
-    if (number < 0) {
-        for (let i = 0; i < array.length + 1; i++) {
-            newArray[i] = array[i];
-            if (i === array.length) {
-                newArray[i] = NaN;
-                if (Number.isInteger(number) === false) {
-                    newArray[i + 1] = -1 * parseInt(number, 10);
-                } else {
-                    newArray[i + 1] = -1 * number;
-                }
-            }
-        }
-
-        return newArray;
+    if (number < 0 || Number.isInteger(number) === false) {
+        return null;
     }
 
     if (helper === array.length) {
