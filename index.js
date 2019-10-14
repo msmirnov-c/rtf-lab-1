@@ -10,12 +10,12 @@ function addNumber(array, number) {
             return null;
         }
     }
-	
+
     if (number < 0 || Number.isInteger(number) === false) {
         return null;
     }
+
     let j = 0;
-	
     for (let i = array.length - 1; i >= 0; i--) {
         helperNum += array[i] * (10 ** j);
         j++;
