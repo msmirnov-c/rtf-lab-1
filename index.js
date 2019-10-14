@@ -4,34 +4,19 @@
  */
 function addNumber(array, number) {
     const newArray = [];
-    let helper = 0;
     let helperNum = 0;
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) !== 'number') {
+        if (typeof (array[i]) !== 'number' || array[i] < 0 || array[i] > 9) {
             return null;
         }
-
-        for (let j = 0; j < 10; j++) {
-            if (array[i] === j) {
-                helper++;
-            }
-        }
     }
-
-    if (helper < array.length || helper === 0) {
-        return null;
-    }
-
     if (number < 0 || Number.isInteger(number) === false) {
         return null;
     }
-
-    if (helper === array.length) {
-        let j = 0;
-        for (let i = array.length - 1; i >= 0; i--) {
-            helperNum += array[i] * (10 ** j);
-            j++;
-        }
+    let j = 0;
+    for (let i = array.length - 1; i >= 0; i--) {
+        helperNum += array[i] * (10 ** j);
+        j++;
     }
 
     helperNum += number;
