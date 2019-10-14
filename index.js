@@ -6,17 +6,17 @@ function addNumber(array, number) {
     // Решение задачи
     let numberString = '';
 
-    if (array.some(e => (Number.isInteger(e) && e >= 0 && e < 10))) { 
+    if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))){ 
         numberString = array.join('');
     } else {
-
         return null;
     }
-    numberString = (parseInt(numberString,10) + number).toString();
+    
+    numberString = (parseInt(numberString, 10) + number).toString();
 
-    return numberString.split('').map(item => parseInt(item));
+    return numberString.split('').map((item) => parseInt(item, 10));
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
