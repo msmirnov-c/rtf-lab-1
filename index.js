@@ -1,19 +1,20 @@
 function addNumber(array, number) {
-    let n1 = 0;
+    var n1 = 0;
 
-    if (!(number >= 0 && typeof (number) === 'number') || number != Math.round()(number)) {
+    if (!(number >= 0 && typeof (number) === 'number') || number !== Math.round()(number)) {
         return null;
     }
 
-    if (!array.every(function (item) {
-        if (item >= 0 && item <= 9 && typeof(item)=='number') {
+    if (!array.every(function checkNumber (item){
+        if (item >= 0 && item <= 9 && typeof (item) === 'number') {
             n1 = n1 * 10 + item;
+
             return true;
         }
-        else {
-            return false;
-        }       
-    })) 
+        
+        else
+            return false;       
+    }))
         return null;
 
     n1 += number;
@@ -21,5 +22,5 @@ function addNumber(array, number) {
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
