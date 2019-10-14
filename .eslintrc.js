@@ -12,5 +12,6 @@ module.exports = {
         'no-plusplus': ['off'],
         'no-console': ['error'],
         'arrow-parens': ['error', 'as-needed']
+        
     }
 };
