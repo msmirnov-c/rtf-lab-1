@@ -16,7 +16,7 @@ function addNumber(array, number) {
         sum += item * 10 ** pow;
         pow--;
     });
-    let answer = (number + sum).toString().split('');
+    const answer = (number + sum).toString().split('');
 
     return answer.map(Number);
 }
