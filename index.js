@@ -30,7 +30,6 @@ function addNumber(array, number) {
     helperNum += number;
     let x = helperNum;
     let helperCount = 0;
-    console.log(x);
     while (x > 1) {
         x /= 10;
         helperCount++;
