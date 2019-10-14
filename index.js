@@ -9,7 +9,7 @@ function addNumber(array, number) {
             stringArray += array[i].toString();
         } else return null;
 
-        const result = stringArray + number;
+        const result = parseInt(stringArray) + number;
 
         return result.split('').map(Number);
     }
