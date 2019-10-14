@@ -10,7 +10,7 @@ function addNumber(array, number) {
         const num = parseInt(string, 10) + number;
         const lastNum = num.toString();
         let arr = lastNum.split('');
-        arr = arr.map(lastN => parseInt(lastN, 10));
+        arr = arr.map((lastN) => parseInt(lastN, 10));
 
         return arr;
     }
