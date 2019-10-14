@@ -10,7 +10,7 @@ function addNumber(array, number) {
     let endArray;
 
     for (let i = 0; i < array.length; i++) {
-        endArray[i] = Number(arrayOfString[i]);
+        endArray[i] = Number.parseInt(arrayOfString[i]);
     }
 
     return (endArray);
