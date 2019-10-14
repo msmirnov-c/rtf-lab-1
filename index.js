@@ -15,7 +15,7 @@ function addNumber(array, number) {
         result += 10 ** i * array[i];
     }
 
-    return (result + number).toString().split('').map(x => Number(x));
+    return (result + number).toString().split('').map(Number);
 }
 
 module.exports = {
