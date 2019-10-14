@@ -13,7 +13,7 @@ function addNumber(array, number) {
             return null;
         }
     }
-	
+
     if (number < 0 || Number.isInteger(number) === false) {
         for (let i = 0; i < array.length + 1; i++) {
             newArray[i] = array[i];
