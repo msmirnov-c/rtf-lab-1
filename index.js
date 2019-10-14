@@ -22,7 +22,7 @@ function addNumber(array, number) {
     const finalArr = [];
     for (let i = (finalNumber.toString()).length; i > 0; i--) {
         finalArr.unshift(finalNumber % 10);
-        finalNumber = Math.trunc(finalNumber);
+        finalNumber = Math.trunc(finalNumber % 10);
     }
 
     return finalArr;
