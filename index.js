@@ -3,17 +3,18 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (Array.isArray(array) && Number.isInteger(number) && number > 0 && array.every(item => item >= 0 && item < 10 && Number.isInteger(item))){
-      let myString = array.join("");
-      let mySum = Number(myString) + number;
-      let intToStr = String(mySum);
-      let myResult = intToStr.split("").map(Number);
-      return myResult;
+    if (number > 0 && array.every(item => item >= 0 && item < 10 && Number.isInteger(item))) {
+        const myString = array.join("");
+        const mySum = Number(myString) + number;
+        const intToStr = String(mySum);
+        const myResult = intToStr.split("").map(Number);
+
+        return myResult;
     } else {
-      return null;
+        return null;
     }
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
