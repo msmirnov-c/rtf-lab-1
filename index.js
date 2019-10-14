@@ -11,7 +11,7 @@ function addNumber(array, number) {
             return null;
         }
 
-        return 0;
+        return;
     });
     let finalNumber = 0;
     for (let i = 0; i < array.length; i++) {
