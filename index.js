@@ -6,11 +6,9 @@ function addNumber(array, number) {
     let final = [];
     let i = 0;
     do {
-        if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number')) 
-        {
+        if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof (array[i]) === 'number')) {
             final += array[i];
-            i++;
-        }
+            i++; }
         else {
             return null;
         }
