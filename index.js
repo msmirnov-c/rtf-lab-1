@@ -13,9 +13,9 @@ function addNumber(array, number) {
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
     const strSum = sum.toSting();
-    array.concat(strSum.split());
+    const arrayEnd = array.concat(strSum.split());
 
-    return array;
+    return array1;
 }
 
 module.exports = { addNumber };
