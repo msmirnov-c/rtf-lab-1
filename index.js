@@ -4,16 +4,19 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    //let numberString = '';
-
-    if (Number.isInteger(number) && array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
+    if (!Number.isInteger(number) || number < 0) {
+        return null;
+    } 
+        
+    if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
         let numberString = array.join('');
-        numberString = (parseInt(numberString, 10) + number).toString();
-
-        return numberString.split('').map((item) => parseInt(item, 10));
     } else {
         return null;
     }
+
+    numberString = (parseInt(numberString, 10) + number).toString();
+
+    return numberString.split('')((item) => parseInt.map(item, 10));
 }
 
 module.exports = {
