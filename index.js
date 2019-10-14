@@ -18,7 +18,7 @@ function addNumber(array, number) {
         }
     }
 
-    if (helper < array.length) {
+    if (helper < array.length || helper === 0) {
         return null;
     }
 
