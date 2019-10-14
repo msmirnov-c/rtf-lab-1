@@ -10,7 +10,7 @@ function addNumber(array, number) {
     }
 
     const str = array.join('');
-    const strValue = parseInt(str, 10);
+    strValue = parseInt(str, 10);
     strValue += number;
     array = array.concat(strValue.splite(''));
     return array;
