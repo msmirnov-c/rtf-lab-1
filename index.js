@@ -8,7 +8,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    if (array.every((elem) => typeof elem !== 'number' && elem >= 9 && elem <= 0)) {
+    if (!array.every((elem) => typeof elem === 'number' && elem <= 9 && elem >= 0)) {
         return null;
     }
 
@@ -21,3 +21,4 @@ function addNumber(array, number) {
 module.exports = {
     addNumber,
 };
+console.log(addNumber([1,0,9], 2));
