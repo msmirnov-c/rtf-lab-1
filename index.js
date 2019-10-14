@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
-        if (!Number.isInteger(number) && array[i] < 0 && array[i] > 9 && typeof array[i] !== 'number') {
+        if (array[i] < 0 && array[i] > 9 && typeof array[i] !== 'number') {
             return null;
         }
     }
