@@ -4,10 +4,10 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    array.forEach((element) => {
-        if (typeof (element) !== 'number') return null;
+    array.forEach((item) => {
+        if (typeof (item) !== 'number') return null;
 
-        if ((element.toString()).length === 1) {
+        if ((item.toString()).length === 1) {
             return 0;
         }
 
