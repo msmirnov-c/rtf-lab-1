@@ -5,7 +5,7 @@
 function addNumber(array, number) 
 { 
 	let n;
-	let sum	=0;
+	let d = [];
 	for (let i of array)
 	{
 		if (typeof(i) !== 'number' && i >= 9)
@@ -16,16 +16,17 @@ function addNumber(array, number)
 		else
 		{
 			n=(array.reduce((total, current) => total + current)) + number;
-			while(n > 0)
-			{
-  				sum += n % 10;
-  				n = Math.floor(n / 10);
+			while (n > 0) {
+				d.push(n % 10);
+				n = parseInt(n / 10);
 			}
-			return sum;
-		}
+			d.reverse();
+			return d;
 	}
 }
 
 module.exports = {
     addNumber
-};
+}
+
+
