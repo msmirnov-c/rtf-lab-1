@@ -4,14 +4,14 @@
 */
 function addNumber(array, number) {
       
-      right = (item) => !Number.isInteger(number)  || typeof item === 'number';
+     const right = (item) => !Number.isInteger(number)  || typeof item === 'number';
         if (!array.every(right)) {
         console.log (null);
       };
       {
-        str1 = array.reduce((array, number) => array + number,"");
-        amount= +str1 + number;
-        array1 = amount.toString().split('');
+       const str1 = array.reduce((array, number) => array + number,"");
+       const amount= +str1 + number;
+       const array1 = amount.toString().split('');
 
         console.log (array1.map((correct) => parseInt(correct)));
     }
