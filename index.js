@@ -2,8 +2,6 @@
 * @param array  – массив элементов. Например, [1, 8, 3] 
 * @param number – число, которое нужно прибавить к числу, полученному из массива 
 */ 
-
-
 function addNumber(array, number) 
 { 
     let num = 0; 
@@ -18,7 +16,6 @@ function addNumber(array, number)
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 } 
-
 module.exports = {
     addNumber
 };
