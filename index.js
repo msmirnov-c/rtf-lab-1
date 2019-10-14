@@ -1,10 +1,9 @@
 function addNumber(array, number) {
-    
+
     for (let i = 0; i < array.length; i++) {
         if (!Number.isInteger(array[i]) || array[i] < 0 || array > 9)
             return null;
     }
-   
     let arrayNumber = '';
     for (let i = 0; i < array.length; i++) {
         arrayNumber += array[i];
