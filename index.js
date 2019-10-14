@@ -10,6 +10,7 @@ function addNumber(array, number) {
         if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             finalNumber = finalNumber * 10 + array[i];
         }
+        else return null;
 
         finalNumber += number;
     }
