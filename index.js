@@ -7,7 +7,7 @@ function addNumber(array, number) {
     array.forEach((item) => {
         if (typeof (item) !== 'number') return null;
 
-        if ((item.toString()).length !== 1) {
+        if (item < 0 || item > 9) {
             return null;
         }
 
