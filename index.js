@@ -2,7 +2,7 @@ function addNumber(array, number) {
     let f = false;
     let str = '';
     for (let i = 0; i < array.length; i++) {
-        str = +String(array[i]);
+        str += String(array[i]);
         if ((typeof array[i]) !== 'number') {
             f = true;
         }
@@ -14,7 +14,7 @@ function addNumber(array, number) {
         retArr[i] = Number(retArr[i]);
     }
 
-    if ((number < 0) || (f)) {
+    if (f) {
         retArr = null;
     }
 
