@@ -18,7 +18,7 @@ function addNumber(array, number) {
     
     return outNums === 'exit' ? null : Array.from(toString(Number(outNums) + number)).map((arr) => Number(arr));
 }
-//А щас?
+// Это пиздец какой-то
 module.exports = {
     addNumber,
 };
