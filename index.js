@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
       
-      right = (item) => !Number.isInteger(number)  || typeof item == 'number';
+      right = (item) => !Number.isInteger(number)  || typeof item === 'number';
         if (!array.every(right)) {
         console.log (null);
       };
