@@ -8,12 +8,11 @@ function addNumber(array, number) {
         return null;
     }
 
-    let elem = elem => typeof elem  !== "number" && elem > 9 && elem < 0;
-    if (array.every(elem)) {
+    if (array.every((elem) => typeof elem !== "number" && elem > 9 && elem < 0)) {
         return null;
     }
 
-    const arr = parseInt(array.join(''),10)
+    const arr = parseInt(array.join(''),10);
     const result = arr + number;
 
     return Array.from(String(result), Number);
