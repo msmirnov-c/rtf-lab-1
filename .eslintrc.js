@@ -18,17 +18,10 @@ module.exports = {
             'error',
             4
         ],
-        'linebreak-style': [
-            'error',
-            'unix'
-        ],
-        'quotes': [
-            'error',
-            'single'
-        ],
-        'semi': [
-            'error',
-            'always'
-        ]
+        camelcase: ['error'],
+        'linebreak-style': 'off',
+        'no-plusplus': ['off'],
+        'no-console': ['error'],
+        'arrow-parens': ['error', 'as-needed']
     }
 };
