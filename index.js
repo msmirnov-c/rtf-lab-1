@@ -1,20 +1,13 @@
 function addNumber(array, number) {
-    const finalArr = [];
-    let translatedNum = '';
-    for (let i = 0; i < array.length; i++) {
-        if (!(typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9 && array[i] === Math.trunc(array[i]))) {
-            return null;
-        }
+    if (!(array.every(item => Number.isInteger(item))) || !(array.every(item => item >= 0)) || !(array.every(item => item <= 10))) {
+        return null;
     }
 
     const translatedArr = array.reduce((result, item) => result + item.toString());
-    translatedNum = (parseInt(translatedArr, 10) + number).toString();
+    let summedNum = (parseInt(translatedArr, 10) + number).toString();
+    const finalArr = summedNum.split('').map(item => parseInt(item));
 
-    for (let i = 0; i < translatedNum.length; i++) {
-        finalArr[i] = parseInt(translatedNum[i], 10);
-    }
-
-    return finalArr;
+    return finalArr
 }
 
 module.exports = {
