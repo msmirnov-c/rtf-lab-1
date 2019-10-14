@@ -5,14 +5,14 @@
 
 function addNumber(array, number) {
     if (array === null || number < 0 || number === null
-        || array.some(element => element < 0 || !Number.isInteger(element) || element == null)) {
+        || array.some((element) => element < 0 || !Number.isInteger(element) || element == null)) {
         return null;
     }
 
     const intResult = parseInt(array.join(''), 10) + number;
     const stringResult = intResult.toString();
 
-    return stringResult.split('').map(element => parseInt(element, 10));
+    return stringResult.split('').map((element) => parseInt(element, 10));
 }
 
 module.exports = {
