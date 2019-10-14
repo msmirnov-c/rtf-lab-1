@@ -23,12 +23,7 @@ function addNumber(array, number){
         }
         return arr
 }
-let s1 = addNumber([2, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
-let s2 = addNumber([2, 5, 1], 5); // 251 + 5 = 256; => [2, 5, 6]
-let s3 = addNumber([1], 4020); // 1 + 4020 = 4021; => [4, 0, 2, 1]
-let s4 = addNumber([1, '4'], 1); // некорректный элемент => null 
-
-console.log(s1)
-console.log(s2)
-console.log(s3)
-console.log(s4)
+addNumber([2, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
+addNumber([2, 5, 1], 5); // 251 + 5 = 256; => [2, 5, 6]
+addNumber([1], 4020); // 1 + 4020 = 4021; => [4, 0, 2, 1]
+addNumber([1, '4'], 1); // некорректный элемент => null 
