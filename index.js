@@ -1,21 +1,21 @@
 /**
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
-*/
+ */
 function addNumber(array, number) {
-    for (let i = 0; i < array.Length; i++) {
-        if (!array[i].isInteger() || array[i] < 0 || array[i] > 9) {
+    for (let i = 0; i < array.length; i++) {
+        if (!Number.isInteger(array[i]) || array[i] < 0 || array[i] > 9) {
             return null;
         }
     }
 
-    array.reversed();
+    array.reverse();
     let result = 0;
-    for (let i = 0; i < array.Length; i++) {
+    for (let i = 0; i < array.length; i++) {
         result += 10 ** i * array[i];
     }
 
-    return (result + number).split('');
+    return (result + number).toString().split('').map(x => +x);
 }
 
 module.exports = {
