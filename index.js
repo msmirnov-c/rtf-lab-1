@@ -8,7 +8,7 @@ function addNumber(array, number) {
         if (typeof (element) !== 'number') return null;
 
         if ((element.toString()).length === 1) {
-            return element;
+            return 0;
         }
 
         return null;
