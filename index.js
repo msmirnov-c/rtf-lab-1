@@ -11,9 +11,10 @@ function addNumber(array, number) {
     if (!(array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10)))) {
         return null;
     }
+
     let numberString = array.join('');
     numberString = (parseInt(numberString, 10) + number);
-    let arrayOfDigits = Array.from(String(numberString), Number);
+    const arrayOfDigits = Array.from(String(numberString), Number);
 
     return arrayOfDigits;
 }
