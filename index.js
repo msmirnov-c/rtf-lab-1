@@ -9,14 +9,12 @@ function addNumber(array, number)
     let num = 0; 
     let newArray = []; 
     var integer = array.every(item => Number.isInteger(item)); 
-    if (integer === true && array.every(item => item>0 && item<9 && item !== null) ) 
-    { 
+    if (integer === true && array.every(item => item>0 && item<9 && item !== null) ) { 
         num = array.join(); 
         num = Number(num.replace(/,/g, '')); 
         num += number; 
         newArray = num.toString(10).split('').map(Number); 
-    } 
-    else 
+    } else 
         return null;// не подходит по усовию 
     return newArray;// возвращаю массив 
 } 
