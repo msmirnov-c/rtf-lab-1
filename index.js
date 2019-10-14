@@ -17,6 +17,4 @@ function addNumber(array, number) {
 
     return array.concat(door);
 }
-
 module.exports = { addNumber };
- 
