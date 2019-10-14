@@ -13,11 +13,10 @@ function addNumber(array, number) {
     const str = array.join('');
     strValue = parseInt(str, 10);
     strValue += number;
-    array = array.concat(strValue.splite(''));
+    array.concat(strValue.splite(''));
 
     return array;
 }
 
 module.exports = {
-    addNumber
-};
+    addNumber};
