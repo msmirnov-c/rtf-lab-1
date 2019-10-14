@@ -12,11 +12,9 @@ function addNumber(array, number) {
 
             return null;
         }
-        
         outNums += array[i];
 
     }
-
     return outNums === 'exit' ? null : Array.from((Number(outNums) + number) + '').map((arr) => Number(arr));
 }
 
