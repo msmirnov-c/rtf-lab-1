@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     function right(element) {
-        return element < 9 && element > 0 && Number.isInteger(element);
+        return element <= 9 && element >= 0 && Number.isInteger(element);
     }
     if (!array.every(right)) {
         return null;
