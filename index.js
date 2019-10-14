@@ -1,14 +1,16 @@
 function addNumber(array, number) {
-    if (!(array.every(item => Number.isInteger(item))) || !(array.every(item => item >= 0)) || !(array.every(item => item <= 10))) {
+    let isFromZeroToNine = array.every(item => item >= 0) && array.every(item => item < 10);
+    if (!(array.every(item => Number.isInteger(item))) || !(isFromZeroToNine)) {
         return null;
     }
 
     const translatedArr = array.reduce((result, item) => result + item.toString());
-    let summedNum = (parseInt(translatedArr, 10) + number).toString();
-    const finalArr = summedNum.split('').map(item => parseInt(item));
-
+    const summedNum = (parseInt(translatedArr, 10) + number).toString();
+    const finalArr = summedNum.split('').map(item => parseInt(item, 10));
     return finalArr
 }
+
+console.log(addNumber([11, 4], 1));
 
 module.exports = {
     addNumber,
