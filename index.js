@@ -2,6 +2,7 @@ function checkArray(array) {
     function check(element) {
         return element > 9 || element < 0 || !Number.isInteger(element);
     }
+    
     return array.some(check);
 }
 
