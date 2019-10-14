@@ -15,7 +15,7 @@ function addNumber(array, number) {
 
             return stringFromArray;
         }
-        
+
         return null;
     });
     const finalNumber = parseInt(stringFromArray, 10) + number;
