@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let pow = 0;
+    let pow = array.length - 1;
     let sum = 0;
     const funcArray = function validation(item) {
         return (item < 0 || item > 9 || typeof item !== 'number');
@@ -12,12 +12,11 @@ function addNumber(array, number) {
         return null;
     }
 
-    let answer = array.reverse();
-    answer.forEach((item) => {
-        sum += item * 10 ** pow;
-        pow++;
+    array.forEach((item) => {
+        sum += item * Math.pow(10 , pow);
+        pow--;
     });
-    answer = (number + sum).toString().split('');
+    array = (number + sum).toString().split('');
 
     return array.map(Number);
 }
