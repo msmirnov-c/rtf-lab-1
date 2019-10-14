@@ -7,13 +7,11 @@ function addNumber(array, number) {
     for (let i = 0; i < array.lenght; i++) {
         if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             stringArray += array[i].toString();
-        } else {
-            return null;
-        }
+        } else return null;
 
         const result = stringArray + number;
 
-        return (result.split('').map(Number));
+        return result.split('').map(Number);
     }
 }
 
