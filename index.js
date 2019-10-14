@@ -15,7 +15,6 @@ function addNumber(array, number) {
     const strSum = sum.toSting();
     const arr = strSum.split('');
 
-
     for (let i = 0; i < arr.length; i++) {
         arr[i] = parseInt(arr[i], 10);
     }
