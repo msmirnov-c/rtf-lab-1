@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    array.forEach(function (element) { if (typeof (element) !== 'number') return null
+    array.forEach(checkElement (element) { if (typeof (element) !== 'number') return null
     else if ((element.toString()).length === 1) {return element}
     else return null;
     });
