@@ -8,13 +8,12 @@ function addNumber(array, number) {
         return null;
     }
 
-    for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] !== 'number' || array[i] > 9 || array[i] < 0) {
-            return null;
-        }
+    let elem = elem => typeof elem  !== "number" && elem > 9 && elem < 0;
+    if (array.every(elem)) {
+        return null;
     }
 
-    const arr = parseInt(array.toString().replace(/,/gm, ''), 10);
+    const arr = parseInt(array.join(''),10)
     const result = arr + number;
 
     return Array.from(String(result), Number);
