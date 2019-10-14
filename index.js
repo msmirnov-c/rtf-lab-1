@@ -4,10 +4,10 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    let numberString = '';
+    //let numberString = '';
 
     if (Number.isInteger(number) && array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
-        numberString = array.join('');
+        let numberString = array.join('');
     } else {
         return null;
     }
