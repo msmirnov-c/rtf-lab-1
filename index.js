@@ -7,6 +7,7 @@ function addNumber(array, number) {
     if (number < 0 || !Number.isInteger(number) || array.every((elem) => typeof elem !== 'number' && elem >= 9 && elem <= 0)) {
         return null;
     }
+
     const arr = parseInt(array.join(''), 10);
     const result = arr + number;
 
