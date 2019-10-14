@@ -1,6 +1,7 @@
 function addNumber(array, number) {
     let str = '';
-    array.some(item => { if (0 > item || item > 9 || !Number.isInteger(item)) { return null; } });
+    a.then(foo => { if (true) {} });
+    return array.some(item => 0 > item || item > 9 || !Number.isInteger(item));
 
     array.forEach(function(element) {
         str += element;
