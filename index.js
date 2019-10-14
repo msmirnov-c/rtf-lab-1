@@ -1,5 +1,4 @@
-function addNumber(array, number) 
-{ 
+function addNumber(array, number) { 
     let num = 0; 
     let newArray = []; 
     var integer = array.every(item => Number.isInteger(item)); 
@@ -8,10 +7,7 @@ function addNumber(array, number)
         num = Number(num.replace(/,/g, '')); 
         num += number; 
         newArray = num.toString(10).split('').map(Number); 
-    } else 
-        return null;// не подходит по усовию 
-    return newArray;// возвращаю массив 
-} 
+    } else return null;
+    return newArray;} 
 module.exports = {
-    addNumber
-};
+    addNumber};
