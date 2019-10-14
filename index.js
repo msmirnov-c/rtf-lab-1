@@ -12,7 +12,7 @@ function addNumber(array, number) {
         }
 
         return 0;
-    });
+    };
     let finalNumber = 0;
     for (let i = 0; i < array.length; i++) {
         finalNumber = finalNumber * 10 + array[i];
