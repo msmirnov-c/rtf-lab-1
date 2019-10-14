@@ -8,7 +8,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    for (let i = array.length - 1; i >= 0;  i--) {
+    for (let i = array.length - 1; i >= 0; i--) {
         if (!(typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9)) {
             return null;
         }
@@ -24,8 +24,8 @@ function addNumber(array, number) {
     }
 
     return resultArray;
-};
+}
 
 module.exports = {
-    addNumber
+    addNumber,
 };
