@@ -13,12 +13,12 @@ function addNumber(array, number) {
     }
 
     let answer = array.reverse();
-    answer.forEach(function sumItems(item) {
+    answer.forEach(item => {
         sum += item * 10 ** pow;
         pow++;
     });
     answer = (number + sum).toString().split('');
-    
+
     return array.map(Number);
 }
 
