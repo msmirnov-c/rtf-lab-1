@@ -11,11 +11,11 @@ function addNumber(array, number) {
         }
 
         finalString += array[i].toString();
-        i++;
     }
 
     return (parseInt(finalString, 10) + number).toString().split('').map((element) => parseInt(element, 10));
 }
+
 
 module.exports = {
     addNumber,
