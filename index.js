@@ -26,6 +26,7 @@ function addNumber(array, number) {
             helperNum += array[i] * (10 ** i);
         }
     }
+	
     helperNum += number;
     let x = helperNum;
     let helperCount = 0;
@@ -33,10 +34,12 @@ function addNumber(array, number) {
         x /= 10;
         helperCount++;
     }
+	
     for (let i = helperCount - 1; i >= 0; i--) {
         helperNum %= 10;
         newArray[i] = helperNum;
     }
+	
     return newArray;
     // Решение задачи
 }
