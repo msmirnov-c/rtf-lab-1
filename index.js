@@ -11,7 +11,7 @@ function addNumber(array, number) {
 
    const str = array.join('');
    const strValue = parseInt(str,10);
-   const str = strstrValue + number;
+   strstrValue += number;
    array1 = array.concat(strValue.splite(''));
    
    return array1;
