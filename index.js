@@ -7,12 +7,12 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if ((array[i].toString().length === 1) && (typeof array[i] === 'number')) {
             sum += array[i];
-        } else
-            return null;
+        } else return null;
     }
+
     sum = (Number(sum) + number).toString().split('');
-    let endresult = Array.from(sum, x => Number(x));
-    return endresult;
+
+    return Array.from(sum, x => Number(x));
 }
 
 module.exports = {
