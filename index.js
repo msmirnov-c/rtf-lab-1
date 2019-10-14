@@ -4,7 +4,7 @@
  */
 function addNumber(array, number) {
     const isArrayElementsNumber = array.every((item) => (typeof item === 'number') && (item >= 0) && (item <= 9));
-    const IsSecondParameterNumber = typeof (number) === 'number';
+    const IsSecondParameterNumber = typeof number === 'number';
     if (isArrayElementsNumber && IsSecondParameterNumber) {
         const amount = Number(array.join('')) + number;
 
