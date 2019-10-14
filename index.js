@@ -6,7 +6,7 @@ function addNumber(array, number) {
     // Решение задачи
     array.forEach((element) => {
         if (typeof (element) !== 'number') return null;
-        else if ((element.toString()).length === 1) { return element };
+        if ((element.toString()).length === 1) { return element };
         return null;
     });
     let finalNumber;
