@@ -4,12 +4,12 @@
 */
 function addNumber(array, number) {
     let stringArray = '';
-    for (let i = 0; i < array.lenght; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             stringArray += array[i].toString();
         } else return null;
     }
-
+   
     const result = (parseInt(stringArray, 10) + number).toString();
 
     return result.split('').map((item) => parseInt(item, 10));
