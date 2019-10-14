@@ -4,6 +4,19 @@
 */
 function addNumber(array, number) {
     // Решение задачи
+    array.forEach(function (element) { if  !(typeof (element) === 'number') return null
+    else if ((element.toString()).length === 1) {return element}
+    else return null;
+    });
+    let finalNumber;
+    for (let i=0;i<array.length;i++){
+        finalNumber+=array[i]*10;
+    }
+    let finalArr=[];
+    for (let i = (finalNumber.toString().length; i=0; i--){
+        finalArr[i]=finalNumber%10
+    }
+    return finalArr;
 }
 
 module.exports = {
