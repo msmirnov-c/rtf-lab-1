@@ -13,11 +13,11 @@ function addNumber(array, number) {
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
     const strSum = sum.toSting();
-    const array = strSum.split('');
+    const arr = strSum.split('');
 
 
     for (let i = 0; i < array.length; i++) {
-        array[i] = parseInt(arr[i], 10);
+        arr[i] = parseInt(arr[i], 10);
     }
 
     return array;
