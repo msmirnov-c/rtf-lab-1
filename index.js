@@ -37,7 +37,7 @@ function addNumber(array, number) {
     helperNum += number;
     let x = helperNum;
     let helperCount = 0;
-    while (x > 1) {
+    while (x >= 1) {
         x /= 10;
         helperCount++;
     }
