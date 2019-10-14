@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (typeof number !== 'number') return null;   
+    if (typeof number !== 'number') return null;
 
     let stringFromArray = '';
     const returnedArray = [];
@@ -14,8 +14,8 @@ function addNumber(array, number) {
             stringFromArray += toString(item);
 
             return stringFromArray;
-
-        } return null;
+        } 
+        return null;
     });
     const finalNumber = parseInt(stringFromArray, 10) + number;
     for (let i = 0; i < toString(finalNumber).length; i += 1) {
