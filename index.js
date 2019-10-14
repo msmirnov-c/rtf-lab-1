@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     let sum = '';
     for (let i = 0; i < array.length; i++) {
-        if ((array[i].toString().length === 1) && (typeof array[i] === 'number')) {
+        if (typeof array[i] === 'number') {
             sum += array[i];
         } else return null;
     }
