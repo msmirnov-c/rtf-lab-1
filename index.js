@@ -8,14 +8,14 @@ function addNumber(array, number) {
         return null;
     }
 
-    if (array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
-        let numberString = array.join('');
-        numberString = (parseInt(numberString, 10) + number).toString();
-    } else {
-            return null;
-        }
+    if (!(array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10)))) {
+        return null;
+    }
+    let numberString = array.join('');
+    numberString = (parseInt(numberString, 10) + number);
+    let arrayOfDigits = Array.from(String(numberString), Number);
 
-    return numberString.split('').map(Number);
+    return arrayOfDigits;
 }
 
 module.exports = {
