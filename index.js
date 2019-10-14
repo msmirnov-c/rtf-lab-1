@@ -9,12 +9,13 @@ function addNumber(array, number) {
     else return null;
     });
     let finalNumber;
-    for (let i=0;i<array.length;i++){
-        finalNumber+=array[i]*10;
+    for (let i = 0; i < array.length; i++){
+        finalNumber += array[i] * 10;
     }
-    let finalArr=[];
-    for (let i = (finalNumber.toString()).length; i>0; i--){
-        finalArr[i]=finalNumber%10;
+    finalNumber+=number;
+    let finalArr = [];
+    for (let i = (finalNumber.toString()).length; i > 0; i--){
+        finalArr[i]=finalNumber % 10;
     }
     return finalArr;
 }
