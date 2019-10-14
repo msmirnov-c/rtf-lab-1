@@ -14,6 +14,7 @@ function addNumber(array, number) {
         const result = stringArray + number;
 
         return result.split('').map(Number);
+        
     }
 }
 
