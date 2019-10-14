@@ -8,9 +8,7 @@ function addNumber(array, number) {
         || item === 4 || item === 5 || item === 6 || item === 7
         || item === 8 || item === 9)) {
         stringFromArray = array.join('');
-    }
-
-    else return null;
+    } else return null;
 
     if (typeof number !== 'number') return null;
 
