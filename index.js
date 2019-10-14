@@ -20,15 +20,18 @@ function addNumber(array, number) {
     }
 
     if (helper === array.length) {
-        for (let i = 0; i < array.length; i++) {
-            helperNum += array[i] * (10 ** i);
+        let j = 0;
+        for (let i = array.length - 1; i >= 0; i--) {
+            helperNum += array[i] * (10 ** j);
+            j++;
         }
     }
 
     helperNum += number;
     let x = helperNum;
     let helperCount = 0;
-    while (x > 0) {
+    console.log(x);
+    while (x > 1) {
         x /= 10;
         helperCount++;
     }
