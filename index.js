@@ -7,8 +7,8 @@ function addNumber(array, number) {
 
     array = array.join('');
     array = Number.parseInt(array);
-    let array = array + number;
-    let array = Array.from(array.toString());
+    array += number;
+    array = Array.from(array.toString());
 
     for (let i = 0; i < array.length; i++) {
         array[i] = Number.parseInt(array[i]);
