@@ -1,6 +1,6 @@
 function addNumber(array, number) {
     let str = '';
-    if (array.some(item => {0 > item || item > 9 || !Number.isInteger(item)})) {
+    if (array.some(item => (0 > item || item > 9 || !Number.isInteger(item)))) {
         return null;
     }
 
@@ -8,9 +8,9 @@ function addNumber(array, number) {
            str += item;
     });
     str = (Number(str) + number).toString();
-    array = str.split('').map(Number);
+    newArray = str.split('').map(Number);
 
-    return array;
+    return newArray;
 }
 
 module.exports = {
