@@ -14,16 +14,16 @@ function addNumber(array, number) {
         }
     }
 
-    if (Number.isInteger(number) === false) {
-        number = parseInt(number, 10);
-    }
-
     if (number < 0) {
         for (let i = 0; i < array.length + 1; i++) {
             newArray[i] = array[i];
             if (i === array.length) {
                 newArray[i] = NaN;
-                newArray[i + 1] = -1 * number;
+                if (Number.isInteger(number) === false) {
+                    newArray[i + 1] = -1 * parseInt(number, 10);
+                } else {
+                    newArray[i + 1] = -1 * number;
+                }
             }
         }
 
