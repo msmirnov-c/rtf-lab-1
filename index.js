@@ -9,10 +9,12 @@ function addNumber(array, number) {
             const string = array.join('');
             newNumber = Number(string);
             newNumber += number;
+            
             return newNumber.toString.split('').map(Number);
         }
 
     }
+
     return null;
 }
 
