@@ -9,10 +9,12 @@ function addNumber(array, number) {
         }
     }
 
+    let strValue = '';
     const str = array.join('');
     strValue = parseInt(str, 10);
     strValue += number;
     array = array.concat(strValue.splite(''));
+
     return array;
 }
 
