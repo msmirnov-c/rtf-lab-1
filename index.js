@@ -7,18 +7,16 @@ function addNumber(array, number) {
     const newArray = [];
     let helper = 0;
     let helperNum = 0;
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 1; j < 10; j++) {
-            if (array[i] === j) {
-                if (number > 0 && Number.isInteger(number) === true) {
-                    helper++;
-                } else {
-                    return null;
-                }
+    if (number > 0 && Number.isInteger(number) === true) {
+        for (let i = 0; i < array.length; i++) {
+            if (typeof (array[i]) === 'number') {
+                helper++;
             } else {
                 return null;
             }
         }
+    } else {
+        return null;
     }
 
     if (helper === array.length) {
