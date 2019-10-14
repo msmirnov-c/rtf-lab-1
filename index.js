@@ -9,13 +9,13 @@ function addNumber(array, number) {
     if (!array.every(right)) {
         return null;
     }
+
     const sumDigit = Number(array.join('')) + number;
-    
     const sumArray = sumDigit.toString().split('').map(Number);
 
     return sumArray;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
