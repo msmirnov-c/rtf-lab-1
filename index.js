@@ -9,11 +9,11 @@ function addNumber(array, number) {
         }
     }
 
-    let strValue = '';
-    const str = array.join('');
-    strValue = parseInt(str, 10);
-    strValue += number;
-    array.concat(strValue.split(''));
+   // let strValue = '';
+   // const str = array.join('');
+  //  strValue = parseInt(str, 10);
+    //strValue += number;
+   // array.concat(strValue.split(''));
 
     return array;
 }
