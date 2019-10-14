@@ -8,14 +8,17 @@ function addNumber(array, number) {
     if (array.length === 0) {
         return null;
     }
+
     for (let i = 0; i < array.length; i++) {
         if (typeof (array[i]) !== 'number' || array[i] < 0 || array[i] > 9) {
             return null;
         }
     }
+
     if (number < 0 || Number.isInteger(number) === false) {
         return null;
     }
+
     let j = 0;
     for (let i = array.length - 1; i >= 0; i--) {
         helperNum += array[i] * (10 ** j);
