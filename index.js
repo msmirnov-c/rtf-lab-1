@@ -12,8 +12,8 @@ function addNumber(array, number) {
 
             return null;
         }
-
-        else outNums += array[i];
+        
+        outNums += array[i];
 
     }
 
