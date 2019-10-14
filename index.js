@@ -7,7 +7,7 @@ function addNumber(array, number) {
         let newNumber = Number(array.join(''));
         newNumber += number;
 
-        return newNumber.toString.split('').map(Number);
+        return newNumber.toString.split('').map(parseInt);
     }
 
     return null;
