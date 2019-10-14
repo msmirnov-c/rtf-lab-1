@@ -13,7 +13,7 @@ let array2 =[];
 array2 = sum.split('');
 let array3 =[];
 for (let j = 0; j < array2.length; j++)
-array3[j] = parseInt(array2[j]);
+array3[j] = parseInt(array2[j], 10);
 return(array3);
 }
 
