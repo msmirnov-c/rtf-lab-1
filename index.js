@@ -15,12 +15,12 @@ function addNumber(array, number) {
     }
 
     if ((number < 0) || (f)) {
-        retArr = null; 
+        retArr = null;
     }
 
     return retArr;
-};
+}
 
 module.exports = {
-    addNumber
+    addNumber,
 };
