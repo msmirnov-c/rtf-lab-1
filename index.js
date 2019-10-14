@@ -16,11 +16,11 @@ function addNumber(array, number) {
     const arr = strSum.split('');
 
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         arr[i] = parseInt(arr[i], 10);
     }
 
-    return array;
+    return arr;
 }
 
 
