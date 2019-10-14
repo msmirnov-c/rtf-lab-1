@@ -8,7 +8,7 @@ function addNumber(array, number) {
 		return null;
 	}
 	array.forEach(function(element){
-		if(!Number.isInteger(element) || element < 0 || element > 9 || ){
+		if(!Number.isInteger(element) || element < 0 || element > 9){
 			return null;
 		}
 		temp += element;
