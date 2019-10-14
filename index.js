@@ -7,7 +7,7 @@ function addNumber(array, number) {
     let helper = 0;
     let helperNum = 0;
     for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0 || typeof (array[i]) !== 'number' || array[i] > 9) {
+        if (typeof (array[i]) !== 'number') {
 
             return null;
         }
@@ -17,6 +17,11 @@ function addNumber(array, number) {
                 helper++;
             }
         }
+    }
+
+    if (helper < array.length) {
+
+        return null;
     }
 
     if (number < 0) {
