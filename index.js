@@ -9,10 +9,10 @@ function addNumber(array, number) {
             stringArray += array[i].toString();
         } else return null;
     }
-   
+
     const result = (parseInt(stringArray, 10) + number).toString();
 
-    return result.split('').map((item) => parseInt(item, 10));
+    return result.split('');
 }
 
 module.exports = {
