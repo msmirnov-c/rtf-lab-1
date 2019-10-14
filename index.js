@@ -7,12 +7,12 @@ function addNumber(array, number) {
     if (!Number.isInteger(number) || number < 0) {
         return null;
     }
-    array.forEach(function(element) {
-        if (!Number.isInteger(element) || element < 0 || element > 9) {
+    for(let i = 0; i < array.lenght; i++) {
+        if (!Number.isInteger(lenght[i]) || lenght[i] < 0 || lenght[i] > 9) {
             return null;
         }
-        temp += element;
-    });
+        temp += lenght[i];
+    }
     temp = parseInt(temp) + number;
 
     return temp.toString().split('').map(Number);
