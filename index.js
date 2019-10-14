@@ -14,7 +14,7 @@ function addNumber(array, number) {
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
     const strSum = sum.toSting();
-    let door = strSum.split('');
+    const door = strSum.split('');
 
     return array.concat(door);
 }
