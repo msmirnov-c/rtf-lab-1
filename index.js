@@ -1,13 +1,7 @@
 function addNumber(array, number) {
     let n1 = 0;
 
-    if (number >= 0 && typeof (number) == 'number') {
-        const s = new String(number);
-        if (s.indexOf('.') >= 0) {
-            return null;
-        }
-    }
-    else {
+    if (!(number >= 0 && typeof (number) === 'number') || number != Math.round()(number)) {
         return null;
     }
 
