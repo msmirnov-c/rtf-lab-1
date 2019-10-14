@@ -9,8 +9,7 @@ function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
             finalNumber = finalNumber * 10 + array[i];
-        }
-        else return null;
+        } else return null;
 
         finalNumber += number;
     }
