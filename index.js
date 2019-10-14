@@ -14,9 +14,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    numberString = (parseInt(numberString, 10) + number).toString();
-
-    return numberString.split('')((item) => parseInt.map(item, 10));
+    return  (parseInt(numberString, 10) + number).toString().split('').map(Number);
 }
 
 module.exports = {
