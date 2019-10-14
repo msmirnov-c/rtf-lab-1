@@ -20,7 +20,7 @@ function addNumber(array, number) {
 
     finalNumber += number;
     const finalArr = [];
-    for (let i = (finalNumber.toString()).length; i = 0; i--) {
+    for (let i = (finalNumber.toString()).length; i >= 0; i--) {
         finalArr.unshift(finalNumber % 10);
     }
 
