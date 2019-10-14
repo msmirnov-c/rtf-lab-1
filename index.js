@@ -8,19 +8,20 @@ function addNumber(array, number) {
         if (typeof (element) !== 'number') return null;
 
         if ((element.toString()).length === 1)
-        { return element;
+        {
+            return element;
         }
 
         return null;
     });
     let finalNumber;
-    for ( let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         finalNumber += array[i] * 10;
     }
 
     finalNumber += number;
     const finalArr = [];
-    for ( let i = (finalNumber.toString()).length; i > 0; i--){
+    for (let i = (finalNumber.toString()).length; i > 0; i--) {
         finalArr[i] = finalNumber % 10;
     }
 
