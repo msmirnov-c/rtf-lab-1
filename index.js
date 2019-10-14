@@ -15,7 +15,7 @@ function addNumber(array, number) {
         }
     }
 
-    if (number < 0 || typeof (number) !== 'number') {
+    if (number < 0 || Number.isInteger(number) === false) {
         return null;
     }
 
@@ -26,6 +26,10 @@ function addNumber(array, number) {
     }
 
     helperNum += number;
+
+    if (helperNum === 0) {
+        newArray[0] = 0;
+    }
     let x = helperNum;
     let helperCount = 0;
     while (x >= 1) {
