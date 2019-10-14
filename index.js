@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    array.forEach((item) => {
+    for (let i = 0; i < array.length; i++) {
         if (typeof (item) !== 'number') return null;
 
         if (item < 0 || item > 9) {
