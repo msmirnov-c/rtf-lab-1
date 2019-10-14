@@ -5,13 +5,13 @@
 function addNumber(array, number) {
     if (!array.every((item) => (typeof item) === 'number')) { return null; }
 
-    let array = array.join('');
+    array = array.join('');
     let array = Number.parseInt(array);
     let array = array + number;
     let array = Array.from(array.toString());
 
     for (let i = 0; i < array.length; i++) {
-        let array[i] = Number.parseInt(array[i]);
+        array[i] = Number.parseInt(array[i]);
     }
 
     return (array);
