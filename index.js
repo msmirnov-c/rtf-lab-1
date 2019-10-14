@@ -7,15 +7,11 @@ function addNumber(array, number) {
         return numeric >= 0 && numeric <= 9 && typeof numeric === 'number';
     }
 
-    function returnInt(element) {
-        return parseInt(element, 10);
-    }
-
     if (array.every(isTrue)) {
         let newNumber = Number(array.join(''));
         newNumber += number;
 
-        return newNumber.toString.split('').map(returnInt);
+        return newNumber.toString.split('').map(string => parseInt(string));
     }
 
     return null;
