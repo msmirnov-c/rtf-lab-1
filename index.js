@@ -21,4 +21,3 @@ function addNumber(array, number) {
 module.exports = {
     addNumber,
 };
-console.log(addNumber([1,0,9], 2));
