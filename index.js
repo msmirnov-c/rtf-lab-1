@@ -9,7 +9,6 @@ function addNumber(array, number) {
         }
     }
 
-   
     const str = array.join('');
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
