@@ -9,9 +9,8 @@ function addNumber(array, number) {
             string += number;
             return string.split('');
         }
-        else return null;
     }
-    else return null;
+    return null;
 }
 
 module.exports = {
