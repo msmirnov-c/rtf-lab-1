@@ -10,6 +10,7 @@ function addNumber(array, number) {
             return null;
         }
     }
+
     for (let i = 0; i < array.length; i++) {
         strArr += array[i].toString();
     }
