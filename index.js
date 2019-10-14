@@ -11,7 +11,6 @@ function addNumber(array, number) {
     if (array.some(funcArray)) {
         return null;
     }
-    
 
     let answer = array.reverse();
     answer.forEach((item) => {
