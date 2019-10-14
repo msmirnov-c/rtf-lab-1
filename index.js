@@ -7,11 +7,11 @@ function addNumber(array, number) {
     let numberString = '';
 
     if (array.some(e => (Number.isInteger(e) && e >= 0 && e < 10))) { 
-          numberString = array.join('');
-      } else {
+        numberString = array.join('');
+    } else {
 
-          return null;
-      }
+        return null;
+    }
     numberString = (parseInt(numberString,10) + number).toString();
 
     return numberString.split('').map(item => parseInt(item));
