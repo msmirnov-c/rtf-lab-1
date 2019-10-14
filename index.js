@@ -3,19 +3,17 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
 function addNumber(array, number) {
-    // Решение задачи
     const newArray = [];
     let helper = 0;
     let helperNum = 0;
-    if (number > 0 && Number.isInteger(number) === true) {
-        for (let i = 0; i < array.length; i++) {
-            if (typeof (array[i]) === 'number') {
-                helper++;
-            } else {
-                return null;
-            }
+    for (let i = 0; i < array.length; i++) {
+        if (typeof (array[i]) === 'number') {
+            helper++;
+        } else {
+            return null;
         }
-    } else {
+    }
+    if (number < 0 || Number.isInteger(number) === false) {
         for (let i = 0; i < array.length + 1; i++) {
             newArray[i] = array[i];
             if (i === array.length) {
@@ -43,8 +41,9 @@ function addNumber(array, number) {
     }
 
     for (let i = helperCount - 1; i >= 0; i--) {
-        helperNum %= 10;
-        newArray[i] = helperNum;
+        newArray[i] = helperNum % 10;
+        helperNum -= helperNum % 10;
+        helperNum /= 10;
     }
 
     return newArray;
