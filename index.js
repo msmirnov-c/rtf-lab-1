@@ -14,7 +14,7 @@ function addNumber(array, number) {
         array[i] = Number.parseInt(array[i]);
     }
 
-    return(array);
+    return (array);
 }
 
 module.exports = {
