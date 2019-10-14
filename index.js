@@ -12,7 +12,8 @@ function addNumber(array, number) {
     const str = array.join('');
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
-    array.concat(sum.toString.split(''));
+    const strSum = sum.toSting();
+    array.concat(strSum.split(''));
 
     return array;
 }
