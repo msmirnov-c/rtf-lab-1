@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     for (let i = 0; i < array.lenght; i++) {
-        if (typeof array[i] !== 'number') {
+        if (typeof array[i] !== 'number'||array[i] < 0 || array[i] > 9) {
             return null;
         }
     }
@@ -13,7 +13,7 @@ function addNumber(array, number) {
     const str = array.join('');
     strValue = parseInt(str, 10);
     strValue += number;
-    array.concat(strValue.splite(''));
+    array.concat(strValue.split(''));
 
     return array;
 }
