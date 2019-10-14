@@ -2,7 +2,7 @@
  * @param array – массив элементов. Например, [1, 8, 3]
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
-console.log(addNumber([0,1,1], 10))
+
 function addNumber(array, number) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] < 0 || array[i] > 9 || typeof array[i] !== 'number') {
