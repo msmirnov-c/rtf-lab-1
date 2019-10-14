@@ -12,7 +12,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    const arr = parseInt(array.join(''),10);
+    const arr = parseInt(array.join(''), 10);
     const result = arr + number;
 
     return Array.from(String(result), Number);
