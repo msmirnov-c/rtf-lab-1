@@ -18,6 +18,7 @@ function addNumber(array, number) {
     for (let i = 0; i < stringNumber.length; i++) {
         newArray[i] = parseInt(stringNumber[i], 10);
     }
+
     return newArray;
 }
 
