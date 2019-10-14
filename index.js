@@ -2,11 +2,11 @@ function addNumber(array, number)
 {
     if (!array.every(item => typeof item ===  'number' ));
         return null
-        const s = String((Number(array.join('')) + number)).split('').map(item => Number(item));
+        let s = ((Number(array.join('')) + number)).tostring().split('').map(item => Number(item));
     return s
     }
 
-    addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
-    addNumber([2, 5, 1], 5); // 251 + 5 = 256; => [2, 5, 6]
-    addNumber([1], 4020); // 1 + 4020 = 4021; => [4, 0, 2, 1]
-    addNumber([1, '4'], 1); // некорректный элемент => null
+    addNumber([2, 1, 7], 2);
+    addNumber([4, 3, 9], 1); 
+    addNumber([4], 3123);
+    addNumber([2, '3'], 7);
