@@ -5,8 +5,9 @@
 function addNumber(array, number) {
     if (array.every((value) => Number.isInteger(value))) {
         const arrStr = parseInt(array.join(''), 10) + number;
+
         return arrStr.toString().split('').map(Number);
-}
+    }
 
     return null;
 }
