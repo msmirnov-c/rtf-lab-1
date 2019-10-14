@@ -1,13 +1,12 @@
 function addNumber(array, number) {
-    let NewMass = [];
-    let NewNum = 0;
-    if (array.some((item) => item === null || item > 9 || item < 0 || Math.trunc(item) !== item || typeof (item) !== 'number' || Number.isInteger(item) === false)) return null;// Проверка на подходящие числа
+    let newMass = [];
+    let newNum = 0;
+    if (array.some((item) => item > 9 || item < 0 || Math.trunc(item) !== item || !Number.isInteger(item))) return null;// Проверка на подходящие числа
 
-    NewNum = parseInt(array.join(''), 10);
-    NewNum += number;
-    NewMass = NewNum.toString(10).split('').map(Number);
+    newNum = parseInt(array.join(''), 10);
+    newMass = (newNum + number).toString(10).split('').map(Number);
 
-    return NewMass;
+    return newMass;
 }
 module.exports = {
     addNumber,
