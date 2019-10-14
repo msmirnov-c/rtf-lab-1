@@ -8,13 +8,13 @@ function addNumber(array, number) {
     array = array.join('');
     array = Number.parseInt(array);
     array += number;
-    let array = Array.from(array.toString());
+    let finArray = Array.from(array.toString());
 
-    for (let i = 0; i < array.length; i++) {
-        array[i] = Number.parseInt(array[i]);
+    for (let i = 0; i < finArray.length; i++) {
+        finArray[i] = Number.parseInt(finArray[i]);
     }
 
-    return (array);
+    return (finArray);
 }
 
 module.exports = {
