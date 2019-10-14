@@ -1,20 +1,20 @@
 function addNumber(array, number) {
 
-    for (let j = 0; j < array.length; j++) {
-        if (!Number.isInteger(array[j]) || array[j] < 0 || array > 9)
+    for (let i = 0; i < array.length; i++) {
+        if (!Number.isInteger(array[i]) || array[i] < 0 || array > 9)
             return null;
     }
-    let arrayNumber = '';
+    let arrayNum = '';
     for (let i = 0; i < array.length; i++) {
-        arrayNumber += array[i];
+        arrayNum += array[i];
     }
 
-    const stringNumber = (parseInt(arrayNumber, 10) + number).toString();
+    const stringNumber = (parseInt(arrayNum, 10) + number).toString();
 
     const newArray = [];
 
     for (let i = 0; i < stringNumber.length; i++) {
-        newArray[i] = parseInt(stringNumber[i], 10);
+        newArray[i] = parseInt(stringNumber[i], 10);		
     }
 
     return newArray;
