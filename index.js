@@ -13,7 +13,7 @@ function addNumber(array, number) {
     const strValue = parseInt(str, 10);
     const sum = strValue + number;
     const strSum = sum.toSting();
-    array.concat(strSum.split(''));
+    array.concat(strSum.split());
 
     return array;
 }
