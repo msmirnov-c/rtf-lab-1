@@ -15,8 +15,8 @@ function addNumber(array, number) {
     const array2 = [];
     array2 = sum.split('');
     const array3 = [];
-    for {let j = 0; j < array2.length; j++)
-    array3[j] = parseInt(array2[j], 10};
+    for (let j = 0; j < array2.length; j++)
+    array3[j] = parseInt(array2[j], 10);
                          
     return (array3);
 }
