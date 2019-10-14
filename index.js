@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     let result = 0;
-    if (!(typeof (number) === 'number' && number >= 0)) {
+    if (!(typeof (number) === 'number' && number >= 0 && array.length > 0)) {
         return null;
     }
 
