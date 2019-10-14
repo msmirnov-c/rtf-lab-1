@@ -8,13 +8,12 @@ function addNumber(array, number) {
 
     if (Number.isInteger(number) && array.some((item) => (Number.isInteger(item) && item >= 0 && item < 10))) {
         let numberString = array.join('');
+        numberString = (parseInt(numberString, 10) + number).toString();
+
+        return numberString.split('').map((item) => parseInt(item, 10));
     } else {
         return null;
     }
-
-    numberString = (parseInt(numberString, 10) + number).toString();
-
-    return numberString.split('').map((item) => parseInt(item, 10));
 }
 
 module.exports = {
