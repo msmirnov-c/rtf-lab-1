@@ -4,15 +4,15 @@
  */
 
 function addNumber(array, number) {
-    if (array.some((element) => (!Number.isInteger(element) || element < 0 || element > 9))) {
+    if (array === null || number < 0 || number === null
+        || array.some((element) => element < 0 || !Number.isInteger(element) || element == null)) {
         return null;
     }
 
-    let myString = array.join('');
-    myString = String(Number(myString) + number);
+    const intResult = parseInt(array.join(''), 10) + number;
+    const stringResult = intResult.toString();
 
-    return myString.split('')
-        .map(Number);
+    return stringResult.split('').map((element) => parseInt(element, 10));
 }
 
 module.exports = {
