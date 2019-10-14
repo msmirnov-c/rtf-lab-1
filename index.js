@@ -10,6 +10,7 @@ function addNumber(array, number) {
             return (null);
         }
     }
+    
     const sum = String(parseInt(array.join(''), 10) + number);
     let array2 = [];
     array2 = sum.split('');
