@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    array.forEach(function (element) { if  !(typeof (element) === 'number') return null
+    array.forEach(function (element) { if  !!(typeof (element) === 'number') return null
     else if ((element.toString()).length === 1) {return element}
     else return null;
     });
@@ -14,7 +14,7 @@ function addNumber(array, number) {
     }
     let finalArr=[];
     for (let i = (finalNumber.toString().length; i=0; i--){
-        finalArr[i]=finalNumber%10
+        finalArr[i]=finalNumber%10;
     }
     return finalArr;
 }
