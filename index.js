@@ -3,11 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 
-function addNumber(array, number) {
- Number(array.reduse((sum,current)=>sum+current.toString())+number)
-}
+function addNumber(array , number) {
+    Number(array.reduse((sum , current) => sum + current.toString()) + number);
+ }
 module.exports = { addNumber };
-
-
-
-
