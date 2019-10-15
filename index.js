@@ -9,8 +9,8 @@ function addNumber(array, number) {
         return null;
     }
 
-    array.forEach(function (item) {
-        if (typeof (item) !== 'number' || item < 0 || item > 9) {
+    array.forEach(function (array) {
+        if (typeof (array) !== 'number' || array < 0 || array > 9) {
             return null;
         }
     });
