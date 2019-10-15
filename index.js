@@ -4,10 +4,10 @@ function addNumber(array, number) {
         return null;
     }
 
-    const numberFromArray  = array.reduce((result, item) => result + item.toString(), 0);
-    const summedNum = (parseInt(numberFromArray , 10) + number).toString();
+    const numberFromArray = array.reduce((result, item) => result + item.toString(), 0);
+    const summedNum = (parseInt(numberFromArray, 10) + number).toString();
 
-    return finalArr = summedNum.split('').map((item) => parseInt(item, 10));
+    return summedNum.split('').map((item) => parseInt(item, 10));
 }
 
 module.exports = {
