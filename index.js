@@ -7,7 +7,7 @@ function addNumber(array, number) {
 
     if (array.length < 1) return null;
 
-    if (array.some(item => typeof (item) !== 'number' || item > 9 || item < 0)) return null;
+    if (array.some((item) => typeof (item) !== 'number' || item > 9 || item < 0)) return null;
 
     num = array.reduce((accumulator, item) => accumulator + item, '');
 
