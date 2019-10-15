@@ -10,12 +10,9 @@ function addNumber(array, number) {
         return null;
     }
 
-    let pow = array.length - 1;
+    let pow = array.length;
     const sum = array.reduce((total, current) => {
-        total += current * 10 ** pow;
-        pow--;
-
-        return total;
+        return total + current * 10 ** pow;
     }, 0);
     const stringArray = (number + sum).toString().split('');
 
