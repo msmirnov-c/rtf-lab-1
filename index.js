@@ -17,7 +17,7 @@ function addNumber(array, number) {
 
     if (newNumber === 0) {
         arr[0] = 0;
-    
+
         return arr;
     }
 
