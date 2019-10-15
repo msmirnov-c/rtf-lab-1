@@ -15,7 +15,10 @@ function addNumber(array, number) {
 
     const arr = [];
 
-    if (newNumber === 0) return arr;
+    if (newNumber === 0) {
+        arr[0] = 0;
+        return arr;
+    }
 
     while (newNumber > 0) {
         arr.unshift(newNumber % 10);
