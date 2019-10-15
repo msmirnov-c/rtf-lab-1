@@ -4,15 +4,21 @@
 */
 
 function addNumber(array, number) {
-    if (array.some(check)) {
+    if (array === null || number < 0 || number === null) {
         return null;
-        Number(array.reduse((sum, current) => sum + current.toString()) + number);
-    };
-
-    function check(elem, array) {
-        elem = array[i];
-        return elem !== 'number';
     }
+    else {
 
+        for (let i = 0; i < array.lentgh; i++) {
+            if (array[i] > 9 || array[i] < 0 || typeof array[i] !== 'number') {
+                return null;
+            }
+            array[i] = toString(array[i]);
+        }
+        const str = parseInt(array.join(''), 10) + number;
+        const strRes = str.toString();
+
+        return strRes.split('').map(element).parseInt(element, 10);
+    }
 }
 module.exports = { addNumber };
