@@ -7,7 +7,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    if (!array.every(elem => typeof (elem) === 'number' && elem >= 0 && elem <= 9)) {
+    if (!array.every((elem) => typeof (elem) === 'number' && elem >= 0 && elem <= 9)) {
         return null;
     }
 
@@ -17,6 +17,7 @@ function addNumber(array, number) {
     }
 
     result += number;
+
     return result.toString().split('').map(Number);
 }
 
