@@ -3,10 +3,10 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    const checkIsTrue = array.every((element) =>
-    element >= 0
-    && element <= 9
-    && Number.isInteger(element));
+    const checkIsTrue = array.every((element) => 
+        element >= 0
+        && element <= 9
+        && Number.isInteger(element));
     if (checkIsTrue) {
         const string = array.reduce((str, element) => str + element, '');
         const num = parseInt(string, 10) + number;
