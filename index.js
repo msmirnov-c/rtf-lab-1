@@ -1,32 +1,32 @@
-/** 
-* @param array – массив элементов. Например, [1, 8, 3] 
-* @param number – число, которое нужно прибавить к числу, полученному из массива 
-*/ 
-
-function addNumber(array, number) { 
-    let num = ''; 
-    if (array.length < 1) return null; 
-
-    array.forEach(function(item) {
-        if (typeof (item) !== 'number' || item > 9 || item < 0) return null; 
+/**
+ * * @param array – массив элементов. Например, [1, 8, 3]
+* @param number – число, которое нужно прибавить к числу, полученному из массива
+*/
+function addNumber(array, number) {
+    let num = '';
+    
+    if (array.length < 1) return null;
+    
+    array.forEach(function (item) {
+        if (typeof (item) !== 'number' || item > 9 || item < 0) return null;
     });
 
     num = array.reduce((accumulator, item) => accumulator + item, '');
 
     let newNumber = parseInt(num, 10) + number;
+
+    const arr = [];
     
-    const arr = []; 
-
-    if (newNumber === 0) return arr; 
-
-    while (newNumber > 0) { 
-    arr.unshift(newNumber % 10); 
-    newNumber = Math.floor(newNumber / 10); 
-    }
-
-    return arr; 
-    } 
+    if (newNumber === 0) return arr;
     
-    module.exports = { 
-    addNumber, 
-    };
+    while (newNumber > 0) {
+        arr.unshift(newNumber % 10);
+    newNumber = Math.floor(newNumber / 10);
+}
+
+    return arr;
+}
+    
+module.exports = {
+        addNumber,
+};
