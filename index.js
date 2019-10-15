@@ -3,48 +3,47 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
 function addNumber(array, number) {
-    const newArray = [];
-    let helperNum = 0;
+    const result = [];
+    let sum = 0;
     if (array.length === 0) {
         return null;
     }
 
-    for (let i = 0; i < array.length; i++) {
+    array.forEach(function (item, i, array) {
         if (typeof (array[i]) !== 'number' || array[i] < 0 || array[i] > 9) {
             return null;
         }
-    }
+    });
 
-    if (number < 0 || Number.isInteger(number) === false) {
+    if (number < 0 || !Number.isInteger(number)) {
         return null;
     }
 
     let j = 0;
-    for (let i = array.length - 1; i >= 0; i--) {
-        helperNum += array[i] * (10 ** j);
-        j++;
+    for (let i = array.length - 1; i >= 0; i--, j++) {
+        sum += array[i] * (10 ** j);
     }
 
-    helperNum += number;
+    sum += number;
 
-    if (helperNum === 0) {
-        newArray[0] = 0;
+    if (sum === 0) {
+        result[0] = 0;
     }
 
-    let x = helperNum;
-    let helperCount = 0;
+    let x = sum;
+    let count = 0;
     while (x >= 1) {
         x /= 10;
-        helperCount++;
+        count++;
     }
 
-    for (let i = helperCount - 1; i >= 0; i--) {
-        newArray[i] = helperNum % 10;
-        helperNum -= helperNum % 10;
-        helperNum /= 10;
+    for (let i = count - 1; i >= 0; i--) {
+        result[i] = sum % 10;
+        sum -= sum % 10;
+        sum /= 10;
     }
 
-    return newArray;
+    return result;
     // Решение задачи
 }
 
