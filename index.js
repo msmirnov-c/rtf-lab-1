@@ -10,7 +10,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    array.forEach(function checking(item) {
+    array.forEach(function checking(item) => {
         if (typeof (item) !== 'number' || item < 0 || item > 9) {
             check = null;
         }
