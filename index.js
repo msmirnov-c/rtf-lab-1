@@ -3,22 +3,21 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let pow = array.length - 1;
-    let sum = 0;
-    const funcArray = function validation(item) {
+    function validation(item) {
         return (item < 0 || item > 9 || typeof item !== 'number');
     };
-    if (array.some(funcArray)) {
+    if (array.some(validation)) {
         return null;
     }
-
-    array.forEach((item) => {
-        sum += item * 10 ** pow;
+    let pow = array.length - 1;
+    let sum = array.reduce(function(sum, current) {
+        sum += current * Math.pow(10,pow);
         pow--;
-    });
-    const answer = (number + sum).toString().split('');
+        return sum;
+    }, 0);
+    const stringArray = (number + sum).toString().split('');
 
-    return answer.map(Number);
+    return stringArray.map(Number);
 }
 
 module.exports = {
