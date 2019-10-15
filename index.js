@@ -15,7 +15,7 @@ function digitFind(array, number) {
 function addNumber(array, number) {
     const digit = digitFind(array, number);
 
-    if digit === null ? null : digit.toString().split('').map(Number);
+    return digit === null ? null : digit.toString().split('').map(Number);
 }
 
 module.exports = {
