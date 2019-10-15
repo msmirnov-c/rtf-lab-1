@@ -4,12 +4,16 @@
 */
 
 function addNumber(array, number) {
+    str = new String();
+    strNumber = new String();
     for (let i = 0; i < array.length; i++) {
         if (array[i] !== 'number') {
             return null;
         }
-        const str = array[i].toString();
+
+        str = array[i].toString();
         strNumber = strNumber + str;
+
     }
     str = parseInt(strNumber, 10);
     str = str + number;
