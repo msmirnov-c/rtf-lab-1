@@ -4,22 +4,21 @@
 */
 
 function addNumber(array, number) {
-    str = new String();
     for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0 || array[i] > 9 || typeof array[i] !== 'number') {
+        if (array[i] !== 'number') {
             return null;
         }
-        str = + array[i];
+        const str = array[i].toString();
+        strNumber = strNumber + str;
     }
-    const str = parseInt(str, 10);
-    const sum = str + number;
-    const final = array.concat(sum.split(''));
-
-    return final;
+    str = parseInt(strNumber, 10);
+    str = str + number;
+    array = new array();
+    array = array.concat(str.split(''));
+    return array;
 }
 module.exports = { addNumber };
 
-   
-    
 
-   
+
+
