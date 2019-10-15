@@ -12,6 +12,8 @@ function addNumber(array, number) {
 
     let pow = array.length;
     const sum = array.reduce((total, current) => {
+        pow--;
+
         return total + current * 10 ** pow;
     }, 0);
     const stringArray = (number + sum).toString().split('');
