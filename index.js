@@ -5,17 +5,18 @@
 function addNumber(array, number) {
     const result = [];
     let sum = 0;
+    let check;
     if (array.length === 0) {
         return null;
     }
 
-    array.forEach(function (array) {
-        if (typeof (array) !== 'number' || array < 0 || array > 9) {
-            return null;
+    array.forEach(function (item, i, myArray) {
+        if (typeof (myArray[i]) !== 'number' || myArray[i] < 0 || myArray[i] > 9) {
+            check = null;
         }
     });
 
-    if (number < 0 || !Number.isInteger(number)) {
+    if (number < 0 || !Number.isInteger(number) || check === null) {
         return null;
     }
 
@@ -44,7 +45,6 @@ function addNumber(array, number) {
     }
 
     return result;
-    // Решение задачи
 }
 
 module.exports = {
