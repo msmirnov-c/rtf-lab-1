@@ -1,15 +1,16 @@
 function digitFind(array, number) {
     let i = 1;
+    let quantity = number
     for (let j = array.length - 1; j >= 0; j--) {
         if (array[j] > 9 || array[j] < 0 || !Number.isInteger(array[j])) {
             return null;
         }
 
-        number += array[j] * i;
+        quantity += array[j] * i;
         i *= 10;
     }
 
-    return number;
+    return quantity;
 }
 
 function addNumber(array, number) {
