@@ -4,6 +4,15 @@
 */
 
 function addNumber(array, number) {
-    Number(array.reduse((sum, current) => sum + current.toString()) + number);
+    if (array.some(check)) {
+        return null;
+        Number(array.reduse((sum, current) => sum + current.toString()) + number);
+    };
+
+    function check(elem, array) {
+        elem = array[i];
+        return elem !== 'number';
+    }
+
 }
 module.exports = { addNumber };
