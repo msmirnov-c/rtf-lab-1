@@ -5,18 +5,17 @@
 function addNumber(array, number) {
     let result = [];
     let sum = 0;
-    let check;
     if (array.length === 0) {
         return null;
     }
 
     array.forEach((item) => {
         if (typeof (item) !== 'number' || item < 0 || item > 9) {
-            check = null;
+            sum = null;
         }
     });
 
-    if (number < 0 || !Number.isInteger(number) || check === null) {
+    if (number < 0 || !Number.isInteger(number) || sum === null) {
         return null;
     }
 
