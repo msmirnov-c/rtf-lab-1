@@ -1,5 +1,5 @@
 function addNumber(array, number) {
-    if (array.every((i) => Number.isInteger(i) && (i >= 0 || i <= 9))) {
+    if (array.every((i) => !Number.isInteger(i))) {
         return null;
     }
 
