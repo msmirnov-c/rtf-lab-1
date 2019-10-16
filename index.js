@@ -5,7 +5,7 @@
 function addNumber(array, number) {
     if (array.some((item) => Number.isInteger(item) === 'false' || item <= 0 || item >= 9)) return null;
 
-    let stringFromArray = array.join('');
+    const stringFromArray = array.join('');
 
     if (typeof number !== 'number') return null;
 
