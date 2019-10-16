@@ -1,8 +1,9 @@
 function addNumber(array, number) {
-    if (array.every(i => !Number.isInteger(i) || i < 0 || i > 9))
+    if (array.every((i) => !Number.isInteger(i) || i < 0 || i > 9)) {
         return null;
+    }
 
-    let arrayNum = array.reduce(function(sum, current) {
+    const arrayNum = array.reduce((sum, current) => {
         return sum.toString() + current.toString();
     }, 0);
 
