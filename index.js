@@ -4,11 +4,11 @@
 */
 function addNumber(array, number) {
     let stringFromArray = '';
-    if (array.some((item) => Number.isInteger(item) === 'false' || item <= 0 || item >= 9 ))
-        return null;
-    stringFromArray = array.join('');
-    if (typeof number !== 'number') return null;
 
+    if (array.some((item) => Number.isInteger(item) === 'false' || item <= 0 || item >= 9)) return null;
+    stringFromArray = array.join('');
+
+    if (typeof number !== 'number') return null;
     const finalNumber = parseInt(stringFromArray, 10) + number;
     const returnedArray = finalNumber.toString().split('').map(Number);
 
