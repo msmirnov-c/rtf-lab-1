@@ -1,9 +1,13 @@
 function addNumber(array, number) {
-    if (array.some((i) => (!Number.isInteger(i)) || i < 0 || i > 9 || number < 0)) {
+    if (number < 0) {
+        return  null;
+    }
+
+    if (array.some((i) => (!Number.isInteger(i)) || i < 0 || i > 9)) {
         return null;
     }
 
-    const arrayNum = array.reduce((sum, current) => sum.toString() + current.toString(), 0);
+    const arrayNum = array.reduce((sum, current) => sum + current, '');
 
     const stringNumber = (parseInt(arrayNum, 10) + number).toString();
 
