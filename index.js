@@ -9,7 +9,9 @@ function addNumber(array, number) {
         return null;
     }
 
-    res = array.reduce((sum, item, index) => sum + (10 ** (array.length - index - 1)) * array[index], number);
+    res = array.reduce((sum, item, index) => {
+        return sum + (10 ** (array.length - index - 1)) * array[index];
+    }, number);
 
     return String(res).split('').map((item) => parseInt(item, 10));
 }
