@@ -9,7 +9,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    if (!array.every((item) => typeof(item) === 'number' && item >= 0 && item <= 9) ) {
+    if (!array.every((item) => typeof (item) === 'number' && item >= 0 && item <= 9)) {
         return null;
     }
 
