@@ -3,9 +3,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    const arrayNum = array.reduce((sum, current) => {
-        return sum.toString() + current.toString();
-    }, 0);
+    const arrayNum = array.reduce((sum, current) => sum.toString() + current.toString(), 0);
 
     const stringNumber = (parseInt(arrayNum, 10) + number).toString();
 
