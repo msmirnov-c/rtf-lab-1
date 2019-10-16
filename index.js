@@ -4,7 +4,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (number > 0 && array.every((item) => item >= 0 && item < 10 && Number.isInteger(item))) {
+    if (number >= 0 && array.every((item) => item >= 0 && item < 10 && Number.isInteger(item))) {
         const myString = array.join('');
         const mySum = Number(myString) + number;
         const intToStr = String(mySum);
@@ -15,6 +15,7 @@ function addNumber(array, number) {
 
     return null;
 }
+
 module.exports = {
     addNumber,
 };
