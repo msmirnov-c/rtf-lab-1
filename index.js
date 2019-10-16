@@ -9,9 +9,9 @@ function addNumber(array, number) {
     }
 
     sumElement = String(Number(sumElement) + number);
-    const strArr = sumElement.split ('', sumElement.length);
+    const strArr = sumElement.split('', sumElement.length);
     const numbArr = [];
-    for (let i = 0; i < strArr.length; i++){
+    for (let i = 0; i < strArr.length; i++) {
         numbArr[i] = Number(strArr[i]);
     }
 
