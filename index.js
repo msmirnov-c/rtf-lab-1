@@ -4,8 +4,7 @@
  */
 function addNumber(array, number) {
     const result = [];
-    let sum = 0;
-    let check;
+    let sum = 0, check;
     if (array.length === 0) {
         return null;
     }
@@ -28,23 +27,18 @@ function addNumber(array, number) {
     sum += number;
 
     if (sum === 0) {
-        result[0] = 0;
+        result = [0];
     }
 
-    let x = sum;
     let count = 0;
-    while (x >= 1) {
-        x /= 10;
+    while (sum >= 1) {
+        result[count] = sum % 10;
+        sum -= sum % 10;
+        sum /= 10;
         count++;
     }
 
-    for (let i = count - 1; i >= 0; i--) {
-        result[i] = sum % 10;
-        sum -= sum % 10;
-        sum /= 10;
-    }
-
-    return result;
+    return result.reverse();
 }
 
 module.exports = {
