@@ -7,6 +7,10 @@
 ```js
 function addNumber(array, number) {
   // Решение задачи
+  let str = '';
+  for (let i = 0; i < array.length; i++){
+    str=str+array[i];
+  }
 }
 
 addNumber([1, 0, 9], 2); // 109 + 2 = 111; => [1, 1, 1]
