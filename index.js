@@ -5,11 +5,12 @@
 function addNumber(array, number) {
     if (array.some((item) => Number.isInteger(item) === 'false' || item <= 0 || item >= 10)) return null;
 
-    const stringFromArray = array.join('');
+    let unifiedArray = 0;
+    unifiedArray = array.join('');
 
     if (typeof number !== 'number') return null;
 
-    const finalNumber = parseInt(stringFromArray, 10) + number;
+    const finalNumber = parseInt(unifiedArray, 10) + number;
     const returnedArray = finalNumber.toString().split('').map(Number);
 
     return returnedArray;
