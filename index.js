@@ -3,14 +3,13 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let stringArray = '';
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
-            stringArray += array[i].toString();
-        } else return null;
+        if (!(typeof (array[i]) === 'number') && !(array[i] >= 0) && !(array[i] <= 9)) {
+            return null;
+        }
     }
 
-    const result = (parseInt(stringArray, 10) + number).toString();
+    const result = (parseInt(array.join(''), 10) + number).toString();
 
     return result.split('').map((item) => parseInt(item, 10));
 }
