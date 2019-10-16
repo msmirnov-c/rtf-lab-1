@@ -4,7 +4,8 @@
  */
 function addNumber(array, number) {
     const result = [];
-    let sum = 0, check;
+    let sum = 0;
+    let check;
     if (array.length === 0) {
         return null;
     }
@@ -27,7 +28,7 @@ function addNumber(array, number) {
     sum += number;
 
     if (sum === 0) {
-        result = [0];
+        result[0] = 0;
     }
 
     let count = 0;
