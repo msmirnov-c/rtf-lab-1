@@ -16,7 +16,7 @@ function addNumber(array, number) {
         outNums += array[i];
     }
 
-    let outArray = Array.from(String(Number(outNums) + number))
+    let outArray = Array.from(String(Number(outNums) + number));
     return outArray.map((el) => Number(el));
 }
 
