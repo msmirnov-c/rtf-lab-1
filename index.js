@@ -9,13 +9,11 @@ function addNumber(array, number) {
         return null;
     }
 
-    array.forEach((item) => {
-        if (typeof (item) !== 'number' || item < 0 || item > 9) {
-            sum = null;
-        }
-    });
+    if (!array.every((item) => typeof (item) === 'number' && item >= 0 && item <= 9) ) {
+        return null;
+    }
 
-    if (number < 0 || !Number.isInteger(number) || sum === null) {
+    if (number < 0 || !Number.isInteger(number)) {
         return null;
     }
 
