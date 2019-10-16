@@ -4,15 +4,13 @@
  */
 function addNumber(array, number) {
     let res = 0;
-    if (array.length === 0 || !Number.isInteger(number)
-        || !array.every((num) => Number.isInteger(num))
-        || !array.every((num) => num <= 9 && num >= 0) || number < 0) return null;
+    if (array.length === 0 || !Number.isInteger(number) || number < 0
+        || !array.every((num) => Number.isInteger(num) || num <= 9 && num >= 0))
+        return null;
 
-    for (let i = 0; i < array.length; i++) {
-        res += (10 ** (array.length - i - 1)) * array[i];
-    }
-
-    res += number;
+    res = array.reduce(function(sum, item, index){
+        return sum + (10 ** (array.length - index - 1)) * array[index];
+    }, number);
 
     return String(res).split('').map((item) => parseInt(item, 10));
 }
