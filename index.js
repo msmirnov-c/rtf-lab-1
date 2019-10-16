@@ -1,15 +1,10 @@
 function addNumber(array, number) {
-    for (let i = 0; i < array.length; i++) {
-        if (!Number.isInteger(array[i]) || array[i] < 0 || array > 9) {
-            return null;
-        }
-    }
+    if (array.every(i => !Number.isInteger(i) || i < 0 || i > 9))
+        return null;
 
-    let arrayNum = '';
-
-    for (let i = 0; i < array.length; i++) {
-        arrayNum += array[i];
-    }
+    let arrayNum = array.reduce(function(sum, current) {
+        return sum.toString() + current.toString();
+    }, 0);
 
     const stringNumber = (parseInt(arrayNum, 10) + number).toString();
 
