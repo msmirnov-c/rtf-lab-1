@@ -8,6 +8,7 @@ function addNumber(array, number) {
     }
 
     let outNums = '';
+    let outArray = [];
     for (let i = 0; i < array.length; i++) {
         if ((array[i] < 0 || array[i] > 9) || typeof array[i] !== 'number') {
             return null;
@@ -16,8 +17,9 @@ function addNumber(array, number) {
         outNums += array[i];
     }
 
-    let outArray = Array.from(String(Number(outNums) + number));
-    return outArray.map((el) => Number(el));
+    outArray = Array.from(String(Number(outNums) + number));
+    outArray = outArray.map((el) => Number(el));
+    return outArray;
 }
 
 module.exports = {
