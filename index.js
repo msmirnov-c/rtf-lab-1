@@ -12,7 +12,8 @@ function addNumber(array, number) {
         let amount = +str1 + number;
         let array1 = amount.toString().split('');
         return (array1.map((correct) => parseInt(correct)));
-    }
+    };
+)
 module.exports = {
     addNumber
 };
