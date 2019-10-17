@@ -8,10 +8,11 @@ function addNumber(array, number) {
         return null;
     };
     {
-        let str1 = array.reduce((array, number) => array + number, "");
-        let amount = +str1 + number;
-        let array1 = amount.toString().split('');
-        return (array1.map((correct) => parseInt(correct)));
+        const str1 = array.reduce((array, number) => array + number, "");
+        const amount = +str1 + number;
+        const array1 = amount.toString().split('');
+        const result = (array1.map((correct) => parseInt(correct)));
+        return result;
     };
 )
 module.exports = {
