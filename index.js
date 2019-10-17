@@ -10,9 +10,9 @@ function addNumber(array, number) {
         } else return null;
     }
 
-    sum = (Number(sum) + number).toString().split('');
+    sum = (Number(sum) + number).toString();
 
-    return Array.from(sum, (x) => Number(x));
+    return Array.from(sum.split(''), Number);
 }
 
 module.exports = {
