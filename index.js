@@ -1,24 +1,19 @@
 function addNumber(array, number) {
-    let f = false;
-    let str = '';
+    let numFromArray = '';
     for (let i = 0; i < array.length; i++) {
-        str += String(array[i]);
-        if ((typeof array[i]) !== 'number') {
-            f = true;
+        if (((typeof array[i]) !== 'number')||((array[i]<0)||(array[i]>9))) {
+            return null;
         }
+        numFromArray += String(array[i]);
     }
 
-    const num = String(Number(str) + number);
-    let retArr = num.split('', array.length + number);
-    for (let i = 0; i < retArr.length; i++) {
-        retArr[i] = Number(retArr[i]);
+    const num = String(Number(numFromArray) + number);
+    let returnedArray = num.split('', array.length + number);
+    for (let i = 0; i < returnedArray.length; i++) {
+        returnedArray[i] = Number(returnedArray[i]);
     }
 
-    if (f) {
-        retArr = null;
-    }
-
-    return retArr;
+    return returnedArray;
 }
 
 module.exports = {
