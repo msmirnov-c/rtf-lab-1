@@ -12,6 +12,7 @@ if (!array.every(right)) {
     let array1 = amount.toString().split('');
     return (array1.map((correct) => parseInt(correct)));
 }
+}
 module.exports = {
     addNumber
 }
