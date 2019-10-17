@@ -14,8 +14,7 @@ function addNumber(array, number) {
         const result = (array1.map((correct) => parseInt(correct)));
         return result;
     };
-)
+}
 module.exports = {
     addNumber
-};
 }
