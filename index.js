@@ -4,19 +4,21 @@
 */
 function addNumber(array, number) {
     // Решение задачи
-    let finalNumber = 0;
+    let arrayAsNumber = 0;
     const finalArr = [];
     for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) === 'number' && array[i] >= 0 && array[i] <= 9) {
-            finalNumber = finalNumber * 10 + array[i];
-        } else return null;
+        if (!(typeof (array[i]) === 'number') || !(array[i] >= 0) || !(array[i] <= 9)) {
+            return null;
+        } else {
+            arrayAsNumber = arrayAsNumber * 10 + array[i];
+        }
     }
 
-    finalNumber += number;
+    arrayAsNumber += number;
 
-    for (let i = (finalNumber.toString()).length; i > 0; i--) {
-        finalArr.unshift(finalNumber % 10);
-        finalNumber = Math.trunc(finalNumber / 10);
+    for (let i = arrayAsNumber.toString().length; i > 0; i--) {
+        finalArr.unshift(arrayAsNumber % 10);
+        arrayAsNumber = Math.trunc(arrayAsNumber / 10);
     }
 
     return finalArr;
