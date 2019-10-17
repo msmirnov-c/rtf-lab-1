@@ -4,17 +4,15 @@
 */
 function addNumber(array, number) {
     let numLine = '';
-    array.forEach((_item, i) => {
-        numLine += array[i];
+    var condition = array.every((item) => item === Math.ceil(item) && item >= 0 && item <= 9 && (typeof (item) === 'number'));
+    numLine = array.reduce((accumulator, item, _i) => accumulator + item, numLine);
 
-        return numLine;
-    });
-
-    if (!(array.every((item) => item === Math.ceil(item) && item >= 0 && item <= 9 && (typeof (item) === 'number') && (typeof (number) === 'number')))) {
+    if (!condition) {
         return null;
     }
+    totalAmount = number + parseInt(numLine, 10);
 
-    return (number + parseInt(numLine, 10)).toString(10).split('').map((item) => parseInt(item, 10));
+    return totalAmount.toString(10).split('').map((item) => parseInt(item, 10));
 }
 module.exports = {
     addNumber,
