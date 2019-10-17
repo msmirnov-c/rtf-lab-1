@@ -3,15 +3,16 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    const right = (item) => (!Number.isInteger(number)) || (typeof (item) == 'number');
-if (!array.every(right)) {
-    return null;
+    const right = (item) => (!Number.isInteger(number) || (typeof item == 'number'));
+    if (!array.every(right)) {
+        console.log (null);
     };
     {
-    let str1 = array.reduce((array, number) => array + number, ""), amount = +str1 + number;
-    let array1 = amount.toString().split('');
-    return (array1.map((correct) => parseInt(correct)));
-}
+        let str1 = array.reduce((array, number) => array + number, "")
+        let amount = +str1 + number
+        let array1 = amount.toString().split('');
+        console.log ((array1.map((correct) => parseInt(correct))));
+    }
 }
 module.exports = {
     addNumber
