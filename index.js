@@ -4,8 +4,8 @@
 */
 function addNumber(array, number) {
     let numLine = '';
-    var totalAmount = 0;
-    var condition = array.every((item) => item === Math.ceil(item) && item >= 0 && item <= 9 && (typeof (item) === 'number'));
+    let totalAmount = 0;
+    const condition = array.every((item) => item === Math.ceil(item) && item >= 0 && item <= 9 && (typeof (item) === 'number'));
     numLine = array.reduce((accumulator, item) => accumulator + item, numLine);
 
     if (!condition) {
