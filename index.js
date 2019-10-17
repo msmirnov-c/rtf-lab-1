@@ -5,10 +5,10 @@
 function addNumber(array, number) {
     // Решение задачи
 
-    if (array.some(item => (typeof (item) !== 'number' || item < 0 || item > 9))) return null;
+    if (array.some((item) => (typeof (item) !== 'number' || item < 0 || item > 9))) return null;
 
     let arrayAsString = '';
-    array.forEach(item => {
+    array.forEach((item) => {
         item.toString();
         arrayAsString += item;
     });
