@@ -13,11 +13,13 @@ function addNumber(array, number) {
 
     const result = [];
     let n = number;
-    for (let i = 0; i < array.length || n > 0; i++) {
-        if (i < array.length) {
-            n += array[array.length - 1 - i];
-        }
+    for (let i = 0; i < array.length; i++) {
+        n += array[array.length - 1 - i];
+        result.unshift(n % 10);
+        n = Math.trunc(n / 10);
+    }
 
+    while (n > 0) {
         result.unshift(n % 10);
         n = Math.trunc(n / 10);
     }
