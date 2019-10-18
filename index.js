@@ -3,7 +3,7 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
 function addNumber(array, number) {
-    const result = [];
+    const result = [0];
     let sum = 0;
 
     if (array.length === 0 || number < 0 || !Number.isInteger(number) || !array.every((item) => typeof (item) === 'number' && item >= 0 && item <= 9)) {
@@ -16,11 +16,6 @@ function addNumber(array, number) {
     }
 
     sum += number;
-
-    if (sum === 0) {
-        return (result = [0]);
-    }
-
     let i = 0;
     while (sum >= 1) {
         result[i] = sum % 10;
