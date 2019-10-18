@@ -1,10 +1,9 @@
 function addNumber(array, number) {
     let numberFromArray;
-    for (i = 0; i < array.length; i++) {
-        if (typeof array[i] === 'number' && array[i] <= 9 && array[i] >= 0) {
-            numberFromArray = array.reduce((sum, current) => sum*10 + current, 0);
-        } else return null;
-    }
+        for (let i = 0; i < array.length; i++)
+            if (typeof array[i] === 'number' && array[i] <= 9 && array[i] >= 0)
+                numberFromArray = array.reduce((sum, current) => sum*10 + current, 0);
+            else return null;
 
     numberFromArray += number;
     const sumOfNumbers = [];
