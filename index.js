@@ -3,17 +3,10 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
 function addNumber(array, number) {
-    let result = [];
+    const result = [];
     let sum = 0;
-    if (array.length === 0) {
-        return null;
-    }
 
-    if (!array.every((item) => typeof (item) === 'number' && item >= 0 && item <= 9)) {
-        return null;
-    }
-
-    if (number < 0 || !Number.isInteger(number)) {
+    if (array.length === 0 || number < 0 || !Number.isInteger(number) || !array.every((item) => typeof (item) === 'number' && item >= 0 && item <= 9)) {
         return null;
     }
 
@@ -25,15 +18,15 @@ function addNumber(array, number) {
     sum += number;
 
     if (sum === 0) {
-        result = [0];
+        return (result = [0]);
     }
 
-    let count = 0;
+    let i = 0;
     while (sum >= 1) {
-        result[count] = sum % 10;
+        result[i] = sum % 10;
         sum -= sum % 10;
         sum /= 10;
-        count++;
+        i++;
     }
 
     return result.reverse();
