@@ -2,7 +2,6 @@ function addNumber(array, number) {
     let numberFromArray = 0;
     for (let i = 0; i < array.length; i++) {
         if (typeof array[i] === 'number' && array[i] <= 9 && array[i] >= 0) {
-            array.reduce((numberFromArray, current) => numberFromArray + current);
         } else return null;
     }
 
