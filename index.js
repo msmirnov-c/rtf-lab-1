@@ -5,9 +5,7 @@
 function addNumber(array, number) {
     // Решение задачи
 
-    if (array.some((item) => (typeof (item) !== 'number' || item < 0 || item > 9))) {
-        return null;
-    }
+    if (array.some((item) => (typeof (item) !== 'number' || item < 0 || item > 9))) return null;
 
     const initialValue = '';
     let arrayAsString = array.reduce((accumulator, currentValue) => {
