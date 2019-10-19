@@ -9,11 +9,10 @@ function addNumber(array, number) {
         return null;
     }
 
-
-    let arrayAsString = '';
-    array.forEach((item) => {
-        arrayAsString += item;
-    });
+    const initialValue = '';
+    let arrayAsString = array.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+    }, initialValue);
 
     arrayAsString = parseInt(arrayAsString, 10) + number;
 
