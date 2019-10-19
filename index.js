@@ -1,8 +1,8 @@
 function addNumber(array, number) {
     let numberFromArray;
-    if (array.every(array => array => 'number')  && array.every(array => array <= 9)  && array.every(array => array => 0)){
-            numberFromArray = array.reduce((sum, current) => sum * 10 + current, 0);
-        } else return null;
+    if (array.every(currentValue => currentValue => 'number') && array.every(currentValue => currentValue <= 9) && array.every(currentValue => currentValue => 0)) {
+        numberFromArray = array.reduce((sum, current) => sum * 10 + current, 0);
+    } else return null;
 
     numberFromArray += number;
     const sumOfNumbers = [];
