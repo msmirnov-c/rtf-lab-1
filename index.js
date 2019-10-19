@@ -1,15 +1,12 @@
-const array = [1, 6, 3];
-const number = 2;
-
 function addNumber(array, number) {
+    function checkNumber(num) {
+        return (typeof num === 'number' && num <= 9 && num >= 0);
+    }
+
     let numberFromArray;
     if (array.every(checkNumber)) {
         numberFromArray = array.reduce((sum, current) => sum * 10 + current, 0);
     } else return null;
-
-    function checkNumber(num){
-        return (typeof num === 'number' && num <=9 && num>=0);
-    }
 
     numberFromArray += number;
     const sumOfNumbers = [];
@@ -22,7 +19,6 @@ function addNumber(array, number) {
     return sumOfNumbers;
 }
 
-console.log(addNumber(array, number));
 module.exports = {
     addNumber,
 };
