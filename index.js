@@ -8,9 +8,7 @@ function addNumber(array, number) {
     if (array.some((item) => (typeof (item) !== 'number' || item < 0 || item > 9))) return null;
 
     const initialValue = '';
-    let arrayAsString = array.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue;
-    }, initialValue);
+    let arrayAsString = array.reduce((a, b) => a + b, initialValue);
 
     arrayAsString = parseInt(arrayAsString, 10) + number;
 
