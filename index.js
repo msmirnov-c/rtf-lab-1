@@ -10,7 +10,8 @@ function addNumber(array, number) {
     }
 
     const initialValue = '';
-    let arrayAsString = array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+    let arrayAsString = array.reduce((accumulator, currentValue) =>
+        accumulator + currentValue, initialValue);
 
     arrayAsString = parseInt(arrayAsString, 10) + number;
 
