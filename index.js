@@ -10,7 +10,7 @@ function addNumber(array, number) {
     const endNumber = Number(array.join('')) + number;
     const arrayOfString = Array.from(endNumber.toString());
 
-    const arrayOfNumbers = arrayOfString.map(function (numbInString) {
+    const arrayOfNumbers = arrayOfString.map(function ToNumber(numbInString) {
         return Number(numbInString);
     });
 
