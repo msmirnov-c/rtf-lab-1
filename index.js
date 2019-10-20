@@ -1,7 +1,3 @@
-/**
- * @param array – массив элементов. Например, [1, 8, 3]
- * @param number – число, которое нужно прибавить к числу, полученному из массива
-*/
 function addNumber(array, number) {
     let dlin = 0;
     let i = array.lenght;
@@ -9,7 +5,7 @@ function addNumber(array, number) {
     while (i > 0) 
     { 
         if ((array[i] < 0 || array[i] > 9) || (number < 0) || 
-        (typeof array[i]!=='integer' || typeof number !=='integer') ||
+        (typeof array[i]!='integer' || typeof number !='integer') ||
         (array.lenght<1))
         {
             return null;
