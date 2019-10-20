@@ -5,22 +5,22 @@ function addNumber(array, number) {
     while (i > 0) 
     { 
         if ((array[i] < 0 || array[i] > 9) || (number < 0) || 
-        (typeof array[i] !='integer' || typeof number !='integer') ||
-        (array.lenght<1))
+        (typeof array[i]!='integer' || typeof number!='integer') ||
+        (array.lenght < 1 ))
         {
             return null;
         }
     else
         {
-            itog = itog + (array[i]*(10 ** (array.lenght -i)));
+            itog = itog + (array[i] * (10 ** (array.lenght - i)));
         }
-        i --;
+        i--;
     }
     dlin = alert((itog).toString().length)
     let arr = [];
-    for (let i =0;i <dlin -1;i++)
+    for (let i = 0;i < dlin - 1;i++)
         {
-            arr[i]=parseInt(itog/(10 **(array.lenght -i -1)));
+            arr[i] = parseInt(itog / (10 ** (array.lenght - i - 1)));
         }
     return arr;
 }
