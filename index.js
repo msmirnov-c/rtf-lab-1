@@ -9,7 +9,7 @@ function addNumber(array, number) {
     while (i > 0) 
     { 
         if ((array[i] < 0 || array[i] > 9) || (number < 0) || 
-        (typeof array[i]!='integer' || typeof number !='integer') ||
+        (typeof array[i]!=='integer' || typeof number !=='integer') ||
         (array.lenght<1))
         {
             return null;
