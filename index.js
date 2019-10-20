@@ -1,19 +1,22 @@
 function addNumber(array, number) {
     let numFromArray = '';
-    for (let i = 0; i < array.length; i++) {
-        if (((typeof array[i]) !== 'number') || ((array[i] < 0) || (array[i] > 9))) {
-            return null;
-        }
+    let even = function(element) {
+        return ((typeof element) !== 'number') || ((element < 0) || (element > 9));
+    }
 
+    if (array.some(even)) {
+        return null;
+    }
+
+    for (let i = 0; i < array.length; i++) {
         numFromArray += String(array[i]);
     }
 
-    const num = String(Number(numFromArray) + number);
-    const returnedArray = num.split('', array.length + number);
-    for (let i = 0; i < returnedArray.length; i++) {
-        returnedArray[i] = Number(returnedArray[i]);
-    }
-
+    numFromArray = String(Number(numFromArray) + number);
+    let returnedArray = numFromArray.split('');
+    returnedArray = returnedArray.map(function(number) {
+        return Number(number);
+    });
     return returnedArray;
 }
 
