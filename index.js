@@ -4,14 +4,14 @@
 */
 function addNumber(array, number) {
     if (!array.every((item) => typeof item === 'number')) {
-        return null; 
+        return null;
     }
 
     const endNumber = Number(array.join('')) + number;
     const arrayOfString = Array.from(endNumber.toString());
 
-    const arrayOfNumbers = arrayOfString.map(function(numbInString) {
-        return Number(numbInString)
+    const arrayOfNumbers = arrayOfString.map(function (numbInString) {
+        return Number(numbInString);
     });
 
     return (arrayOfNumbers);
