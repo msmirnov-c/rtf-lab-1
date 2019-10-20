@@ -14,10 +14,11 @@ function addNumber(array, number) {
 
     numFromArray = String(Number(numFromArray) + number);
     let returnedArray = numFromArray.split('');
-    returnedArray = returnedArray.map(function (elem) {
+    const convert = function (elem) {
         return Number(elem);
-    });
-    
+    };
+
+    returnedArray = returnedArray.map(convert);
     return returnedArray;
 }
 
