@@ -19,6 +19,7 @@ function addNumber(array, number) {
     };
 
     returnedArray = returnedArray.map(convert);
+    
     return returnedArray;
 }
 
