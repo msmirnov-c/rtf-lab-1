@@ -1,8 +1,8 @@
 function addNumber(array, number) {
     let numFromArray = '';
-    let even = function(element) {
+    const even = function (element) {
         return ((typeof element) !== 'number') || ((element < 0) || (element > 9));
-    }
+    };
 
     if (array.some(even)) {
         return null;
@@ -14,9 +14,10 @@ function addNumber(array, number) {
 
     numFromArray = String(Number(numFromArray) + number);
     let returnedArray = numFromArray.split('');
-    returnedArray = returnedArray.map(function(number) {
-        return Number(number);
+    returnedArray = returnedArray.map(function (elem) {
+        return Number(elem);
     });
+    
     return returnedArray;
 }
 
