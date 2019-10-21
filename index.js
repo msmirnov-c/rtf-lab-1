@@ -12,7 +12,7 @@ function addNumber(array, number) {
     }
 
     let str = '';
-    array.forEach((item, index, array) => {
+    array.forEach((item) => {
         str += item.toString();
     });
 
