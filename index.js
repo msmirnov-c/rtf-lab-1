@@ -1,5 +1,5 @@
 function checkArray(value) {
-    return value > 9 || value < 0 || !Number.isInteger(value) ? false : true;
+    return value > 9 || value < 0 || !Number.isInteger(value);
 }
 
 function quantityFind(array, number) {
@@ -14,7 +14,7 @@ function quantityFind(array, number) {
 }
 
 function addNumber(array, number) {
-    if (!array.every(checkArray)) {
+    if (array.every(checkArray)) {
         return null;
     }
 
