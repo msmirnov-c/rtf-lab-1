@@ -3,8 +3,8 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    if (typeof array !== 'object' || typeof number !== 'number' ||
-        !array.every((item) => Number.isInteger(item) || (item < 0 && item > 9))) {
+    if (typeof array !== 'object' || typeof number !== 'number'
+        || !array.every((item) => Number.isInteger(item) || (item < 0 && item > 9))) {
         return null;
     }
 
