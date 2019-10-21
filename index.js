@@ -9,7 +9,7 @@ function addNumber(array, number) {
     }
 
     let outNums = '';
-    outNums = array.reduce((sum, item) => sum + item, "");
+    outNums = array.reduce((sum, item) => sum + item, '');
 
     const outArray = Array.from(String(Number(outNums) + number));
 
