@@ -7,7 +7,7 @@ function addNumber(array, number) {
         return null;
     }
 
-    if (array.some((item) => !Number.isInteger(item) || item < 0 || item] > 9)) {
+    if (array.some((item) => !Number.isInteger(item) || item < 0 || item > 9)) {
         return null;
     }
 
