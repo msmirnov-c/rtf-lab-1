@@ -14,7 +14,7 @@ function addNumber(array, number) {
 
     str = String(number + Number(str));
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i <= str.length; i++) {
         str[i] = Number(str[i]);
     }
 
