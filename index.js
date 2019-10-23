@@ -3,22 +3,23 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
 */
 function addNumber(array, number) {
-    let stri;
-    let numb;
+    let str = "";
     for (let i = 0; i <= array.length; i++) {
-        if (isNaN(array[i]) || array.length === 0) {
-           return null;
+        if (typeof(array[i]) === 'number' || array.length === 0) {
+            return null;
         }
 
-        stri = stri + (String(array[i]));
+        str += (String(array[i]));
     }
-    numb = String(number + Number(stri));
-    for (let i = 0; i < numb.length; i++) {
-        numb[i] = Number(numb[i]);
+    str = String(number + Number(str));
+
+    for (let i = 0; i < str.length; i++) {
+        str[i] = Number(str[i]);
     }
-    return numb;
+
+    return str;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
