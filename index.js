@@ -5,18 +5,18 @@
 function addNumber(array, number) {
     let stri;
     let numb;
-   for(let i = 0; i <= array.length; i++) {
-       if (!isNaN(array[i]) || array.length === 0 ){
+    for (let i = 0; i <= array.length; i++) {
+        if (isNaN(array[i]) || array.length === 0) {
            return null;
-       }
-       stri = stri + (String(array[i]));
-   }
-   numb = String(number + Number(stri));
-   numb.split('');
-   for(let i = 0; i < numb.length; i++){
-       numb[i] = Number(numb[i]);
-   }
-   return numb;
+        }
+
+        stri = stri + (String(array[i]));
+    }
+    numb = String(number + Number(stri));
+    for (let i = 0; i < numb.length; i++) {
+        numb[i] = Number(numb[i]);
+    }
+    return numb;
 }
 
 module.exports = {
