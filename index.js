@@ -4,7 +4,7 @@
 */
 function addNumber(array, number) {
     let str = '';
-    let strArr = new array();
+    const strarr = new array();
     for (let i = 0; i <= array.length; i++) {
         if (typeof (array[i]) !== 'number' || array.length === 0 || array[i] < 0 || array[i] > 9 || number < 0 || typeof (number) !== 'number') {
             return null;
@@ -16,10 +16,10 @@ function addNumber(array, number) {
     str = String(number + Number(str));
 
     for (let i = 0; i <= str.length; i++) {
-        strArr[i] = Number(str[i]);
+        strarr[i] = Number(str[i]);
     }
 
-    return strArr;
+    return strarr;
 }
 
 module.exports = {
