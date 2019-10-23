@@ -5,12 +5,16 @@
 function addNumber(array, number) {
     let str = '';
     const Strarr = [];
+    if (array.length === 0 || typeof (number) !== 'number' || number < 0) {
+        return null;
+    }
+
     for (let i = 0; i <= array.length; i++) {
-        if (typeof (array[i]) !== 'number' || array.length === 0 || array[i] < 0 || array[i] > 9 || number < 0 || typeof (number) !== 'number') {
+        if (typeof (array[i]) !== 'number' || array[i] < 0 || array[i] > 9) {
             return null;
         }
 
-        str += (String(array[i]));
+        str += array[i];
     }
 
     str = String(number + Number(str));
