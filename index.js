@@ -4,8 +4,23 @@
 */
 function addNumber(array, number) {
     // Решение задачи
+
+    if (array.some((item) => (typeof (item) !== 'number' || item < 0 || item > 9))) return null;
+
+    const initialValue = '';
+    let arrayAsString = array.reduce((a, b) => a + b, initialValue);
+
+    arrayAsString = parseInt(arrayAsString, 10) + number;
+
+    const finalArr = [];
+    for (let i = arrayAsString.toString().length; i > 0; i--) {
+        finalArr.unshift(arrayAsString % 10);
+        arrayAsString = Math.trunc(arrayAsString / 10);
+    }
+
+    return finalArr;
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
