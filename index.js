@@ -3,19 +3,19 @@
  * @param number – число, которое нужно прибавить к числу, полученному из массива
  */
 function addNumber(array, number) {
-    // Решение задачи
-    let massif = [];
-    let i = 0;
-    for (i < array.linght; i = i++) {
-        if (Number.isInteger(array[i]) && array[i].toString().lenght == 2) {
-            massif += array[i].toString();
-        } else {
-            return null;
+    function check(value) {
+        let result = true;
+        if (value < 0 || value > 9 || typeof value !== 'number') {
+            result = false;
         }
+        return result;
     }
-    return (number + Number(massif)).toString(10).split('').map((findig) => parseInt(finding, 10));
+    if (!array.every(check)) {
+        return null;
+    }
+    return (parseInt(array.join(''), 10) + number).toString().split('').map(Number);
 }
 
 module.exports = {
-    addNumber
+    addNumber,
 };
