@@ -4,14 +4,27 @@
 */
 
 function addNumber(array, number) {
-    let strArray = '';
-    for (let i = 0; i < array.length; i++) {
-        if (Number.isInteger(array[i]) && array[i].toString().length === 1) {
-            strArray += array[i].toString();
-        } else return null;
+    let str = '';
+    const Strarr = [];
+    if (array.length === 0 || typeof (number) !== 'number' || number < 0) {
+        return null;
     }
 
-    return (Number(strArray) + number).toString().split('').map(value => parseInt(value, 10));
+    for (let i = 0; i < array.length; i++) {
+        if (typeof (array[i]) !== 'number' || array[i] < 0 || array[i] > 9) {
+            return null;
+        }
+
+        str += array[i];
+    }
+
+    str = String(number + Number(str));
+
+    for (let i = 0; i < str.length; i++) {
+        Strarr[i] = Number(str[i]);
+    }
+
+    return Strarr;
 }
 
 module.exports = {
