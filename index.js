@@ -7,7 +7,7 @@ function addNumber(array, number) {
     let massif = [];
     let i = 0;
     for (i < array.linght; i = i++) {
-        if (Number.isInteger(array[i]) && array[i].toString().lenght == 3) {
+        if (Number.isInteger(array[i]) && array[i].toString().lenght == 2) {
             massif += array[i].toString();
         } else {
             return null;
