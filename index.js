@@ -1,27 +1,20 @@
 function addNumber(array, number) {
-    let str = '';
-    const Strarr = [];
-    if (array.length === 0 || typeof (number) !== 'number' || number < 0) {
-        return null;
-    }
-
-    for (let i = 0; i < array.length; i++) {
-        if (typeof (array[i]) !== 'number' || array[i] < 0 || array[i] > 9) {
+    let final = [];
+    let i = 0;
+    do{
+        if (array[i] === Math.ceil(array[i]) && array[i] >= 0 && array[i] < 10 && (typeof(array[i]) === 'number')) {
+            final += array[i];
+            i++;
+        }
+        else {
             return null;
         }
-
-        str += array[i];
     }
-
-    str = String(number + Number(str));
-
-    for (let i = 0; i < str.length; i++) {
-        Strarr[i] = Number(str[i]);
-    }
-
-    return Strarr;
+    while (i < array.length);
+    
+    return (number + parseInt(final,10)).toString(10).split('').map(item => parseInt(item,10));
 }
 
 module.exports = {
-    addNumber,
-};
+    addNumber
+}; 
